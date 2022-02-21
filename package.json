@@ -1,0 +1,22 @@
+{
+  "name": "game-shop",
+  "version": "1.0.0",
+  "description": "Los videos juegos son la forma de entretenimiento mas populares, es la industria con mucho crecimiento en los ultimos años. Nuestro publico al cual apuntamos, es muy diverso y amplio empezando desde niñas y niños, adolescentes, jovenes hasta adultos. Les ofrecemos los mejores y muy variados videos juegos.\r El equipo está conformado por estudiantes de Desarrollo Web Full Stack, utilizando Node.Js que, es un entorno en tiempo de ejecución multiplataforma para la capa del servidor, basado en JavaScript, utilizado por las marcas mas importante del mercado.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DayGut/Game-Shop.git"
+  },
+  "author": "grupo 5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DayGut/Game-Shop/issues"
+  },
+  "homepage": "https://github.com/DayGut/Game-Shop#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
