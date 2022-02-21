@@ -6,7 +6,11 @@
 Los videos juegos son la forma de entretenimiento mas populares, es la industria con mucho crecimiento en los ultimos años. Nuestro publico al cual apuntamos, es muy diverso y amplio empezando desde niñas y niños, adolescentes, jovenes hasta adultos. Les ofrecemos los mejores y muy variados videos juegos.
 El equipo está conformado por estudiantes de Desarrollo Web Full Stack, utilizando Node.Js que, es un entorno en tiempo de ejecución multiplataforma para la capa del servidor, basado en JavaScript, utilizado por las marcas mas importante del mercado.
 
-<H2> Integrantes del equipo<h2> 
+<<<<<<< HEAD
+<H2> Integrantes del equipo🧑🏽‍💻👨🏽‍💻👩🏽‍💻👨🏽‍💻<h2> 
+=======
+ 
+
 
 ✅ juan mendoza
 
