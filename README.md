@@ -15,7 +15,7 @@
 
 <p>✅ Daiana Gutierrez</p>
 
-<h3>Rederentes de paginas</h3>
+<h3>Referentes de paginas</h3>
 
 <p>🗒️ Escogimos estos referentes de paginas por la experiencia de usuario en el entorno online al visitar las páginas, en cada momento su navegación es fácil, ordenada y su elaboración es profesional. Ademas la velocidad de carga es ligera. Ofrece un diseño Web limpio, sencillo, fácil de usar y entender para los usuarios. Con una estética trabajada organizada e intuitiva. Por ello será fundamental que nuestros clientes permanezcan en nuestra web el máximo tiempo posible, encuentren lo que buscan y puedan disfrutar</p>
 
