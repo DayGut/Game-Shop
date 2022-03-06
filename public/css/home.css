@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+*{
+    margin:0;
+    padding: 0;
+}
+:root {
+    /* COLORES */
+    --color-azulMarino:#0F044C;
+    --color-azul:#141E61;
+    --color-gris:#787A91;
+    --color-blanco:#EEEEEE;
+    
+    /* Tamaños de fuentes */
+    
+}
+header{
+    background-color: red;
+}
