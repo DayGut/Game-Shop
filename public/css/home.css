@@ -1,19 +1,115 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
-:root {
-    /* COLORES */
-    --color-azulMarino:#0F044C;
-    --color-azul:#141E61;
-    --color-gris:#787A91;
-    --color-blanco:#EEEEEE;
+
+:root{
+    --colorTexto:#777777;
+    --colorBotones:#8c2574;
+    --colorFondo:#a381f2;
+    --paddingSecciones:60px 0;
+    --marginElementos:40px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+.contenedor{
     
-    /* Tamaños de fuentes */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: var(--paddingSecciones);
+}
+
+/* MENU*/
+.menu-navegacion{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.logo{
+    height: 80px;
+}
+.logo img{
+    display:block;
+    height: 100%;
     
 }
-header{
-    background-color: red;
+
+.enlaces li{
+    list-style: none;
+    display: inline-block;
+    
+    
+}
+.enlaces{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.enlaces a{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
+   
+}
+.buscador-entrada{
+    width: 90%;
+}
+
+
+/*HERO*/
+
+.hero{
+    height: 500px;
+    background-image: url("/images/estrellas.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+
+}
+
+.contenedor-texto{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.hero p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.boton{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: var(--colorBotones);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
 }
