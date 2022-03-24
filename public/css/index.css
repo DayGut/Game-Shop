@@ -9,6 +9,7 @@
     --Azul: #141E61;
     --colorFondo: #787A91;
     --grisClaro:#EEEEEE;
+
 }
 
  header .menu-navegacioncontenedor{
@@ -101,7 +102,7 @@ main{
 body{
  margin-bottom: 0;
  position: relative;
- min-height: 100vh;/*al aplicar grid funciona tomando todo el alto*/
+ min-height: 100vh;
  display: grid;
  grid-template-rows: auto 1fr auto;
  font-family: roboto;
