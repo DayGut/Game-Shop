@@ -1,0 +1,498 @@
+:root{
+    --texto-color-AzulMarino:#0F044C;
+    --backgound-color-Azul: #141E61;
+    --body-color-Gris: #787A91;
+    --text-color-GrisClaro:#EEEEEE;
+}
+
+
+body{
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--text-color-GrisClaros);
+}
+a{
+    text-decoration: none;
+    background-color: var(--text-color-GrisClaro);
+
+}
+
+
+/*header*/
+.topheader{
+    box-shadow: 0 4px 5px var(--backgound-color-Azul);
+    width: 100%;
+    
+}
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-color: var(--backgound-color-Azul);
+}
+/*logo*/
+.logo img{
+    
+    width: 70px;
+    display:block;
+    height: 100%;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+/*fin log*/
+/*menu*/
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    width: 80%;
+
+}
+
+
+.menu a{
+    color: var(--text-color-GrisClaro);
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: none;
+}
+
+.menu li{
+  padding: 0 15px;
+  color: var(--text-color-GrisClaro);
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.menu li:hover {
+  background-color:var(--body-color-Gris);
+  color: var(--backgound-color-Azul);
+  box-shadow: 0px 0px 10px 15px var(--body-color-Gris);
+}
+
+.open-menu, .close-menu{
+    display: none;
+    color: var(--text-color-GrisClaro);
+}
+
+.menu-navegacion{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+
+.enlaces li{
+    list-style: none;
+    display: inline-block;
+    
+    
+}
+.enlaces{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.enlaces a{
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
+   
+}
+.buscador-entrada{
+    width: 90%;
+}
+/*fin menu*/
+/*fin header*/
+
+/*Login*/
+.login-form{
+    width: 300px;
+    margin: 100px auto;
+    height: 500px;
+    padding: 20px 20px ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%),
+     0 15px 12px rgb(0 0 0 / 22%);
+}
+.login-form h2{
+    color: var(--texto-color-AzulMarino);
+}
+
+
+.login-form input[type="password"],
+.login-form input[type="text"]{
+    width: 100%;
+    padding:  15px;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/*Estilo del boton loguin*/
+.btn-login{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--backgound-color-Azul);
+    border: 0;
+    box-sizing:border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    color: #ffffff;
+}
+.btn-login:hover,.btn-login:active{
+    color: #ffffff;
+    background-color: var(--body-color-Gris);
+    border-color: var(--backgound-color-Azul);
+}
+.btn-login:focus{
+    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25) ;
+}
+
+/*Estilo del boton Register*/
+
+.btn-register{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--backgound-color-Azul);
+    border: 0;
+    box-sizing:border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    color: #ffffff;
+    margin-top: 20px;
+
+    /*para dar la apariencia de un boton*/
+
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+}
+.btn-register:hover,.btn-register:active{
+    color: #ffffff;
+    background-color:var(--body-color-Gris);
+    border-color: var(--texto-color-AzulMarino);
+}
+.btn-login:focus, .btn-register:focus{
+    box-shadow: 0 0 0 3px var(--texto-color-AzulMarino) ;
+}
+
+/* Estilos de link para ir a LOGIN*/
+.a-login:link, .a-login:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid #10B981;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .a-login:hover, .a-login:active {
+    background-color: #10B981;
+    color: white;
+  }
+  
+  /* Estilos de link para realizar el LOGOUT*/
+  .a-logout:link, .a-logout:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid #F87171;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .a-logout:hover, .a-logout:active {
+    background-color: #F87171;
+    color: white;
+  }
+  
+  /* Estilos boton CANCELAR*/
+  .btn-cancel{
+    width: 50%;
+    padding: 15px;
+    background-color: var(--backgound-color-Azul);
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    /* Para dar la apariencia de un boton */
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+  }
+  .btn-cancel:hover,.btn-cancel:active{
+    color:#fff;
+    background-color: var(--body-color-Gris);
+    border-color:var(--texto-color-AzulMarino);
+  }
+  .btn-cancel:focus{
+    box-shadow:0 0 0 3px #6B7280;
+  }
+  
+  /* Estilos boton GUARDAR*/
+  .btn-save{
+    width: 50%;
+    padding: 15px;
+    background-color:var(--backgound-color-Azul);
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    margin-top: 20px;
+    /* Para dar la apariencia de un boton */
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+  }
+  .btn-save:hover,.btn-save:active{
+    color:#fff;
+    background-color: var(--body-color-Gris);
+    border-color:var(--texto-color-Azuarino);
+  }
+  .btn-save:focus{
+    box-shadow:0 0 0 3px var(--body-color-Gris);
+  }
+  
+  /* form User Registration */
+  .register-form{
+    width: 400px;
+    margin: 80px auto;
+    padding: 0px 20px 60px 20px;
+    font-family: roboto;  
+    text-align: left !important;
+   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+  }
+  
+  .register-form h1 {
+    text-align: left;
+    color:var(--texto-color-AzulMarino) ;
+    font-size: 22px;
+    padding: 70px 0 10px 0;
+  }
+  .register-form input[type="password"],
+  .register-form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+    box-sizing:border-box;
+  }
+  
+  
+
+/*fin login*/
+
+
+/*footer */
+.pie-pagina{
+    width: 100%;
+    background-color: var(--backgound-color-Azul);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.grupo-1{
+    display: flex;
+    justify-content: space-around;
+    color: var(--text-color-GrisClaro);
+}
+.redes{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--backgound-color-Azul);
+    margin: 0 10px;
+  
+  }
+  
+  .redes .icon {
+    position: relative;
+    background-color: var(--text-color-GrisClaro);
+    border-radius: 50%;
+    padding: 15px;
+    margin: 5px;
+    width: 20px;
+    height: auto;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .redes .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: var(--header-footer-background--Azul);
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .redes .tooltip::before {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .redes .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .redes .icon:hover span,
+  .redes .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .redes .facebook:hover,
+  .redes .facebook:hover .tooltip,
+  .redes .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+  }
+  
+  .redes .twitter:hover,
+  .redes .twitter:hover .tooltip,
+  .redes .twitter:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+  }
+  
+  .redes .instagram:hover,
+  .redes .instagram:hover .tooltip,
+  .redes .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+  }
+  
+  .redes .github:hover,
+  .redes .github:hover .tooltip,
+  .redes .github:hover .tooltip::before {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .redes .youtube:hover,
+  .redes .youtube:hover .tooltip,
+  .redes .youtube:hover .tooltip::before {
+    background-color: #de463b;
+    color: #ffffff;
+  }
+  
+  .pie-pagina .grupo-1 .red-social a:hover{
+      background-color: var(--colorFondo);
+  }
+  
+  .pie-pagina .Copyright{
+      background-color: var(--Azul);
+      padding: 5px 10px;
+      text-align: center;
+      color: var(--grisClaro);
+  }
+  
+  .pie-pagina .Copyright small{
+      font-size: 15px;
+  }
+  .Copyright small{
+      color: var(--text-color-GrisClaro);
+  }
+  
+  
+/*fin footer*/
+@media (max-width:950px){
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        align-items: center;
+        background-color: var(--body-color-Gris);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    
+    .menu li{
+        line-height: 60px;
+        color:var(--text-color-GrisClaro);
+        text-decoration: none;
+        padding: 0 ;
+    }
+    .open-menu, 
+    .close-menu{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .close-menu{
+        position: absolute;
+        right: 18px;
+        top: 27px;  
+    }
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .hide{
+        display: none;
+    }
+    
+    .open-menu a, .close-menu a{
+        background: none;
+        font-size: 30px;
+    }
+    body > footer > div.grupo-1 > div.logo{
+       display: none;
+     }
+}
