@@ -411,7 +411,7 @@ a{
   
   
 /*fin footer*/
-@media (max-width:950px){
+@media (min-width:950px){
     .menu{
         flex-direction: column;
         position: fixed;
