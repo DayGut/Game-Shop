@@ -5,27 +5,34 @@ const PORT = 3000
 const path = require('path')
 app.use(express.static('public'));
 
+app.set('view enigme','ejs');
+
 
 
 app.get( '/', (req, res) =>{
-    res.sendFile(path.join( __dirname, '/views/home.html'))
+    res.render(path.join( __dirname, '/views/home.ejs'))
 })
 
 app.get( '/productDetail', (req, res) =>{
-    res.sendFile(path.join( __dirname, '/views/productDetail.html'))
+    res.render(path.join( __dirname, '/views/productDetail.ejs'))
 })
 
 app.get( '/register', (req, res) =>{
-    res.sendFile(path.join( __dirname, '/views/register.html'))
+    res.render(path.join( __dirname, '/views/register.ejs'))
 })
 
 app.get( '/productCart', (req, res) =>{
-    res.sendFile(path.join( __dirname, '/views/productCart.html'))
+    res.render(path.join( __dirname, '/views/productCart.ejs'))
 })
 
 app.get( '/login', (req, res) =>{
-    res.sendFile(path.join( __dirname, '/views/login.html'))
+    res.render(path.join( __dirname, '/views/login.ejs'))
 })
+
+app.get( '/agregar_editar', (req, res) =>{
+    res.render(path.join( __dirname, '/views/agregar_editar.ejs'))
+})
+
 
 
 
