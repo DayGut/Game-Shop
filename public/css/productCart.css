@@ -84,7 +84,7 @@ a{
 
 .open-menu, .close-menu{
     display: none;
-    color: var(--text-color-GrisClaro);
+    /* color: var(--text-color-GrisClaro); */
 }
 
 .menu-navegacion{
@@ -217,475 +217,227 @@ a{
 
 
 /* main */
-
-.caja {
-    font-family: 'Roboto';
-    width: 100%;
-    text-align: left;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+body .cart{
+  background-image: url('/images/estrellas.jpg');
+  min-height: 100vh;
+  background-size: contain;
+}
+.cart .box .caja-cont {
+    background-color: white;
+    padding: 13px;
+    margin: 0 0 0.2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-family: 'Roboto Slab', serif;
-  }
-  
-  body div  figure  img{
-      display: flex;
-      justify-content: center;
-      width: 100%; 
-      height: 100%;
-  }
-  
-  figure.caja {
-      font-family: 'Roboto', Arial, sans-serif;
-      position: relative;
-      margin: 0px;
-      min-width: 220px;
-      text-align: left;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    }
-  
-    figure.caja img:hover {
-      max-width: 100%;
-      vertical-align: top;
-      cursor: pointer;
-  
-    }
-    figure.caja figcaption {
-      position: relative;
-      background-color: #eeeeee;
-      padding: 20px 25px 50px;
-    }
-    figure.caja h3 {
-      position: absolute;
-      bottom: 100%;
-      text-transform: uppercase;
-      padding: 0px 25px;
-      line-height: 44px;
-      margin: 0;
-      left: 0;
-      font-weight: 400;
+    align-items: center;
+}
+
+  .cart .box .caja-cont .imagen {
+  display: flex;
+  margin: 0 0 0.5rem;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.cart h1{
+  text-align: center;
+      margin: 0 auto;  
+      text-decoration: underline red;
+      color: var(--text-color-GrisClaro);
+      padding: 30px;
       background-color: var(--texto-color-AzulMarino);
-      color: #ffffff;
-      
-    }
-    figure.caja h3 span {
-      font-weight: 800;
-    }
-    figure.caja h3:before {
-      position: absolute;
-      left: 100%;
-      border-style: solid;
-      border-width: 44px 0 0 12px;
-      border-color: transparent transparent transparent var(  --texto-color-AzulMarino);
-      content: '';
-      top: 0;
-    }
-    figure.caja p {
-      font-size: 0.8em;
-      font-weight: 500;
-      text-align: left;
-      margin: 0;
-      line-height: 1.6em;
-    }
-    figure.caja .precio {
-      position: absolute;
-      top: 0;
-      right: 0;
-      color:var(--text-color-GrisClaro);
-      background-color: var(--texto-color-AzulMarino);
-      padding: 0 10px;
-      line-height: 40px;
-      font-weight: 800;
-    }
+      height: 130px;
+}
+.cart .box{
+  padding: 2px;
+  border-radius: 3px;
+  margin: 0 auto 8px;
+}
 
-    figure.caja .precio:before {
-      position: absolute;
-      right: 100%;
-      border-style: solid;
-      border-width: 0 12px 40px 0;
-      border-color: transparent  transparent;
-      content: '';
-      top: 0;
-    }
-    
-    div .total{
-      text-align: left;
-      position: relative;
-      background-color:var(--text-color-GrisClaro);
-    }
-  
-    section .linea{
-      margin-left: line;
-    }
+.cart .box h4{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+  margin:0 0 .2rem ;
+}
 
+.cart .box .caja-cont .imagen{
+  display: flex;
+  margin: 0 0 .5rem;
+}
 
-  .boton{
-    display: flex;
-    justify-content: center;
-    vertical-align: top;
-    white-space: nowrap;
-    font-size: 0;
-    border: none;
-    border-radius: 1rem;
-    height: 2.5rem;
-    padding: 0.5rem;
-    margin-bottom: 0.2rem;
-    background-color: white;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .qtytext{
-    text-align: center;
-    border:none;
-  }
-  
-  .botones{
-    display: flex;
-      justify-content:space-around;
-      align-items: ceter;
-      background-color: var(--text-color-GrisClaro );
-      position: relative;
-  }
+.cart .box .caja-cont .imagen .juegos{
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  margin: 0 .3rem 0 0;
+}
 
-  div .linea{
-    border-top: 0.5px solid;
-    height: 30px;
-    bottom:30px;
+.cart .box .caja-cont .imagen .juegos img{
+  width: 100%;
+ height: 160%;
+}
 
-  }
+.cant{
+  padding: 24px;
+  } 
 
+  .cant input{
+  display: flex;
+  justify-content: space-around; 
+  width: 140px;
+  height: 30px;
+  border-radius: 7px; 
+  border: solid 3px var(--backgound-color-Azul);
+  margin: 0 auto .5rem; 
+}
 
-  .BTN{
-      background-color: var(  --texto-color-AzulMarino);
-      color:var(--text-color-GrisClaro);
-      border-radius: 10px;
-      padding: 0.5rem;
-      transition: all 450ms;
-  }
-  
-  .BTN:hover{
-    background-color: white;
-    color:var(--texto-color-AzulMarino);
-    position: relative;
-    bottom: 3px;
-    cursor: pointer;
-  }
-  
-  
-  
-   .agregar{
-    border-radius: 10px;
-    background-color:var(--texto-color-AzulMarino);
-    color: var(--text-color-GrisClaro);
-    width: 50vh;
-    padding: 12.5px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .agregar:hover{
-    background-color: white;
-    color:var(--texto-color-AzulMarino);
-    position: relative;
-    bottom: 3px;
-    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
-    cursor: pointer;
-  }
-  
-  figcaption.final{
-    display: flex;
-    justify-content:center;
-    position: absolute;
-    margin-bottom: 0;
-  }
-  
-  h4{
-    font-weight: 400;
-  }
-  /* fin del main */
-  
-   @media (min-width:480px) {
-    
-    
-  figure.caja {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    min-width: 380px;
-    text-align: center;
-  }
-  
-  figure.caja img {
-    max-width: 100%; 
-    width: 100%;
-    height: 100%;
-   
-    vertical-align: center;
-    
-  }
-  
-  figure.caja .precio {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--texto-color-AzulMarino);
-    padding: 0 20px;
-    line-height: 40px;
-    font-weight: 800;
-  }
+.descripcion .btn{
+ background-color: var(--texto-color-AzulMarino);
+ border-radius: 5px;
+ width: 80px;
+ height: 30px;
+ border: none;
+ color: white;
+ transition: background-color .5s;
+}
 
+.descripcion .btn:hover{
+  background-color: gold;
+}
+.cant input{
+  text-align: center;
+  cursor: pointer;
+}
 
-  
-  figure.caja h3 {
-    bottom: 100%;
-    text-transform: uppercase;
-    margin: 0;
-    left: 0;
-  }
-  figure.producto h3 span {
-    font-weight: 300;
-  }
-  figure.producto h3:before {
-    border-width: 10px 0 0 px;
-    content: '';
-    top: 0;
-  }
+.main-carrito .box .caja-cont .cant {
+  display: flex;
+  justify-content: space-around;
+  width: 80px;
+  height: 30px;
+  border-radius: 7px;
+  border: solid 3px var(--body-color-Gris);
+  margin: 0 auto 0.5rem;
+}
 
-  figure.producto p {
-    font-size: 0.8em;
-    font-weight: 500;
-    text-align: left;
-    margin: 0;
-    line-height: 1.6em;
-  }
-  
-  .boton{
+.cart .box .caja-cont .cant button:hover{
+  color: grey;
+}
+.subtotal{
+  font-size: 30px;
+    padding: 15px 10px 10px;
+    padding-bottom: 30px;
+}
+.cart .box .caja-cont .subtotal{
+  display: flex;
+}
+
+.cart .box .caja-cont .imagen .descripcion{
+  width: 200px;
+  font-size: 30px;
+  padding: 2px 19px;
+}
+
+p.sub-p{
+  margin: 0 .2rem 0 0;
+}
+.cart .box .total{
+  background-color: var(--text-color-GrisClaro);
+  padding: 8px;
+}
+
+.cart .box .total .opcionChekc {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart .box .total .precFinal{
+  display: flex;
+  padding-left: 154px;
+  font-size: 30px;
+}
+
+  .cart .box .total .envios{
+  padding-right: 67px;
+  display: flex;
+  font-size: 30px;
+} 
+
+#cbox1{
+  width: 30px;
+  height: 25px;
+  margin: 3px;
+}
+
+.cart .box .total .comprar{
   display: flex;
   justify-content: center;
-  vertical-align: top;
-  white-space: nowrap;
-  font-size: 0;
-  border: none;
-  border-radius: 1rem;
-  height: 2.5rem;
-  padding: 0.5rem;
-  margin-bottom: 0.2rem;
-  background-color: white;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .BTN{
-    background-color: var(  --texto-color-AzulMarino);
-    color:var(--text-color-GrisClaro);
-    border-radius: 10px;
-    padding: 0.5rem;
-    transition: all 450ms;
-    padding: 0.6rem;
-    width: 10rem;
+  padding-left: 62px;
 }
-  } 
-  
 
-  @media (min-width:770px){
-    .padre{
-    min-width: 770px;
+.cart .box .total .comprar button{
+  border: none;
+  background-color: var(--texto-color-AzulMarino);
+  transition: background-color .5s;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: .6rem;
+  margin-top: 1.4rem;
+}
+
+.cart .box .total .comprar button:hover{
+  background-color: gold;
+}
+
+
+@media(min-width:700px){
+
+.cart .box .caja-cont {
     display: flex;
-     flex-direction: row;
-    justify-content: space-around; 
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+  .cart .box h4{
+    text-align: center;
+    background-color: var(--text-color-GrisClaro);
+    margin:0 0 .2rem ;
+    font-size: 30px;
   }
-    .caja {
-       width: 50%;
-      text-align: left;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    }
-    
-     body div  figure  img{
-        width: 50%; 
-        height: 50%;
-    } 
-    
-    figure.caja {
-        position: relative;
-        margin: 0px;
-        min-width: 220px;
-        text-align: left;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-      }
-    
-      
-      figure.caja img:hover {
-        max-width: 100%;
-        vertical-align: top;
-        cursor: pointer;
-    
-      }
-      figure.caja figcaption {
-        position: relative;
-        background-color: #eeeeee;
-        padding: 20px 25px 50px;
-      }
-      figure.caja h3 {
-        position: absolute;
-        bottom: 100%;
-        text-transform: uppercase;
-        padding: 0px 25px;
-        line-height: 44px;
-        margin: 0;
-        left: 0;
-        font-weight: 400;
-        background-color: var(--texto-color-AzulMarino);
-        color: #ffffff;
-        
-      }
-      figure.caja h3 span {
-        font-weight: 800;
-      }
-      figure.caja h3:before {
-        position: absolute;
-        left: 100%;
-        border-style: solid;
-        border-width: 44px 0 0 12px;
-        border-color: transparent transparent transparent var(  --texto-color-AzulMarino);
-        content: '';
-        top: 0;
-      }
-      figure.caja p {
-        font-size: 0.8em;
-        font-weight: 500;
-        text-align: left;
-        margin: 0;
-        line-height: 1.6em;
-      }
-      figure.caja .precio {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color:var(--text-color-GrisClaro);
-        background-color: var(--texto-color-AzulMarino);
-        padding: 0 10px;
-        line-height: 40px;
-        font-weight: 800;
-      }
   
-      figure.caja .precio:before {
-        position: absolute;
-        right: 100%;
-        border-style: solid;
-        border-width: 0 12px 40px 0;
-        border-color: transparent  transparent;
-        content: '';
-        top: 0;
-      }
-      
-      div .total{
-        text-align: left;
-        position: relative;
-        background-color:var(--text-color-GrisClaro);
-      }
-    
-      section .linea{
-        margin-left: line;
-      }
-  
-  
-    .boton{
+  .cart .box .total .opcionChekc{
       display: flex;
-      justify-content: center;
-      vertical-align: top;
-      white-space: nowrap;
-      font-size: 0;
-      border: 1px solid;
-      border-radius: 1rem;
-      height: 2.5rem;
-      padding: 0.5rem;
-      margin-bottom: 0.2rem;
-      background-color: white;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .qtytext{
-      text-align: center;
-      border: none;
-    }
-    
-    .botones{
-      display: flex;
-        justify-content:space-around;
-        align-items: ceter;
-        background-color: var(--text-color-GrisClaro );
-        position: relative;
-    }
-  
-    div .linea{
-      border-top: 0.5px solid;
-      height: 30px;
-      bottom:30px;
-  
-    }
-  
-  
-    .BTN{
-        background-color: var(  --texto-color-AzulMarino);
-        color:var(--text-color-GrisClaro);
-        border-radius: 10px;
-        padding: 0.5rem;
-        transition: all 450ms;
-        width: 40vh;
-        height: 40px;
-      
-    }
-    
-    .BTN:hover{
-      background-color: white;
-      color:var(--texto-color-AzulMarino);
-      position: relative;
-      bottom: 3px;
-      cursor: pointer;
-      height: 40px;
-    }
-    
-     .agregar{
-      border-radius: 10px;
-      background-color:var(--texto-color-AzulMarino);
-      color: var(--text-color-GrisClaro);
-      width: 50vh;
-      padding: 12.5px;
-      display: flex;
-      justify-content: center;
-      height: 20px;
-    }
-    
-    .agregar:hover{
-      background-color: white;
-      color:var(--texto-color-AzulMarino);
-      position: relative;
-      bottom: 3px;
-      box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
-      cursor: pointer;
-    }
-    
-    figcaption.final{
-      display: flex;
-      justify-content:center;
-      position: absolute;
-      margin-bottom: 0;
-    }
-    
-    h4{
-      font-weight: 400;
-    }
-    .imagen-texto {
-        display: flex;
-        flex-direction: row;
-    }
-  
-    .textos {
-        padding: 9rem 0.5rem ;
-    }
+      justify-content: flex-end;
   }
 
+  .cart .box .caja-cont .imagen{
+      width: 290px;
+  }
 
+  .cart .box .caja-cont .imagen .descripcion{
+      width: 200px;
+      font-size: 30px;
+      padding: 2px 19px;
+  }
+
+  .cart .box .total .comprar button{
+      width: 200px;
+      font-size: 1.4rem;
+  }
+  
+  p .sub-p{
+      font-size: 25px;
+  }
+
+  .cart .box{
+      max-width: 1161px;
+      margin: 0 auto 0px;  
+  }
+}
+  /* fin del main */
 
 /*footer */
 .pie-pagina{
@@ -863,8 +615,8 @@ a{
         font-size: 30px;
     }
     body > footer > div.grupo-1 > div.logo{
-       display: none;
-     }
-     
+      display: none;
+    }
+
 }
 

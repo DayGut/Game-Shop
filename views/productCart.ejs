@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/productCart.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
     <script defer src="js/script.js"></script>
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+        <enlace href="https: //fonts.googleapis.com/css2? family= Alfa+Slab+One & family= Rajdhani:wght@600 & familia= Roboto:peso@100;400;500 & display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
     <title>Game Shop</title>
 </head>
 
@@ -37,40 +41,70 @@
 </header>
 <!--fin header-->
 
-<!-- main -->
-<div class="padre">
-    <figure class="caja">
-    <img src="/images/PS4.jpeg" alt="PS4"/>
-    <div class="precio">$1800.00</div>
-    <figcaption>
-      <h3>FIFA 22</h3>
-      <h4>PRODUCTO</h4>
-      <br>
-      <p>Con la potencia de Football™, EA SPORTS FIFA 22 mejora la experiencia con tecnología de juego HyperMotion de última generación.</p>
-      <br>
-      
-    
-      <div class="boton">
-        <input type="number" class="qtytext" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
-        <p>Precio:$1.800</p>
-          </div>
-        </figcaption>
+<!-- MAIN -->
+<main class="cart">
+    <h1>CARRITO DE COMPRAS</h1>
+    <section class="box">
+        <h4>
+            <ul>PRODUCTO</ul>
+            <ul>CANTIDAD</ul>
+            <ul>PRECIO</ul>
+        </h4>
+        <article class="caja-cont">
+            <div class="imagen">
+                <div class="juegos">
+                    <img src="/images/fifa22.jpeg" alt="fifa22">
+                </div>
+                <div class="descripcion">
+                    <strong>Fifa 22</strong><br>
+                    <p> Sports FIFA 2022</p>
+                    <button  class="btn" type="button">Cancelar</button>
+                </div>
+            </div>
+            <div class="cant">
+                <input id="inches" type="number" name="inches" min="0" max="11" step="1">
+            </div>
+            <div class="subtotal">  
+                <p>Subtotal:</p> 
+                <p >$2.500</p>
+            </div>
+        </article>
+        <article class="caja-cont">
+            <div class="imagen">
+                <div class="juegos">
+                    <img src="/images/sekiroo.jpg" alt="sekiroo">
+                </div>
+                <div class="descripcion">
+                    <strong>Sekiroo</strong><br> 
+                    <p>Shadows Die Twice</p>
+                    <button  class="btn" type="button">Cancelar</button>
+                </div>
+            </div>
+            <div class="cant">
+                <input id="inches" type="number" name="inches" min="0" max="11" step="1">
+                
+            </div>
+            <div class="subtotal">
+                <p>Subtotal:</p>
+                <p >$2.500</p>
+            </div>
+        </article>    
         <div class="total">
-            <h5>SUBTOTAL</h5>
-            <div class="linea">
-            <span>TOTAL  $1.800</span>
+            <article class="opcionChekc">   
+                <div class="precFinal">   
+                <p class="precTotal">Total:$5.000</p> 
+                </div>
+            </article>
+            <div class="envios">
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Envio a domicilio</label><br>
+            </div>
+            <div class="comprar">
+                <button>Comprar</button>
+            </div>          
         </div>
-        </div>
-          <figcaption class="botones">
-            <button class="BTN" >Comprar</button>
-            <button class="BTN">Cancelar</button>
-          </figcaption>
-            <figcaption class="final">
-            <button type="submit" name="add-to-cart" value="13271" class="agregar">Agregar al carrito</button>
-    </figcaption>
-        </figure>
-        </div>
-        <!-- fin del main -->
+    </section>
+</main>
+<!-- fin del main -->
 
 <!-- footer-->
 <footer class="pie-pagina">
