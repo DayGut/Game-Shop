@@ -8,7 +8,7 @@ app.use(express.static('public'));
 app.set('view enigme','ejs');
 
 
-
+// agregar las tutas al router
 app.get( '/', (req, res) =>{
     res.render(path.join( __dirname, '/views/home.ejs'))
 })
