@@ -13,7 +13,7 @@ app.set ("views", ".views/partials")
 
 
 
-
+// agregar las tutas al router
 app.get( '/', (req, res) =>{
     res.render(path.join( __dirname, '/views/home.ejs'))
 })
