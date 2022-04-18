@@ -3,16 +3,20 @@ const { getProducts } = require('../data');
 
 module.exports = {
 
-    products:(req,res)=>{
+    detalle:(req,res)=>{
         res.render('products/productDetail', { 
-            title: "Productos",
-            products: getProducts
+            title: "Detalle del producto",
         });
     },
-    productCart:(req, res) => {
+    carrito:(req, res) => {
         res.render('products/productCart', { 
             title: "Carrito de compras" 
         }) 
     },
-   
+    todosLosProductos: (req, res) => {
+        res.render("casa/home", {
+            title: "Productos", getProducts 
+        })
+
+    }
 }

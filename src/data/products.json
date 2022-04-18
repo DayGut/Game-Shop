@@ -1,0 +1,124 @@
+[
+    {
+        "id": 1,
+        "name": "Star Wars: The Force Unleashed",
+        "price": 1000,
+        "description": "Star Wars: The Force Unleashed es una aventura de acción a cargo de Krome Studios y Aspyr para Switch. Juega como Starkiller, el aprendiz secreto de Darth Vader, entrenado para dar caza y aniquilar a los Jedi. Usa los devastadores poderes de la Fuerza y combos con el sable de luz para cumplir la voluntad de Darth Vader. Al igual que en la versión original de 2008 para Nintendo Wii, usa los controles de movimiento de los mandos Nintendo Joy-Con para sentir el poder destructor de la Fuerza o desafiar a un amigo a una partida 1c1 en el modo Duelo multijugador local.",
+        "categoryId": "aventura-accion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    {
+        "id": 2,
+        "name": "Spirit of the Island",
+        "price": 2000,
+        "description": "Spirit of the Island es un colorido RPG cooperativo de simulación de vida ambientado en un archipiélago tropical a cargo de 1M Bits Horde y META Publishing para PC. ¡Crea una granja, cultiva, cría animales, fabrica objetos, cocina, recolecta, construye tiendas y museos para atraer visitas y convierte una isla abandonada en un destino turístico!",
+        "categoryId": "rpg-simulacion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 3,
+        "name": "Kingdom Hearts Missing-Link",
+        "price": 3000,
+        "description": "Kingdom Hearts Missing-Link es una nueva entrega de la saga de acción RPG a cargo de Square Enix para dispositivos iOS y Android que permite a los jugadores embarcarse en aventuras desde el reino de Scala ad Caelum al mundo real. Los jugadores podrán participar en emocionantes batallas contra Heartless y descubrir una historia nueva y original.",
+        "categoryId": "accion-rpg",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 4,
+        "name": "Kingdom Hearts IV",
+        "price": 4000,
+        "description": "Kingdom Hearts IV es la curta entrega numerada de la saga de acción RPG a cargo de Square Enix para PlayStation 5 y Xbox Series protagonizada por Sora, Mickey, Donald, Goofy y compañía junto a la primera aparición de Strelitzia, un nuevo y misterioso personaje que aparece ante Sora en este nuevo y extraño escenario.",
+        "categoryId": "accion-rpg",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 5,
+        "name": "MADiSON",
+        "price": 5000,
+        "description": "MADiSON es una aventura de acción y terror psicológico que ofrece una experiencia inmersiva y terrorífica a cargo de Bloodious Games para PC, PlayStation 4, PlayStation 5, Xbox Series y Switch. Con la ayuda de una cámara instantánea, une el mundo de los vivos con el de los muertos, toma fotografías y agitalas para revelarlas. Resuelve puzles, explora tus alrededores y trata de sobrevivir.",
+        "categoryId": "aventura-accion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 6,
+        "name": "Tape: Unveil the Memories",
+        "price": 6000,
+        "description": "Usa una videocámara especial capaz de rebobinar el tiempo para explorar los recuerdos del pasado en Tape: Unveil the Memories, una aventura narrativa de misterio en primera persona ambientada en la Galicia de los años 90 a cargo de BlackChiliGoat Studio y Gammera Nest para PC, PlayStation 4 y PlayStation 5.",
+        "categoryId": "aventura",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 7,
+        "name": "Kharon's Crypt - Even Death May Die",
+        "price": 7000,
+        "description": "Kharon's Crypt - Even Death May Die es una tenebrosa aventura de acción tipo dungeon crawler no lineal repleta de puzles, misterios y desafíos mortales con unos gráficos pixel art inspirados en la mítica Gameboy Color a cargo de Hebi Lee y Andromeda Project para PC y Switch. En Kharon's Crypt encarnas a Caronte, un ser considerado la personificación de la muerte, en su misión de recuperar su poder y escapar de la cripta donde ha sido sellado por un rey enloquecido que busca eludir la muerte.",
+        "categoryId": "aventura-accion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 8,
+        "name": "Dreamsettler",
+        "price": 8000,
+        "description": "Dreamsettler es una aventura de simulación a cargo de Tendershoot y No More Robots para PC en la que exploramos Sleepnet, donde los sueños se hacen realidad. Aunque en ocasiones los sueños necesitan de nuestra ayuda...",
+        "categoryId": "aventura-simulacion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 9,
+        "name": "Aeon Drive",
+        "price": 9000,
+        "description": "Viaja por Neo Barcelona y disfruta de un ambiente ciberpunk en Aeon Drive, un juego de acción y plataformas con un toque de speedrun. Controla el tiempo y el espacio a tu antojo, recorre la ciudad en solitario o con hasta cuatro amigos y déjate llevar por sus luces de neón. Aeon Drive es un plataformas de acción a cargo de 2Awesome Studio y Critical Reflex para PC, PlayStation 4, Xbox One, PlayStation 5, Xbox Series y Switch.",
+        "categoryId": "plataformas-accion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 10,
+        "name": "Return to Monkey Island",
+        "price": 1000,
+        "description": "Return to Monkey Island es una aventura gráfica a cargo de Terrible Toybox y Devolver Digital para PC que sigue con las alocadas aventuras de piratas de tan celebrada saga de Ron Gilbert.",
+        "categoryId": "accion",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    },
+    
+    {
+        "id": 11,
+        "name": "Rainbow Six Mobile",
+        "price": 11000,
+        "description": "Rainbow Six Mobile es un videojuego de acción first person shooter a cargo de Ubisoft Montreal y Ubisoft para dispositivos iOS y Android basado en la popular entrega de sobremesa Rainbow Six Siege en el que dos equipos compiten en toda clase de escenarios a través de ataques tácticos.",
+        "categoryId": "aventura",
+        "discount": 0,
+        "image": "sekiroo.jpeg",
+        "stock": true
+    }
+    
+    
+]
+

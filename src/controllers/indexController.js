@@ -1,14 +1,10 @@
-const { getProducts } = require('../data')
+module.exports= {
 
-
-
-module.exports = {
-    index: (req,res) => {
-
-        res.render("home.ejs",{
-            productos:getProducts,
-            titulo: "Game-Shop"
+    index: (req, res) => {
+        res.render("casa/home", {
+            title: "Bienvenidos al home"
         })
-     
+        
     }
+    
 }
