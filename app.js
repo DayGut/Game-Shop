@@ -2,10 +2,15 @@ const express = require('express');
 const app = express ();
 const PORT = 3000
 
+
 const path = require('path')
 app.use(express.static('public'));
 
-app.set('view enigme','ejs');
+/*Views config  */
+app.set('view engine','ejs');
+app.set ("views", ".views/partials")
+
+
 
 
 
