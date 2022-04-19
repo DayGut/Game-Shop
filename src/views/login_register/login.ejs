@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('../partials/head') %>
+
+<body>
+    <!-- header-->
+    <%-include('../partials/header') %>
+    <link rel="stylesheet" href="css/login.css">
+    <!--fin header-->
+    <!--Login-->
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="/auth" method="POST">
+            <input type="text" name="user" id="user" placeholder="user" >
+            <input type="password" name="pass" id="pass" placeholder="password" > 
+            <input type="submit" class="btn-login" value="login">
+        </form>
+        <a href="register" class="btn-register">Register</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!--Fin login-->
+    <!-- footer-->
+    <%-include('../partials/footer') %> 
+    <!-- fin footer-->
+
+
+
+    <script src="https://kit.fontawesome.com/f21216c2d3.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

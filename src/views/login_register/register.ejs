@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%-include('../partials/head') %>
+
+<body>
+    <!-- header-->
+    <%-include('../partials/header') %>
+    <!--fin header-->
+    <!--Register-->
+    <div class="register-form">
+        <h1>Form Registration</h1>
+        <form action="register" method="POST">
+            <label form="user">User name</label>
+            <input type="text" name="user" required>
+
+            <label form="user">Full name</label>
+            <input type="text" name="name" required>
+
+
+            <label form="pass">Password</label>
+            <input type="password" name="pass" required>
+
+            <div style="display: inline;">
+                <a href="/" class="btn-cancel">Cancel</a>
+                <input type="submit" class="btn-save" value="save">
+            </div>
+        </form>
+
+    </div>
+
+    
+    <!--Fin Register-->
+    <!-- footer-->
+    <%-include('../partials/footer') %> 
+    <!-- fin footer-->
+
+
+
+    <script src="https://kit.fontawesome.com/f21216c2d3.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
