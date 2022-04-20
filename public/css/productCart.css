@@ -4,6 +4,7 @@
     --body-color-Gris: #787A91;
     --text-color-GrisClaro:#EEEEEE;
 }
+@import url('"https: //fonts.googleapis.com/css2? family= Alfa+Slab+One & family= Rajdhani:wght@600 & familia= Roboto:peso@100;400;500 & display=swap" rel="stylesheet"');
 *{
   box-sizing: border-box;
   margin: 0;
@@ -217,12 +218,12 @@ a{
 
 
 /* main */
-body .cart{
+body .cart-d{
   background-image: url('/images/estrellas.jpg');
   min-height: 100vh;
   background-size: contain;
 }
-.cart .box .caja-cont {
+.cart-d .box-d .caja-cont-d {
     background-color: white;
     padding: 13px;
     margin: 0 0 0.2rem;
@@ -231,14 +232,14 @@ body .cart{
     align-items: center;
 }
 
-  .cart .box .caja-cont .imagen {
+  .cart-d .box-d .caja-cont-d .imagen-d {
   display: flex;
   margin: 0 0 0.5rem;
   width: 80%;
   justify-content: space-evenly;
 }
 
-.cart h1{
+.cart-d h1{
   text-align: center;
       margin: 0 auto;  
       text-decoration: underline red;
@@ -247,43 +248,43 @@ body .cart{
       background-color: var(--texto-color-AzulMarino);
       height: 130px;
 }
-.cart .box{
+.cart-d .box-d{
   padding: 2px;
   border-radius: 3px;
   margin: 0 auto 8px;
 }
 
-.cart .box h4{
+ .cart-d .box-d h4{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
   background-color: white;
   margin:0 0 .2rem ;
-}
+} 
 
-.cart .box .caja-cont .imagen{
+.cart-d .box-d .caja-cont-d .imagen-d{
   display: flex;
   margin: 0 0 .5rem;
 }
 
-.cart .box .caja-cont .imagen .juegos{
+.cart-d .box-d .caja-cont-d .imagen-d .juegos-d{
   width: 90px;
   height: 90px;
   background-color: white;
   margin: 0 .3rem 0 0;
 }
 
-.cart .box .caja-cont .imagen .juegos img{
+.cart-d .box-d .caja-cont-d .imagen-d .juegos-d img{
   width: 100%;
  height: 160%;
 }
 
-.cant{
+.cant-d{
   padding: 24px;
   } 
 
-  .cant input{
+  .cant-d input{
   display: flex;
   justify-content: space-around; 
   width: 140px;
@@ -293,7 +294,7 @@ body .cart{
   margin: 0 auto .5rem; 
 }
 
-.descripcion .btn{
+.descripcion-d .btn-d{
  background-color: var(--texto-color-AzulMarino);
  border-radius: 5px;
  width: 80px;
@@ -303,15 +304,15 @@ body .cart{
  transition: background-color .5s;
 }
 
-.descripcion .btn:hover{
+.descripcion-d .btn:hover{
   background-color: gold;
 }
 .cant input{
   text-align: center;
   cursor: pointer;
 }
-
-.main-carrito .box .caja-cont .cant {
+/*arreglar*/
+.main-carrito-d .box-d .caja-cont-d .cant-d {
   display: flex;
   justify-content: space-around;
   width: 80px;
@@ -321,19 +322,19 @@ body .cart{
   margin: 0 auto 0.5rem;
 }
 
-.cart .box .caja-cont .cant button:hover{
+.cart-d .box-d .caja-cont-d .cant-d button:hover{
   color: grey;
 }
-.subtotal{
+.subtotal-d{
   font-size: 30px;
     padding: 15px 10px 10px;
     padding-bottom: 30px;
 }
-.cart .box .caja-cont .subtotal{
+.cart-d .box-d .caja-cont-d .subtotal-d{
   display: flex;
 }
 
-.cart .box .caja-cont .imagen .descripcion{
+.cart-d .box-d .caja-cont-d .imagen-d .descripcion-d{
   width: 200px;
   font-size: 30px;
   padding: 2px 19px;
@@ -342,23 +343,23 @@ body .cart{
 p.sub-p{
   margin: 0 .2rem 0 0;
 }
-.cart .box .total{
+.cart-d .box-d .total-d{
   background-color: var(--text-color-GrisClaro);
   padding: 8px;
 }
 
-.cart .box .total .opcionChekc {
+.cart-d .box-d .total-d .opcionChekc-d {
   display: flex;
   justify-content: flex-end;
 }
 
-.cart .box .total .precFinal{
+.cart-d .box-d .total-d .precFinal-d{
   display: flex;
   padding-left: 154px;
   font-size: 30px;
 }
 
-  .cart .box .total .envios{
+  .cart-d .box-d .total-d .envios-d{
   padding-right: 67px;
   display: flex;
   font-size: 30px;
@@ -370,13 +371,13 @@ p.sub-p{
   margin: 3px;
 }
 
-.cart .box .total .comprar{
+.cart-d .box-d .total-d .comprar-d{
   display: flex;
   justify-content: center;
   padding-left: 62px;
 }
 
-.cart .box .total .comprar button{
+.cart-d .box-d .total-d .comprar-d button{
   border: none;
   background-color: var(--texto-color-AzulMarino);
   transition: background-color .5s;
@@ -387,43 +388,43 @@ p.sub-p{
   margin-top: 1.4rem;
 }
 
-.cart .box .total .comprar button:hover{
+.cart-d .box-d .total-d .comprar-d button:hover{
   background-color: gold;
 }
 
 
 @media(min-width:700px){
 
-.cart .box .caja-cont {
+.cart-d .box-d .caja-cont-d {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
 
-  .cart .box h4{
+  .cart-d .box-d h4{
     text-align: center;
     background-color: var(--text-color-GrisClaro);
     margin:0 0 .2rem ;
     font-size: 30px;
   }
   
-  .cart .box .total .opcionChekc{
+  .cart-d .box-d .total-d .opcionChekc-d{
       display: flex;
       justify-content: flex-end;
   }
 
-  .cart .box .caja-cont .imagen{
+  .cart-d .box-d .caja-cont-d .imagen-d{
       width: 290px;
   }
 
-  .cart .box .caja-cont .imagen .descripcion{
+  .cart-d .box-d .caja-cont-d .imagen-d .descripcion-d{
       width: 200px;
       font-size: 30px;
       padding: 2px 19px;
   }
 
-  .cart .box .total .comprar button{
+  .cart-d .box-d .total-d .comprar-d button{
       width: 200px;
       font-size: 1.4rem;
   }
@@ -432,191 +433,10 @@ p.sub-p{
       font-size: 25px;
   }
 
-  .cart .box{
+  .cart-d .box-d{
       max-width: 1161px;
       margin: 0 auto 0px;  
   }
 }
   /* fin del main */
-
-/*footer */
-.pie-pagina{
-    width: 100%;
-    background-color: var(--backgound-color-Azul);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.grupo-1{
-    display: flex;
-    justify-content: space-around;
-    color: var(--text-color-GrisClaro);
-}
-.redes{
-    display: flex;
-    flex-wrap: wrap;
-    color: var(--backgound-color-Azul);
-    margin: 0 10px;
-  
-  }
-  
-  .redes .icon {
-    position: relative;
-    background-color: var(--text-color-GrisClaro);
-    border-radius: 50%;
-    padding: 15px;
-    margin: 5px;
-    width: 20px;
-    height: auto;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .redes .tooltip {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    background-color: #ffffff;
-    color: var(--header-footer-background--Azul);
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .redes .tooltip::before {
-    position: absolute;
-    height: 8px;
-    width: 8px;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .redes .icon:hover .tooltip {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  
-  .redes .icon:hover span,
-  .redes .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .redes .facebook:hover,
-  .redes .facebook:hover .tooltip,
-  .redes .facebook:hover .tooltip::before {
-    background-color: #3b5999;
-    color: #ffffff;
-  }
-  
-  .redes .twitter:hover,
-  .redes .twitter:hover .tooltip,
-  .redes .twitter:hover .tooltip::before {
-    background-color: #46c1f6;
-    color: #ffffff;
-  }
-  
-  .redes .instagram:hover,
-  .redes .instagram:hover .tooltip,
-  .redes .instagram:hover .tooltip::before {
-    background-color: #e1306c;
-    color: #ffffff;
-  }
-  
-  .redes .github:hover,
-  .redes .github:hover .tooltip,
-  .redes .github:hover .tooltip::before {
-    background-color: #333333;
-    color: #ffffff;
-  }
-  
-  .redes .youtube:hover,
-  .redes .youtube:hover .tooltip,
-  .redes .youtube:hover .tooltip::before {
-    background-color: #de463b;
-    color: #ffffff;
-  }
-  
-  .pie-pagina .grupo-1 .red-social a:hover{
-      background-color: var(--colorFondo);
-  }
-  
-  .pie-pagina .Copyright{
-      background-color: var(--Azul);
-      padding: 5px 10px;
-      text-align: center;
-      color: var(--grisClaro);
-  }
-  
-  .pie-pagina .Copyright small{
-      font-size: 15px;
-  }
-  .Copyright small{
-      color: var(--text-color-GrisClaro);
-  }
-  
-  
-/*fin footer*/
-@media (max-width:950px){
-    .menu{
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        align-items: center;
-        background-color: var(--body-color-Gris);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-    }
-    
-    .menu li{
-        line-height: 60px;
-        color:var(--text-color-GrisClaro);
-        text-decoration: none;
-        padding: 0 ;
-    }
-    .open-menu, 
-    .close-menu{
-        display: block;
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
-    .close-menu{
-        position: absolute;
-        right: 18px;
-        top: 27px;  
-    }
-    .menu_opened{
-        opacity: 1;
-        pointer-events: all;
-    }
-    .hide{
-      display: none;
-  }
-  
-    .open-menu a, .close-menu a{
-        background: none;
-        font-size: 30px;
-    }
-    body > footer > div.grupo-1 > div.logo{
-      display: none;
-    }
-
-}
 

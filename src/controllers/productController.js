@@ -5,12 +5,12 @@ module.exports = {
 
     detalle:(req,res)=>{
         res.render('products/productDetail', { 
-            title: "Detalle del producto",
+            title: "Detalle del producto", 
         });
     },
     carrito:(req, res) => {
         res.render('products/productCart', { 
-            title: "Carrito de compras" 
+            title: "Carrito de compras",
         }) 
     },
     todosLosProductos: (req, res) => {

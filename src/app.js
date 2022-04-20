@@ -7,6 +7,7 @@ const PORT = 3000;
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productRouter');
+const adminRouter = require ("./routes/adminRouter"); 
 
 //Ruta elementos estaticos
 app.use(express.static(path.join(__dirname, '../public')));
@@ -18,7 +19,8 @@ app.set('view engine', 'ejs');
 // Middleware
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/products', productsRouter)
+app.use('/products', productsRouter);//
+app.use('/admin', adminRouter)
 
 // catch 404 and forward to error handler
  /*app.use(function(req, res, next) {
