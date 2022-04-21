@@ -1,0 +1,14 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* Imports */
+
+@import url('general.css');
+@import url('variables.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('login.css');
+@import url('register.css');
+@import url('products.css');

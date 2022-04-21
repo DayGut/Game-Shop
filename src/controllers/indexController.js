@@ -1,8 +1,9 @@
 module.exports= {
 
     index: (req, res) => {
-        res.render("casa/home", {
-            title: "Bienvenidos al home"
+        res.render("home", {
+            titulo: "Home",
+            css:"home.css"
         })
         
     }

@@ -1,14 +1,15 @@
-const {getUsers, writeUsers} = require('../data');
 
 module.exports = {
-    logueo: (req, res) => {
-        res.render('./login_register/login', {
-            titulo: "Login"
+    login: (req, res) => {
+        res.render('user/login', {
+            titulo:"Login",
+            css:"login.css"
         })
     }, 
     registro: (req, res) => {
-        res.render('./login_register/register', {
-            titulo: "Registro"
+        res.render('user/register', {
+            titulo: "Registro",
+            css:"register.css"
         })
     }, 
 }

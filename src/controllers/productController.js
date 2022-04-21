@@ -2,6 +2,13 @@ const { getProducts } = require('../data');
 
 
 module.exports = {
+    list: (req, res) => {
+        res.render("products/products", {
+            products,
+            titulo:"Productos",
+            css: "products.css"
+        })
+    },
 
     detalle:(req,res)=>{
         res.render('products/productDetail', { 

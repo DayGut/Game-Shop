@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require('../controllers/userController');
 
 /*Renderiza vista login */
-router.get('/logueo', usersController.logueo);
+router.get('/login', usersController.login);
 /* Renderiza vista registro */
 router.get('/registro', usersController.registro);
 
