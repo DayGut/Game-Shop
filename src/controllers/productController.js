@@ -5,24 +5,23 @@ module.exports = {
     list: (req, res) => {
         res.render("products/products", {
             products,
-            titulo:"Productos",
-            css: "products.css"
+            titulo:"Productos"
         })
     },
 
     detalle:(req,res)=>{
         res.render('products/productDetail', { 
-            title: "Detalle del producto",
+            titulo: "Detalle del producto",
         });
     },
     carrito:(req, res) => {
         res.render('products/productCart', { 
-            title: "Carrito de compras" 
+            titulo: "Carrito de compras" 
         }) 
     },
     todosLosProductos: (req, res) => {
         res.render("casa/home", {
-            title: "Productos", getProducts 
+            titulo: "Productos", getProducts 
         })
 
     }
