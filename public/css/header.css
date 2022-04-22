@@ -105,5 +105,9 @@
 .buscador-entrada{
     width: 90%;
 }
+.hamburguesa,
+.cerrar {
+    display: none;
+}
 /*fin menu*/
 /*fin header*/
