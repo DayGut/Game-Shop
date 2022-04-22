@@ -130,6 +130,50 @@
   
 /*fin footer*/
 @media (max-width:950px){
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        align-items: center;
+        background-color: var(--body-color-Gris);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    
+    .menu li{
+        line-height: 60px;
+        color:var(--text-color-GrisClaro);
+        text-decoration: none;
+        padding: 0 ;
+    }
+    .open-menu, 
+    .close-menu{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .close-menu{
+        position: absolute;
+        right: 18px;
+        top: 27px;  
+    }
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .hide{
+      display: none;
+  }
+  
+    .open-menu a, .close-menu a{
+        background: none;
+        font-size: 30px;
+    }
     body > footer > div.grupo-1 > div.logo{
        display: none;
      }
