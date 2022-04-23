@@ -6,7 +6,7 @@
 <p>El equipo está conformado por estudiantes de Desarrollo Web Full Stack, utilizando Node.Js que, es un entorno en tiempo de ejecución multiplataforma para la capa del servidor, basado en JavaScript, utilizado por las marcas mas importante del mercado.</p>
 
 
-<H2> Integrantes del equipo🧑🏽‍💻👨🏽‍💻👩🏽‍💻👨🏽‍💻<h2> 
+<H2> Integrantes del equipo 👨🏽‍💻👩🏽‍💻👨🏽‍💻<h2> 
 
 
 <p>✅ juan mendoza</p>
