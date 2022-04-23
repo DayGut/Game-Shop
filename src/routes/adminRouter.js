@@ -8,4 +8,6 @@ router.get('/productos/agregar', adminProductController.productAdd);
 router.get('/productos/listar', adminProductController.list);
 
 
+
+
 module.exports = router;
