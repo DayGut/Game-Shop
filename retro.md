@@ -35,3 +35,15 @@
 <p>🗒️HACER MENOS:</p>
 
 <p>🗒️DEJAR DE HACER: Atrasar plazos de entrega.</p>
+
+<h1>Retrospectiva Sprint 4</h1>
+
+<p>🗒️HACER MAS: Agregar fechas de vencimiento a las tareas, realizar mas practicas, respetar los plazos de entrega segun Trello. </p>
+
+<p>🗒️SEGUIR HACIENDO: Reuniones por zoom, comunicarnos, Dailys</p>
+
+<p>🗒️EMPEZAR A HACER: Implementar los ejercicios dictados en clase al proyecto grupal, cumplir en tiempo y orden las tarjetas asignadas, Daily diarias a travez de Whatsapp 23hs. </p>
+
+<p>🗒️HACER MENOS: procastinar, crear conflictos en el repositorio.</p>
+
+<p>🗒️DEJAR DE HACER:Trabajar sin comunicacion.</p>
