@@ -138,5 +138,21 @@
         "discount": 0,
         "image": "sekiroo.jpeg",
         "stock": true
+    },
+    {
+        "id": 15,
+        "name": "ulises coaquira",
+        "price": "1213",
+        "categoryId": "rpg-simulacion",
+        "discount": "1",
+        "image": "sekiroo.jpeg"
+    },
+    {
+        "id": 16,
+        "name": "ulises coaquira",
+        "price": "1213",
+        "categoryId": "rpg-simulacion",
+        "discount": "1",
+        "image": "sekiroo.jpeg"
     }
 ]

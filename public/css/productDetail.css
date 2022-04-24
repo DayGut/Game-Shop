@@ -679,7 +679,7 @@ footer {
         display: flex;
         padding: 40px 20px;
         justify-content: space-around;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 

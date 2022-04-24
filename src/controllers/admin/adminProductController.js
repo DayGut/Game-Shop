@@ -46,7 +46,7 @@ module.exports = {
 
             // Paso 4 - Devolver respuesta (redirección)
 
-            res.redirect('/products/listProductos')    
+            res.redirect('admin/products/addProduct')    
         
     },
     

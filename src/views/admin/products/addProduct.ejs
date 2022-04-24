@@ -24,7 +24,7 @@
   </div>
       <div class="container" id="Container-admin">
         <label for="exampleDataList" class="form-label">Categorias</label>
-          <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="">
+          <input name="categoryId" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Seleccione Categoria">
           <datalist id="datalistOptions">
           <option value="aventura-simulacion">
           <option value="aventura-accion">
@@ -34,9 +34,11 @@
         </datalist>
       </div>
       <div class="form-check form-switch pt-3">
-          <input class="form-check-input" name="Stock" role="switch" id="flexSwitchCheckDefault">
+          <input class="form-check-input" name="Stock" type="checkbox" role="switch" id="flexSwitchCheckDefault">
           <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
         </div>
+
+        
         <div class="mb-3">
           <label for="formFile" class="form-label">Agregar archivo de imagen</label>
           <input class="form-control" type="file" id="formFile">

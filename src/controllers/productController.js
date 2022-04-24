@@ -11,7 +11,7 @@ module.exports = {
 
     detalle:(req,res)=>{
         res.render('products/productDetail', { 
-            titulo: "Detalle del producto",
+            titulo: "Detalle del producto"
         });
     },
     carrito:(req, res) => {
