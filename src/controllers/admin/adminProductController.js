@@ -33,7 +33,7 @@ module.exports = {
         categoryId: req.body.categoryId,
         discount: req.body.discount,
         image: "sekiroo.jpeg",
-        stock: req.body.stock 
+        stock: req.body.stock ? true : false
             }
             res.send(newProduct)
             // Paso 2 - Guardar el nuevo producto en el array de usuarios
@@ -46,8 +46,19 @@ module.exports = {
 
             // Paso 4 - Devolver respuesta (redirección)
 
-            res.redirect('admin/products/addProduct')    
+            res.redirect('/admin/productos/listar')    
         
+    },
+    editProduct: (req, res) => {
+        // 1- Obtener el id del producto
+     let idProducto = +req.params.id
+     let producto = products.find(producto => producto.id === idProducto)
+     //mostrar en la vista
+     res.render('admin/products/editProduct', { 
+         titulo : 'editar productos', 
+        producto 
+     })
+
     },
         productoEditado: (req, res) => {
             // 1- Obtener el id del producto
@@ -76,31 +87,28 @@ module.exports = {
             res.redirect('/admin/productos/listar')    
         
                 
-            });
+            })
     
 
-        },
+         },
 
-        editProduct: (req, res) => {
-            // 1- Obtener el id del producto
-         let idProducto = +req.params.id
-         let producto = products.find(producto => producto.id === idProducto)
-         //mostrar en la vista
-         res.render('admin/products/editProduct', { 
-             titulo : 'editar productos', 
-            producto 
-         })
-
+         productDelete: (req, res) => {
+            /* 1 - Obtener el id del producto a eliminar */
+            let idProducto = +req.params.id;
+            /* 2 - Buscar el producto dentro del array y eliminarlo */
+            products.forEach(producto => {
+                if(producto.id === idProducto){
+                    //Obtener la ubicación (índice) del producto a eliminar
+                    let productToDeleteIndex = products.indexOf(producto);
+                    //Elimino el producto del array
+                    products.splice(productToDeleteIndex, 1)
+                }
+            })
+            /* 3 - Sobreescribir el json */
+            writeProducts(products);
+            /* 4 - Enviar respuesta  */
+            res.redirect('/admin/productos/listar')
         }
-        // productDelete: (req, res) => {
-        //     // 1- Obtener el id del producto
-        //  let idProductos = +req.params.id
-        //  let productos = products.find(producto => producto.id === idProductos)
-        //  //mostrar en la vista
-        //  res.render('admin/products/listProduct', { 
-        //      titulo : 'borrar productos', 
-        //     productos  
-        //     })
         
 
     }
