@@ -28,13 +28,15 @@
                   <td><%- producto.projectId %></td>
                   <td><%- producto.stock %></td>
                   <td>
-                    <a href="" class="btn btn-success">
+                    <a href="/admin/productos/editar/<%- producto.id %> " class="btn btn-success">
                       <i class="fa-solid fa-pen-to-square"></i>
 
                     </a>
-                    <a href="" class="btn btn-danger">
+                    <form action='/admin/productos/eliminar/<%- producto.id %>?_method=delete' method="post">
+                    <button class="btn btn-danger" type="submit" >
                       <i class="fa-solid fa-trash-can"></i>
-                    </a>
+                    </button>
+                  </form>
                   </td>
                 </tr>
               <% }) %>  

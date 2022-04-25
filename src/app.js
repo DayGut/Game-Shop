@@ -15,7 +15,7 @@ const adminRouter = require('./routes/adminRouter')
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));//habilita el acceso a put y delete
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
