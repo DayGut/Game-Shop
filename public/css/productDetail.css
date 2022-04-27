@@ -345,10 +345,6 @@ a {
     transition: all 0.2s ease;
 }
 
-a:hover {
-    color: #333;
-}
-
 a.active {
     color: #333;
 }

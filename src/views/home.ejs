@@ -36,83 +36,36 @@
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
   <!--Fin Carrusel-->
-    <section class="contenedor">
-        <h2 class="titulo-seccion">Bienvenido</h2>
-        <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Maiores dicta aliquid sapiente esse</p>
-        <div class="productos">
-            <div class="producto">
-                <img src="/images/juego1.png" alt="juego 1">
-                <h3>Producto 1</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
 
-
-            <div class="producto">
-                <img src="/images/juego2.png" alt="juego 2">
-                <h3>Producto 2</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-
-            <div class="producto">
-                <img src="/images/juego3.jpeg" alt="juego 3">
-                <h3>Producto 3</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-            <div class="producto">
-                <img src="/images/juego1.png" alt="juego 1">
-                <h3>Producto 1</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-
-            <div class="producto">
-                <img src="/images/juego2.png" alt="juego 2">
-                <h3>Producto 2</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-
-            <div class="producto">
-                <img src="/images/juego3.jpeg" alt="juego 3">
-                <h3>Producto 3</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-            <div class="producto">
-                <img src="/images/juego1.png" alt="juego 1">
-                <h3>Producto 1</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-
-            <div class="producto">
-                <img src="/images/juego2.png" alt="juego 2">
-                <h3>Producto 2</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-
-            <div class="producto">
-                <img src="/images/juego3.jpeg" alt="juego 3">
-                <h3>Producto 3</h3>
-                <p class="copy">Lorem ipsum dolor sit amet</p>
-                <a class="boton-Prod" href="#">Comprar</a>
-            </div>
-
-
-            
-        </div>
-    </section>
+  <section class="contenedor">
+    <h2 class="titulo-seccion"> <%= products_title %> </h2>
+    <div class="productos">
+        <% products.forEach(product => { %>
+            <article class="producto">
+                <a class="product-detail" href="/products/detalle/<%= product.id %> ">
+                    <div>
+                        <img src="/images/<%= product.image %>" alt="">
+                    </div>
+                    <p class="product-name"><%= product.name %> </p>
+                    <p class="description-prod"><%= product.description %></p>
+                    <% if (product.discount > 0) { %>
+                        <span class="descuento"><%= product.discount %> de descuento%</span>
+                    <% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
+                    <div class="card__price">
+                        <% if (product.discount > 0) { %>
+                            <span class="card__priceSale--original">$ <%= product.price %> </span>$ <%= product.price - product.discount * product.price / 100 %>
+                        <% } else { %>
+                        $ <%= product.price %> 
+                        <% } %>
+                    </div>
+                   
+                </a>
+                    <a class="boton-Prod" href="#">Comprar</a>
+            </article>
+        <% }) %>
+    </div>
+</section>
+    
     <section class="ofertas">
         <div class="contenedor">
             <h2 class="titulo-seccion">Ofertas del Mes</h2>
@@ -126,6 +79,8 @@
         </div>
     </section>
 </main>
+
+
 <!-- fin main -->
 
 <!-- footer-->

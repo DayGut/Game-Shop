@@ -1,9 +1,13 @@
+const { products } = require('../data')
+
 module.exports= {
 
     index: (req, res) => {
         res.render("home", {
             titulo: "Home",
-            css:"home.css"
+            products_title: "Productos",
+            css:"home.css",
+            products
         })
         
     }

@@ -90,58 +90,7 @@
 
 
 /* Main */
-.contenedor{
-    
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 60px 0;
-}
 
-.titulo-seccion{
-    text-align: center;
-    font-size: 35px;
-    color: var(--texto-color-AzulMarino);
-    
-}
-
-.copy{
-    text-align: center;
-    color: var(--texto-color-AzulMarino);
-    margin: 20px 0;
-}
-.productos{
-    padding-top: 40px ;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap:wrap;
-}
-.producto{
-    width: 12em;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    margin: 5px;
-    align-items: center;
-    box-shadow: 2px 2px 5px var(--backgound-color-Azul);
-}
-.productos img{
-    width: 10em;
-    height: 12em;
-}
-.boton-Prod{
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-    padding: 15px 0;
-    background: var(--backgound-color-Azul);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 20px;
-    text-align: center;
-}
 
 .ofertas{
     background: #f2f2f2;

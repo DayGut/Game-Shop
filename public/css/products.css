@@ -1,77 +1,75 @@
-.product__card--container {
-    padding: 1rem;
+.contenedor{
+    
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
 }
 
-.products__card  {
-    min-width: 300px;
-    height: 500px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 10px rgba(35, 179, 232, 0.3);
-    border-radius: 10px;
-    padding: 1rem;
-    border: 1px solid var(--color-primary);
-}
-
-.products__card  .products__card--discount {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: var(--font-roboto);
-    padding: 5px;
-    font-size: 20px;
-    color: white;
-    background-color: var(--color-primary);  
-    border-radius: 0 10px 0 10px;  
-}
-
-.products__card .card__image--container{
-    height: 250px;
-    width: 100%;
-}
-
-.products__card .card__image--container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.products__card .card__name {
-    font-family: var(--font-bebas);
+.titulo-seccion{
     text-align: center;
-    font-size: var(--size-title);
-    border-bottom: 1px solid var(--color-primary);
-    text-align: center;
-    font-weight: 500;
+    font-size: 35px;
+    color: var(--texto-color-AzulMarino);
+    
+}
+
+.description-prod{
     width: 250px;
-    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.products__card .card__price {
-    font-family: var(--font-roboto);
     text-align: center;
-    font-size: var(--size-title);
-    color: var(--color-primary);
 }
-
+.productos{
+    padding-top: 40px ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+.producto{
+    width: 12em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    box-shadow: 2px 2px 5px var(--backgound-color-Azul);
+}
+.product-detail{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.product-name{
+    color: var(--texto-color-AzulMarino);
+}
+.productos img{
+    width: 10em;
+    height: 12em;
+}
+.boton-Prod{
+    
+    width: 100px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 0;
+    background: var(--backgound-color-Azul);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+}
+.boton-Prod:hover{
+    background-color: gray;
+    color: var(--backgound-color-Azul);
+}
 .products__card .card__priceSale--original {
     color: tomato;
     font-size: 24px;
     text-decoration: line-through;
     margin-right: 0.5rem;
-}
-
-.products__card .card__description {
-    width: 250px;
-    font-size: var(--size-paragraph);
-    font-family: var(--font-roboto);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }

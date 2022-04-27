@@ -1,4 +1,4 @@
-const { getProducts } = require('../data');
+const { products } = require('../data');
 
 
 module.exports = {
@@ -11,7 +11,8 @@ module.exports = {
 
     detalle:(req,res)=>{
         res.render('products/productDetail', { 
-            titulo: "Detalle del producto"
+            titulo: "Detalle",
+            products
         });
     },
     carrito:(req, res) => {
@@ -21,7 +22,7 @@ module.exports = {
     },
     todosLosProductos: (req, res) => {
         res.render("casa/home", {
-            titulo: "Productos", getProducts 
+            titulo: "Productos"
         })
 
     }

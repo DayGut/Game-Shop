@@ -31,6 +31,10 @@
                 <option value="Kharon's Crypt - Even Death May Die">
               </datalist>
             </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Agregar archivo de imagen</label>
+              <input class="form-control" type="file" id="formFile" name="image" value="<%=producto.image%>>
+            </div>
             <div class="form-check form-switch pt-3">
               <input <%= producto.stock ? "checked" : "" %>  class="form-check-input" name="stock" type="checkbox" role="switch" id="stock">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>

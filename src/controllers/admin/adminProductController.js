@@ -32,10 +32,10 @@ module.exports = {
         description:req.body.description,
         categoryId: req.body.categoryId,
         discount: req.body.discount,
-        image: "sekiroo.jpeg",
+        image: req.file ? req.file.formFile : "juego1.png",
         stock: req.body.stock ? true : false
             }
-            res.send(newProduct)
+
             // Paso 2 - Guardar el nuevo producto en el array de usuarios
 
             products.push(newProduct)
