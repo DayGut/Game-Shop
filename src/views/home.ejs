@@ -53,7 +53,7 @@
                     <% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
                     <div class="card__price">
                         <% if (product.discount > 0) { %>
-                            <span class="card__priceSale--original">$ <%= product.price %> </span>$ <%= product.price - product.discount * product.price / 100 %>
+                            <span class="precio-original">$ <%= product.price %> </span>$ <%= product.price - product.discount * product.price / 100 %>
                         <% } else { %>
                         $ <%= product.price %> 
                         <% } %>

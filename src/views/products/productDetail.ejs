@@ -29,11 +29,12 @@
       <div class="column-xs-12 column-md-5">
         <h1><%=producto.name%></h1>
         <h2><% if (producto.discount > 0) { %>
-          <span class="descuento"><%= producto.discount %> de descuento%</span>
+          <span class="descuento">%<%= producto.discount %>off</span>
       <% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
       <div class="card__price">
           <% if (producto.discount > 0) { %>
-              <span class="card__priceSale--original">$ <%= producto.price %> </span>$ <%= producto.price - producto.discount * producto.price / 100 %>
+              <span class="precio-original">$ <%= producto.price %> </span>$ 
+              <%= producto.price - producto.discount * producto.price / 100 %>
           <% } else { %>
           $ <%= producto.price %> 
           <% } %></h2>
