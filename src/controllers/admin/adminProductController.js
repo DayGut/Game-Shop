@@ -25,16 +25,14 @@ module.exports = {
             });
            
 
+            
             let newProduct = {
-                id: lastId + 1,
-        name: req.body.name,
-        price: req.body.price,
-        description:req.body.description,
-        categoryId: req.body.categoryId,
-        discount: req.body.discount,
-        image: req.file ? req.file.image : "juego1.png",
-        stock: req.body.stock ? true : false
+                ...req.body,//require todo con los ...
+                id: lastId +1,
+                image: req.file ? req.file.filename : "juego1.png",
+                stock: req.body.stock ? true: false
             }
+
 
             // Paso 2 - Guardar el nuevo producto en el array de usuarios
 
