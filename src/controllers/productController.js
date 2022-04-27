@@ -3,21 +3,22 @@ const { products } = require('../data');
 
 module.exports = {
     list: (req, res) => {
-           // 1- Obtener el id del producto
-     let idProducto = +req.params.id
-     let producto = products.find(producto => producto.id === idProducto)
-     //mostrar en la vista
+      
         res.render("products/products", {
-            producto,
+            products,
             titulo:"Productos"
         })
     },
     
 
     detalle:(req,res)=>{
+             // 1- Obtener el id del producto
+     let idProducto = +req.params.id
+     let producto = products.find(producto => producto.id === idProducto)
+     //mostrar en la vista
         res.render('products/productDetail', { 
-            titulo: "Detalle",
-            products
+            titulo: "Detalle de producto",
+            producto
         });
     },
     carrito:(req, res) => {

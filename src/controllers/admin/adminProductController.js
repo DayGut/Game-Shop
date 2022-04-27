@@ -32,7 +32,7 @@ module.exports = {
         description:req.body.description,
         categoryId: req.body.categoryId,
         discount: req.body.discount,
-        image: req.file ? req.file.formFile : "juego1.png",
+        image: req.file ? req.file.image : "juego1.png",
         stock: req.body.stock ? true : false
             }
 

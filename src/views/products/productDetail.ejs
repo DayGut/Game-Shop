@@ -9,9 +9,7 @@
       <div class="column-xs-12">
         <nav>
           <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Shop </a></li>
-            <li class="breadcrumb-item active">Elden ring</li>
+            <h3><%=titulo%></h3>
         </nav>
       </div>
     </div>
@@ -19,7 +17,7 @@
       <div class="column-xs-12 column-md-7">
         <div class="product-gallery">
           <div class="product-image">
-            <img class="active" src="/images/elden ring principal.jpg">
+            <img class="active" src="/images/<%=producto.image%>">
           </div>
           <ul class="image-list">
             <li class="image-item"><img src="/images/elden ring principal1.jpg"></li>
@@ -29,11 +27,18 @@
         </div>
       </div>
       <div class="column-xs-12 column-md-5">
-        <h1><%= titulo %></h1>
-        <h2>$59.99</h2>
+        <h1><%=producto.name%></h1>
+        <h2><% if (producto.discount > 0) { %>
+          <span class="descuento"><%= producto.discount %> de descuento%</span>
+      <% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
+      <div class="card__price">
+          <% if (producto.discount > 0) { %>
+              <span class="card__priceSale--original">$ <%= producto.price %> </span>$ <%= producto.price - producto.discount * producto.price / 100 %>
+          <% } else { %>
+          $ <%= producto.price %> 
+          <% } %></h2>
         <div class="description">
-          <p></p>
-          <p>Los descendientes de Márika, todos semidioses, reclamaron los fragmentos del Círculo de Elden conocidos como Grandes Runas. Fue entonces cuando la demencial corrupción de su renovada fuerza provocó una guerra: la Devastación.</p>
+          <p><%=producto.description%></p>
         </div>
         <button class="add-to-cart">Comprar</button>
       </div>
