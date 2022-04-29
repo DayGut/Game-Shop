@@ -75,17 +75,11 @@ module.exports = {
                     producto.description = req.body.description
     
                 }
-
-                // Paso 3 - Escribir el JSON de productos con el array actual
-
-            writeProducts(products)
-
-            // Paso 4 - Devolver respuesta (redirección)
-
-            res.redirect('/admin/productos/listar')    
-        
-                
             })
+                // Paso 3 - Escribir el JSON de productos con el array actual
+            writeProducts(products)
+            // Paso 4 - Devolver respuesta (redirección)
+            res.redirect('/admin/productos/listar')    
     
 
          },
