@@ -1,3 +1,5 @@
+const {users, writeUsers} = require('../data');
+
 
 module.exports = {
     login: (req, res) => {
