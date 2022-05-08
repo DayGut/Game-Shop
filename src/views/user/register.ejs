@@ -10,16 +10,22 @@
     <!--Register-->
     <div class="register-form">
         <h1>Form Registration</h1>
-        <form action="register" method="POST">
-            <label form="user">User name</label>
-            <input type="text" name="user" required>
+        <form action="/user/registro" method="post" enctype="multipart/form-data">
+            <label form="nombre">User name</label>
+            <input type="nombre" name="nombre" >
 
-            <label form="user">Full name</label>
-            <input type="text" name="name" required>
+            <label form="email">Full name</label>
+            <input type="email" name="email" >
 
 
             <label form="pass">Password</label>
-            <input type="password" name="pass" required>
+            <input type="password" name="pass" >
+
+            <div class="form--group">
+                <label for="avatar">Avatar</label>
+                <input type="file" name="avatar" id="avatar" >
+                
+            </div>
 
             <div style="display: inline;">
                 <a href="/" class="btn-cancel">Cancel</a>

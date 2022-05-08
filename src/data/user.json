@@ -1,91 +1,103 @@
-[{
-    "id": 1,
-    "Nombre": "Maddie",
-    "Apellido": "Brolan",
-    "DNI": 47366122,
-    "email": "mbrolan0@lulu.com",
-    "Contraseña": "JVmUjLxY3",
-    "Genero": "Male"
-},
-{
-    "id": 2,
-    "Nombre": "Muffin",
-    "Apellido": "Sokill",
-    "DNI": 41950762,
-    "email": "msokill1@disqus.com",
-    "Contraseña": "nG3MY0rtur",
-    "Genero": "Female"
-},
-{
-    "id": 3,
-    "Nombre": "Fredrika",
-    "Apellido": "Dorro",
-    "DNI": 5468575,
-    "email": "fdorro2@miibeian.gov.cn",
-    "Contraseña": "Q0Sdcffu",
-    "Genero": "Female"
-},
-{
-    "id": 4,
-    "Nombre": "Hamnet",
-    "Apellido": "Kabsch",
-    "DNI": 16930399,
-    "email": "hkabsch3@accuweather.com",
-    "Contraseña": "lfW9dKcoS5",
-    "Genero": "Male"
-},
-{
-    "id": 5,
-    "Nombre": "Tasia",
-    "Apellido": "Hansell",
-    "DNI": 41313062,
-    "email": "thansell4@usgs.gov",
-    "Contraseña": "9isUHQnsY",
-    "Genero": "Female"
-},
-{
-    "id": 6,
-    "Nombre": "Dasie",
-    "Apellido": "Yakubovics",
-    "DNI": 27997820,
-    "email": "dyakubovics5@usda.gov",
-    "Contraseña": "Hm7UvFG",
-    "Genero": "Female"
-},
-{
-    "id": 7,
-    "Nombre": "Willa",
-    "Apellido": "Gerckens",
-    "DNI": 27546494,
-    "email": "wgerckens6@qq.com",
-    "Contraseña": "DZ6JgqRp",
-    "Genero": "Female"
-},
-{
-    "id": 8,
-    "Nombre": "Agretha",
-    "Apellido": "Boutton",
-    "DNI": 6536548,
-    "email": "aboutton7@naver.com",
-    "Contraseña": "WFihKhtGk",
-    "Genero": "Female"
-},
-{
-    "id": 9,
-    "Nombre": "Dione",
-    "Apellido": "Benoey",
-    "DNI": 7518974,
-    "email": "dbenoey8@pagesperso-orange.fr",
-    "Contraseña": "9g95TVWmpWeq",
-    "Genero": "Female"
-},
-{
-    "id": 10,
-    "Nombre": "Ingra",
-    "Apellido": "Gisbey",
-    "DNI": 16537878,
-    "email": "igisbey9@eventbrite.com",
-    "Contraseña": "WycUYyjM",
-    "Genero": "Male"
-}
+[
+    {
+        "id": 1,
+        "Nombre": "Maddie",
+        "Apellido": "Brolan",
+        "DNI": 47366122,
+        "email": "mbrolan0@lulu.com",
+        "password": "JVmUjLxY3",
+        "Genero": "Male",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    
+    {
+        "id": 4,
+        "Nombre": "Hamnet",
+        "Apellido": "Kabsch",
+        "DNI": 16930399,
+        "email": "hkabsch3@accuweather.com",
+        "password": "lfW9dKcoS5",
+        "Genero": "Male",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    {
+        "id": 5,
+        "Nombre": "Tasia",
+        "Apellido": "Hansell",
+        "DNI": 41313062,
+        "email": "thansell4@usgs.gov",
+        "password": "9isUHQnsY",
+        "Genero": "Female",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    {
+        "id": 6,
+        "Nombre": "Dasie",
+        "Apellido": "Yakubovics",
+        "DNI": 27997820,
+        "email": "dyakubovics5@usda.gov",
+        "password": "Hm7UvFG",
+        "Genero": "Female",
+        "avatar": "user-avatar.jpeg",
+        "rol": "admin"
+    },
+    {
+        "id": 7,
+        "Nombre": "Willa",
+        "Apellido": "Gerckens",
+        "DNI": 27546494,
+        "email": "wgerckens6@qq.com",
+        "password": "DZ6JgqRp",
+        "Genero": "Female",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    {
+        "id": 8,
+        "Nombre": "Agretha",
+        "Apellido": "Boutton",
+        "DNI": 6536548,
+        "email": "aboutton7@naver.com",
+        "password": "WFihKhtGk",
+        "Genero": "Female",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    {
+        "id": 9,
+        "Nombre": "Dione",
+        "Apellido": "Benoey",
+        "DNI": 7518974,
+        "email": "dbenoey8@pagesperso-orange.fr",
+        "password": "9g95TVWmpWeq",
+        "Genero": "Female",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    {
+        "id": 10,
+        "Nombre": "Ingra",
+        "Apellido": "Gisbey",
+        "DNI": 16537878,
+        "email": "igisbey9@eventbrite.com",
+        "password": "WycUYyjM",
+        "Genero": "Male",
+        "avatar": "user-avatar.jpeg",
+        "rol": "usuario"
+    },
+    {
+        "id": "101",
+        "email": "dayday@gmail.com",
+        "avatar": "1652028224629_img_.jpg",
+        "rol": "user"
+    },
+    {
+        "id": "1011",
+        "email": "dayday@gmail.com",
+        "avatar": "1652037905346_img_.jpeg",
+        "rol": "user"
+    }
 ]
