@@ -1,103 +1,25 @@
 [
     {
         "id": 1,
-        "Nombre": "Maddie",
-        "Apellido": "Brolan",
-        "DNI": 47366122,
-        "email": "mbrolan0@lulu.com",
-        "password": "JVmUjLxY3",
-        "Genero": "Male",
+        "name": "asd",
+        "email": "asd@gmail.com",
         "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    
-    {
-        "id": 4,
-        "Nombre": "Hamnet",
-        "Apellido": "Kabsch",
-        "DNI": 16930399,
-        "email": "hkabsch3@accuweather.com",
-        "password": "lfW9dKcoS5",
-        "Genero": "Male",
-        "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    {
-        "id": 5,
-        "Nombre": "Tasia",
-        "Apellido": "Hansell",
-        "DNI": 41313062,
-        "email": "thansell4@usgs.gov",
-        "password": "9isUHQnsY",
-        "Genero": "Female",
-        "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    {
-        "id": 6,
-        "Nombre": "Dasie",
-        "Apellido": "Yakubovics",
-        "DNI": 27997820,
-        "email": "dyakubovics5@usda.gov",
-        "password": "Hm7UvFG",
-        "Genero": "Female",
-        "avatar": "user-avatar.jpeg",
-        "rol": "admin"
-    },
-    {
-        "id": 7,
-        "Nombre": "Willa",
-        "Apellido": "Gerckens",
-        "DNI": 27546494,
-        "email": "wgerckens6@qq.com",
-        "password": "DZ6JgqRp",
-        "Genero": "Female",
-        "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    {
-        "id": 8,
-        "Nombre": "Agretha",
-        "Apellido": "Boutton",
-        "DNI": 6536548,
-        "email": "aboutton7@naver.com",
-        "password": "WFihKhtGk",
-        "Genero": "Female",
-        "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    {
-        "id": 9,
-        "Nombre": "Dione",
-        "Apellido": "Benoey",
-        "DNI": 7518974,
-        "email": "dbenoey8@pagesperso-orange.fr",
-        "password": "9g95TVWmpWeq",
-        "Genero": "Female",
-        "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    {
-        "id": 10,
-        "Nombre": "Ingra",
-        "Apellido": "Gisbey",
-        "DNI": 16537878,
-        "email": "igisbey9@eventbrite.com",
-        "password": "WycUYyjM",
-        "Genero": "Male",
-        "avatar": "user-avatar.jpeg",
-        "rol": "usuario"
-    },
-    {
-        "id": "101",
-        "email": "dayday@gmail.com",
-        "avatar": "1652028224629_img_.jpg",
         "rol": "user"
     },
     {
-        "id": "1011",
-        "email": "dayday@gmail.com",
-        "avatar": "1652037905346_img_.jpeg",
+        "id": 2,
+        "name": "asd",
+        "email": "asd@asd.com",
+        "password": "1234",
+        "avatar": "user-avatar.jpeg",
+        "rol": "user"
+    },
+    {
+        "id": 3,
+        "name": "asd1",
+        "email": "asd1@asd.com",
+        "password": "1234",
+        "avatar": "1652062028946_img_.png",
         "rol": "user"
     }
 ]
