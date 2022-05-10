@@ -1,4 +1,5 @@
 const {users, writeUsers} = require('../data');
+const bcrypt = require('bcryptjs');
 
 
 module.exports = {
@@ -20,7 +21,7 @@ module.exports = {
             rol: user.rol,
         }
 
-       //res.locals.user = req.session.user
+        //res.locals.user = req.session.user
 
        res.redirect('/')
     },
@@ -50,7 +51,7 @@ module.exports = {
                     id: lastId + 1,
                     name: req.body.name,
                     email: req.body.email,
-                    password: req.body.pass,
+                    password: bcrypt.hashSync(req.body.pass, 10),
                     avatar: req.file ? req.file.filename : "user-avatar.jpeg",
                     rol: "user"
                 }
