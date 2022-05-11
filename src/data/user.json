@@ -1,1 +1,81 @@
-[{"id":1,"name":"asd","email":"asd@gmail.com","avatar":"user-avatar.jpeg","rol":"user"},{"id":2,"name":"asd","email":"asd@asd.com","password":"1234","avatar":"user-avatar.jpeg","rol":"user"},{"id":3,"name":"asd1","email":"asd1@asd.com","password":"1234","avatar":"1652062028946_img_.png","rol":"user"},{"id":4,"name":"day","email":"dayday@gmail.com","password":"123567899","avatar":"1652182256052_img_.png","rol":"user"},{"id":5,"name":"day","email":"dayjhggfr@gmail.com","password":"$2a$10$Mmz9SWqGUFz6KyFN45N97.tF/mzhScBZB/wXUGs.GqOgT21pmqmlO","avatar":"user-avatar.jpeg","rol":"user"},{"id":6,"name":"daianaday","email":"daianaday@gmail.com","password":"$2a$10$GLRyTDzu6djQx2s1pydA4OxXQC9TQyo2F9oWLQb1Y5yh5A2mx3hFS","avatar":"1652184179263_img_.png","rol":"user"},{"id":7,"name":"daiana","email":"dayg@email.com","password":"$2a$10$FqlDw7Ee0GDG7EvMDpoyxuz50waUyIFr3WHqOoE8MUlzj3LsLc0iK","avatar":"1652184953352_img_.webp","rol":"user"},{"id":8,"name":"day","email":"day@email.com","password":"$2a$10$rp6vEIx5JO3ek94KSKBnru1oQpm3l4/mN.QmG0TK/sqgd4AnkFPBi","avatar":"1652185403555_img_.webp","rol":"user"},{"id":9,"name":"daiana","email":"dayday@email.com","password":"$2a$10$LYoPXKPK.9Dw.haMjG9hpeJgC9jcPPxYQFFy3zwApPmHeUOL2Hkcu","avatar":"1652185478499_img_.png","rol":"user"},{"id":10,"name":"daiana","email":"dayday@email.com","password":"$2a$10$j7mb.Fz6qTI6lpggA2hJceQQ27KOgLwAUZMtEpHi3mvK4N87W4beS","avatar":"1652185954318_img_.png","rol":"user"}]
+[
+    {
+        "id": 1,
+        "name": "asd",
+        "email": "asd@gmail.com",
+        "avatar": "user-avatar.jpeg",
+        "rol": "user"
+    },
+    {
+        "id": 2,
+        "name": "asd",
+        "email": "asd@asd.com",
+        "password": "1234",
+        "avatar": "user-avatar.jpeg",
+        "rol": "user"
+    },
+    {
+        "id": 3,
+        "name": "asd1",
+        "email": "asd1@asd.com",
+        "password": "1234",
+        "avatar": "1652062028946_img_.png",
+        "rol": "admin"
+    },
+    {
+        "id": 4,
+        "name": "day",
+        "email": "dayday@gmail.com",
+        "password": "123567899",
+        "avatar": "1652182256052_img_.png",
+        "rol": "admin"
+    },
+    {
+        "id": 5,
+        "name": "day",
+        "email": "dayjhggfr@gmail.com",
+        "password": "$2a$10$Mmz9SWqGUFz6KyFN45N97.tF/mzhScBZB/wXUGs.GqOgT21pmqmlO",
+        "avatar": "user-avatar.jpeg",
+        "rol": "user"
+    },
+    {
+        "id": 6,
+        "name": "daianaday",
+        "email": "daianaday@gmail.com",
+        "password": "$2a$10$GLRyTDzu6djQx2s1pydA4OxXQC9TQyo2F9oWLQb1Y5yh5A2mx3hFS",
+        "avatar": "1652184179263_img_.png",
+        "rol": "user"
+    },
+    {
+        "id": 7,
+        "name": "daiana",
+        "email": "dayg@email.com",
+        "password": "$2a$10$FqlDw7Ee0GDG7EvMDpoyxuz50waUyIFr3WHqOoE8MUlzj3LsLc0iK",
+        "avatar": "1652184953352_img_.webp",
+        "rol": "user"
+    },
+    {
+        "id": 8,
+        "name": "day",
+        "email": "day@email.com",
+        "password": "$2a$10$rp6vEIx5JO3ek94KSKBnru1oQpm3l4/mN.QmG0TK/sqgd4AnkFPBi",
+        "avatar": "1652185403555_img_.webp",
+        "rol": "user"
+    },
+    {
+        "id": 9,
+        "name": "daiana",
+        "email": "dayday@email.com",
+        "password": "$2a$10$LYoPXKPK.9Dw.haMjG9hpeJgC9jcPPxYQFFy3zwApPmHeUOL2Hkcu",
+        "avatar": "1652185478499_img_.png",
+        "rol": "user"
+    },
+    {
+        "id": 10,
+        "name": "daiana",
+        "email": "dayday@email.com",
+        "password": "$2a$10$j7mb.Fz6qTI6lpggA2hJceQQ27KOgLwAUZMtEpHi3mvK4N87W4beS",
+        "avatar": "1652185954318_img_.png",
+        "rol": "user"
+    }
+]

@@ -13,7 +13,7 @@ let validateLogin = [
         }
         return false;
     }).withMessage("Email o contraseña incorrecto"),
-    check("password")
+    check("pass")
         .notEmpty().withMessage("Ingrese su contraseña"),
 ];
 
