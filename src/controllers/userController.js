@@ -20,6 +20,14 @@ module.exports = {
             avatar: user.avatar,
             rol: user.rol,
         }
+        if(req.body.remember){
+            const TIME_IN_MILISECONDS = 60000; 
+            res.cookie("pagCookie",req.session.user,{
+                expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                httpOnly: true,
+                secure: true
+            })
+        }
 
         //res.locals.user = req.session.user
 
