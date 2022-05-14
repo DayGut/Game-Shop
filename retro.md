@@ -47,3 +47,15 @@
 <p>HACER MENOS: procastinar, crear conflictos en el repositorio.</p>
 
 <p>DEJAR DE HACER:Trabajar sin comunicacion.</p>
+
+<h1>Retrospectiva Sprint 5</h1>
+
+<p>HACER MAS: Agregar fechas de vencimiento a las tareas, respetar los plazos de entrega segun Trello,  practicar los temas </p>
+
+<p>SEGUIR HACIENDO: Reuniones por zoom, comunicarnos, Dailys, practicar los temas,  </p>
+
+<p>EMPEZAR A HACER:Implementar de manera mas efectiva las daylis, cumplir con los plazos de entrega,Tomarse un dia previo para investigar los temas a desarrollar en el sprint antes de repartir las tarjetas  </p>
+
+<p>HACER MENOS:No atrarse con los plazos de entrega, </p>
+
+<p>DEJAR DE HACER:Perder el ritmo de trabajo, procastinar </p

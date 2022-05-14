@@ -6,7 +6,7 @@
 
 <h1>Dayli sprint 5</h1>
 
-<p>● Qué hizo ayer: </p>
-<p>● Si se encontró con algún impedimento: </p>
-<p>● Qué va a hacer hoy: </p>
+<p>● Qué hizo ayer:Se trabajo en las tareas de cada uno para el sprint 5  </p>
+<p>● Si se encontró con algún impedimento:hubo correciones del sprint 4 las cuales todavia no se han resuelto </p>
+<p>● Qué va a hacer hoy:Seguir trabajando en en el proyecto en conjunto</p>
 
