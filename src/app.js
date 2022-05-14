@@ -5,7 +5,7 @@ const PORT = 3000;
 const methodOverride = require('method-override');
 const process = require('process');
 require('dotenv').config();
-let session = require('express-session')
+const session = require('express-session')
 
 //routes
 const indexRouter = require('./routes/indexRouter');

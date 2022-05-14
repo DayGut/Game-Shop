@@ -7,7 +7,8 @@ const loginValidator = require('../validations/loginValidator');
 
 /*Renderiza vista login */
 router.get('/login', usersController.login);
-router.post('/login', usersController.processlogin);
+//router.post('/login', usersController.processlogin);
+router.post('/login', loginValidator, usersController.processlogin);
 /* Renderiza vista registro */
 router.get('/registro', usersController.registro);
 /* POST - Crea un nuevo usuario */

@@ -44,7 +44,7 @@ module.exports = {
           
         }else{
             
-            res.render('users/login', {
+            res.render('user/login', {
                 titulo: "Login",
                 css: "login.css",
                 errors: errors.mapped(),
