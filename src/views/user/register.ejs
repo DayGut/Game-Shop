@@ -11,19 +11,35 @@
     <div class="register-form">
         <h1>Form Registration</h1>
         <form action="/user/registro" method="post" enctype="multipart/form-data">
+            <div>
             <label form="nombre">User name</label>
             <input type="text" name="name" >
-
+            <% if (locals.errors && errors.name) { %>
+                <small class="text-danger"><%= errors.name.msg %></small>
+            <% } %>
+            </div>
+            <div>
             <label form="email">E-mail</label>
             <input type="email" name="email" >
-
+            <% if (locals.errors && errors.email) { %>
+                <small class="text-danger"><%= errors.email.msg %></small>
+            <% } %>
+            </div>
+            <div>
 
             <label form="pass">Password</label>
             <input type="password" name="pass" >
-
+            <% if (locals.errors && errors.pass) { %>
+                <small class="text-danger"><%= errors.pass.msg %></small>
+            <% } %>
+        </div>
+        <div>
             <label form="pass2">Repeat Password</label>
-            <input type="password" name="pass" >
-
+            <input type="password" name="pass2" >
+            <% if (locals.errors && errors.pass2) { %>
+                <small class="text-danger"><%= errors.pass2.msg %></small>
+            <% } %>
+        </div>
             <div class="form--group">
                 <label for="avatar">Avatar</label>
                 <input type="file" name="avatar" id="avatar" >
@@ -34,6 +50,9 @@
                 <label class="form-check-label" for="terms">
                     Acepto los términos y condiciones
                 </label>
+                <% if (locals.errors && errors.terms) { %>
+                    <small class="text-danger"><%= errors.terms.msg %></small>
+                <% } %>
             </div>   
             <div class="botones-registro">
                 <a href="/" class="btn-cancel">Cancelar</a>

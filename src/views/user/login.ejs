@@ -16,7 +16,13 @@
     </div> -->
         <h2>Login</h2>
         <form action="/user/login" method="POST">
+            <% if (locals.errors && errors.email) { %>
+                <small class="text-danger"><%= errors.email.msg %></small>
+            <% } %>
             <input type="email" name="email" id="email" placeholder="user" >
+            <% if (locals.errors && errors.password) { %>
+                <small class="text-danger"><%= errors.password.msg %></small>
+            <% } %>
             <input type="password" name="password" id="password" placeholder="password" > 
             <input type="submit" class="btn-login" value="login">
         </form>

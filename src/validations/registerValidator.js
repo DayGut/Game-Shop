@@ -6,7 +6,7 @@ let validateRegister = [
     .notEmpty().withMessage("El nombre es requerido")
     .isLength({ min:2}).withMessage("ingrese nombre valido"),
  check("email")
-    .notEmpty().withMessage("Se Requiere email").bail()
+    .notEmpty().withMessage("Se Requiere email")
     .isEmail().withMessage("ingrese un email valido"),
     body("email").custom((value)=>{
       let user = users.find(user => user.email === value);
@@ -22,7 +22,7 @@ let validateRegister = [
       .notEmpty().withMessage("Reingrese su contraseña"),
 
   body("pass2").custom((value, { req }) => {
-      if(value !== req.body.password){
+      if(value !== req.body.pass){
           return false;
       }
       return true;
