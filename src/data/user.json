@@ -20,7 +20,11 @@
         "email": "asd1@asd.com",
         "password": "1234",
         "avatar": "1652062028946_img_.png",
+<<<<<<< HEAD
         "rol": "user"
+=======
+        "rol": "admin"
+>>>>>>> ac736871fd73e248d0ca0498d9f14149a7df5d0e
     },
     {
         "id": 4,
@@ -28,7 +32,11 @@
         "email": "dayday@gmail.com",
         "password": "123567899",
         "avatar": "1652182256052_img_.png",
+<<<<<<< HEAD
         "rol": "user"
+=======
+        "rol": "admin"
+>>>>>>> ac736871fd73e248d0ca0498d9f14149a7df5d0e
     },
     {
         "id": 5,
@@ -77,6 +85,7 @@
         "password": "$2a$10$j7mb.Fz6qTI6lpggA2hJceQQ27KOgLwAUZMtEpHi3mvK4N87W4beS",
         "avatar": "1652185954318_img_.png",
         "rol": "user"
+<<<<<<< HEAD
     },
     {
         "id": 11,
@@ -101,5 +110,7 @@
         "password": "$2a$10$cc8cliuU/4kghQFeSkmAN..5igFyGsU6RkB7yLsvAnhV3RHvSpGlK",
         "avatar": "user-avatar.jpeg",
         "rol": "user"
+=======
+>>>>>>> ac736871fd73e248d0ca0498d9f14149a7df5d0e
     }
 ]

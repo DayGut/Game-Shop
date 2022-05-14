@@ -1,5 +1,6 @@
 const {users, writeUsers} = require('../data');
 const bcrypt = require('bcryptjs');
+const {validationResult} = require('express-validator')
 
 
 module.exports = {
@@ -13,12 +14,23 @@ module.exports = {
     processlogin: (req, res) =>{
         let user = users.find(user => user.email === req.body.email);
         console.log(user);
-        req.user = {
-            id: user.id, 
-            email: user.email,
-            password: user.pass,
-            avatar: user.avatar,
-            rol: user.rol,
+       
+
+        if (typeof user != 'undefined') {
+            req.user = {
+                id: user.id, 
+                email: user.email,
+                password: user.pass,
+                avatar: user.avatar,
+                rol: user.rol,
+            }
+            res.redirect('/')
+        } else {
+            res.render('user/login', {
+                titulo:"Login",
+                css:"login.css",
+                session: req.session
+            })
         }
         if(req.body.remember){
             const TIME_IN_MILISECONDS = 60000; 
@@ -31,7 +43,7 @@ module.exports = {
 
         //res.locals.user = req.session.user
 
-       res.redirect('/')
+      
     },
 
     registro: (req, res) => {
@@ -43,6 +55,9 @@ module.exports = {
     },
    
         processRegister: (req, res) => {
+            //verifica si hubo error
+            let errors = validationResult(req);
+            res.send(errors)
                 //Registrar un usuario - Guardarlo en el JSON
                 // Paso 1 - Crear un objeto User
 
