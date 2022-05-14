@@ -3,7 +3,9 @@
 
     <%- include('../partials/head')  %> 
 
+
 <body>
+    
     <!-- header-->
     <%- include('../partials/header')  %> 
     <!--fin header-->
@@ -16,10 +18,26 @@
     </div> -->
         <h2>Login</h2>
         <form action="/user/login" method="POST">
+            <% if (locals.errors && errors.email) { %>
+                <small class="text-danger"><%= errors.email.msg %></small>
+            <% } %>
             <input type="email" name="email" id="email" placeholder="user" >
+            <% if (locals.errors && errors.password) { %>
+                <small class="text-danger"><%= errors.password.msg %></small>
+            <% } %>
             <input type="password" name="password" id="password" placeholder="password" > 
             <input type="submit" class="btn-login" value="login">
         </form>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" name="remember" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">
+                Recordarme
+            </label>
+        </div>
+        <% if (locals.errors && errors.custom) { %>
+            <small class="text-danger"><%= errors.custom.msg %></small>
+        <% } %>
         <a href="/user/registro" class="btn-register">Register</a>
         <div class="envios-d">
                 <label><input name="remember" type="checkbox" id="remember" > Recordar</label><br>

@@ -1,7 +1,8 @@
 module.exports= {
     index: (req, res) => {
         res.render('admin/adminIndex',{
-            titulo:'Administrador'
+            titulo:'Administrador',
+            session: req.session
         })
     }
 }

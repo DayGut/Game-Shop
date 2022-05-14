@@ -11,6 +11,9 @@
         <div class="header_avatar">
                 <div class="avatar_session"></div>
                 <img src="images/avatar" alt="avatar"> 
+                <% if (locals.session) { %>
+                    <p><%= session.user.name %></p>
+                <% } %> 
            
         </div>
         <ul class="menu">

@@ -6,7 +6,8 @@ module.exports = {
       
         res.render("products/products", {
             products,
-            titulo:"Productos"
+            titulo:"Productos",
+            session: req.session
         })
     },
     

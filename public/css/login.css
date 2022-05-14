@@ -1,4 +1,11 @@
 /*Login*/
+
+ .login-fondo{
+  background-image: url('/images/fondo.jpeg');
+  min-height: 100vh;
+  background-size: contain;
+}
+
 .login-form{
     width: 300px;
     margin: 100px auto;
