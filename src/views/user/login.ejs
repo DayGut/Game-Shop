@@ -3,7 +3,9 @@
 
     <%- include('../partials/head')  %> 
 
+
 <body>
+    
     <!-- header-->
     <%- include('../partials/header')  %> 
     <!--fin header-->
@@ -26,6 +28,16 @@
             <input type="password" name="password" id="password" placeholder="password" > 
             <input type="submit" class="btn-login" value="login">
         </form>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" name="remember" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">
+                Recordarme
+            </label>
+        </div>
+        <% if (locals.errors && errors.custom) { %>
+            <small class="text-danger"><%= errors.custom.msg %></small>
+        <% } %>
         <a href="/user/registro" class="btn-register">Register</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

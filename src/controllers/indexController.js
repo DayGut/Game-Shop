@@ -7,7 +7,8 @@ module.exports= {
             titulo: "Home",
             products_title: "Productos",
             css:"home.css",
-            products
+            products,
+            session: req.session
         })
         
     }

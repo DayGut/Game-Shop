@@ -6,14 +6,14 @@ let validateLogin = [
     check("email")
         .notEmpty().withMessage("Ingrese su email").bail()
         .isEmail().withMessage("Email no valido").bail(),
-    body("custom").custom((value, { req })=>{
-        let user = users.find(user => user.email === req.body.email);
+    body("email").custom((value, { req })=>{
+        let user = users.find(user => user.email === value);
         if(bcrypt.compareSync(user.pass === req.body.pass)){
             return true;
         }
         return false;
     }).withMessage("Email o contraseña incorrecto"),
-    check("pass")
+    check("password")
         .notEmpty().withMessage("Ingrese su contraseña"),
 ];
 

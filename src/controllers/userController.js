@@ -19,14 +19,14 @@ module.exports = {
             
             let user= users.find(user => user.email === req.body.email)
             
-            req.session= {
+            req.session.user= {
                 id: user .id,
                 name:user.name,
                 email: user.email,
                 avatar:user.avatar,
                 rol: user.rol
             }
-            console.log(req.session)
+           res.send(req.session.user)
             
 
            if(req.body.remember){
@@ -106,7 +106,7 @@ module.exports = {
         }
     },
     logout: (req, res) => {
-        req.session.destroy();
+        req.session.destroy();//destruye la session
 
         if(req.cookies.formarCookie){
             res.cookie('formarCookie', "", { maxAge: -1 })

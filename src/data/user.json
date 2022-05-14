@@ -21,5 +21,13 @@
         "password": "$2a$08$0Gyx66nhJW9BlHHT6Li/qefSu3mXdWAeeHofzy/pXXPCEq2I7k87C",
         "avatar": "user-avatar.jpeg",
         "rol": "user"
+    },
+    {
+        "id": 4,
+        "name": "daiana",
+        "email": "day@gmail.com",
+        "password": "$2a$08$8r0673ntStlRx41cahcPMO14YTQJAmJ6tMkGlQ1C8MYu9d.elnI0m",
+        "avatar": "1652543124415_img_.webp",
+        "rol": "user"
     }
 ]

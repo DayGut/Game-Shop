@@ -25,4 +25,8 @@
       text-decoration: none;
   
   }
-  
+  /* mensaje de error */
+
+.text-danger{
+  color: red;
+}

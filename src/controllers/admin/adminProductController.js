@@ -4,12 +4,14 @@ module.exports = {
     list: (req, res) => {
         res.render('admin/products/listProduct', {
             titulo: "Listado de productos",
-            producto: products
+            producto: products,
+            session: req.session
         })
     },
     productAdd: (req, res) => {
         res.render('admin/products/addProduct', {
-            titulo: "Agregar producto"
+            titulo: "Agregar producto",
+            session: req.session
         })
     },
         productCreate: (req, res) => {

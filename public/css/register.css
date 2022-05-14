@@ -15,7 +15,11 @@
     color: var(--texto-color-AzulMarino);
 }
 
+/* mensaje de error */
 
+.text-danger{
+  color: red;
+}
 .login-form input[type="password"],
 .login-form input[type="text"]{
     width: 100%;
