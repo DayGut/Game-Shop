@@ -58,4 +58,4 @@
 
 <p>HACER MENOS:No atrarse con los plazos de entrega, </p>
 
-<p>DEJAR DE HACER:Perder el ritmo de trabajo, procastinar </p
+<p>DEJAR DE HACER:Perder el ritmo de trabajo, procastinar </p>
