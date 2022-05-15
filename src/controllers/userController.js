@@ -1,13 +1,13 @@
 const {users, writeUsers} = require('../data');
 const bcrypt = require('bcryptjs');
-const {validationResult} = require('express-validator')
+const {validationResult} = require('express-validator');
 
 
 module.exports = {
     
     login: (req, res) => {
+
         res.render('user/login', {
-        
             titulo:"Login",
             css:"login.css",
             session: req.session
@@ -26,32 +26,7 @@ module.exports = {
                 avatar:user.avatar,
                 rol: user.rol
             }
-           res.send(req.session.user)
-            
 
-           if(req.body.remember){
-                const TIME_IN_MILISECONDS = 60000;
-                res.cookie('formarCookie', req.session.user, {
-                    expires: new Date(Date.now() + TIME_IN_MILISECONDS),
-                    httpOnly: true,
-                    secure: true
-                })
-            }
-
-            res.locals.user = req.session.user
-
-            res.redirect('/')
-          
-        }else{
-            
-            res.render('user/login', {
-                titulo: "Login",
-                css: "login.css",
-                errors: errors.mapped(),
-                session: req.session
-            })
-        }
-<<<<<<< HEAD
         if(req.body.remember){
             const TIME_IN_MILISECONDS = 60000; 
             res.cookie("pagCookie",req.session.user,{
@@ -60,12 +35,19 @@ module.exports = {
                 secure: true
             })
         }
+        res.locals.user = req.session.user
 
-        //res.locals.user = req.session.user
-
-      
-=======
->>>>>>> c4d4524c83a9aa620595d9b735c8aa96302d8a84
+        res.redirect('/')
+        
+        }else{
+            
+        res.render('user/login', {
+            titulo: "Login",
+            css: "login.css",
+            errors: errors.mapped(),
+            session: req.session
+        })
+    }
     },
 
     registro: (req, res) => {
@@ -98,8 +80,7 @@ module.exports = {
                     rol: "user"
                 }
     
-            
-
+        
             users.push(newUser)
 
             
@@ -123,8 +104,8 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();//destruye la session
 
-        if(req.cookies.formarCookie){
-            res.cookie('formarCookie', "", { maxAge: -1 })
+        if(req.cookies.pagCookie){
+            res.cookie('pagCookie', '', { maxAge: -1 })
         }
 
         res.redirect('/')

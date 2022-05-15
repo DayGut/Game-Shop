@@ -15,40 +15,23 @@
         "rol": "user"
     },
     {
-        "id": 3,
-<<<<<<< HEAD
-        "name": "asd1",
-        "email": "asd1@asd.com",
-        "password": "1234",
-        "avatar": "1652062028946_img_.png",
-<<<<<<< HEAD
-        "rol": "user"
-=======
-        "rol": "admin"
->>>>>>> ac736871fd73e248d0ca0498d9f14149a7df5d0e
-    },
-    {
         "id": 4,
         "name": "day",
         "email": "dayday@gmail.com",
         "password": "123567899",
         "avatar": "1652182256052_img_.png",
-<<<<<<< HEAD
         "rol": "user"
-=======
-        "rol": "admin"
->>>>>>> ac736871fd73e248d0ca0498d9f14149a7df5d0e
     },
     {
         "id": 5,
         "name": "day",
         "email": "dayjhggfr@gmail.com",
-        "password": "$2a$10$Mmz9SWqGUFz6KyFN45N97.tF/mzhScBZB/wXUGs.GqOgT21pmqmlO",
-=======
+        "password": "$2a$10$Mmz9SWqGUFz6KyFN45N97.tF/mzhScBZB/wXUGs.GqOgT21pmqmlO"
+    },
+    {
         "name": "admin",
         "email": "admin@admin.com",
         "password": "$2a$08$0Gyx66nhJW9BlHHT6Li/qefSu3mXdWAeeHofzy/pXXPCEq2I7k87C",
->>>>>>> c4d4524c83a9aa620595d9b735c8aa96302d8a84
         "avatar": "user-avatar.jpeg",
         "rol": "user"
     },
@@ -59,7 +42,6 @@
         "password": "$2a$08$8r0673ntStlRx41cahcPMO14YTQJAmJ6tMkGlQ1C8MYu9d.elnI0m",
         "avatar": "1652543124415_img_.webp",
         "rol": "user"
-<<<<<<< HEAD
     },
     {
         "id": 11,
@@ -79,12 +61,18 @@
     },
     {
         "id": 13,
-        "name": "",
-        "email": "",
-        "password": "$2a$10$cc8cliuU/4kghQFeSkmAN..5igFyGsU6RkB7yLsvAnhV3RHvSpGlK",
-        "avatar": "user-avatar.jpeg",
+        "name": "day",
+        "email": "daiana@gmail.com",
+        "password": "$2a$08$9JY4naf0zZovbaDiCCkODucKf56E3Rjn.kniC/A275iW35jTfxfA.",
+        "avatar": "1652638524648_img_.webp",
         "rol": "user"
-=======
->>>>>>> ac736871fd73e248d0ca0498d9f14149a7df5d0e
+    },
+    {
+        "id": 14,
+        "name": "daiana",
+        "email": "daiana@email.com",
+        "password": "$2a$08$KJ0Mv19Nj2m5916ou/P7MOqEFhnlPnJLoSxKuShOaE.DnX9mIDRrO",
+        "avatar": "1652643759648_img_.jpg",
+        "rol": "user"
     }
 ]

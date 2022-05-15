@@ -3,6 +3,6 @@ const userInSessionCheck = (req, res, next) => {
        return res.redirect('/')
     }
     next()
-};
+}
 
 module.exports = userInSessionCheck;

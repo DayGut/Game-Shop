@@ -9,13 +9,10 @@
     <!-- header-->
     <%- include('../partials/header')  %> 
     <!--fin header-->
-    <!--Login-->
 
+    <!--Login-->
     <div class="login-form">
-        <!-- <div class="header_avatar">
-            <div class="avatar_session" ></div>
-            <img src="images/avatar" alt="avatar">
-    </div> -->
+        
         <h2>Login</h2>
         <form action="/user/login" method="POST">
             <% if (locals.errors && errors.email) { %>
@@ -29,12 +26,6 @@
             <input type="submit" class="btn-login" value="login">
         </form>
 
-        <div class="form-check mb-3">
-            <input class="form-check-input" name="remember" type="checkbox" id="remember">
-            <label class="form-check-label" for="remember">
-                Recordarme
-            </label>
-        </div>
         <% if (locals.errors && errors.custom) { %>
             <small class="text-danger"><%= errors.custom.msg %></small>
         <% } %>
