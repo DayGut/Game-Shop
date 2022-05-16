@@ -56,7 +56,8 @@ module.exports = {
      //mostrar en la vista
      res.render('admin/products/editProduct', { 
          titulo : 'editar productos', 
-        producto 
+        producto,
+        session: req.session
      })
 
     },

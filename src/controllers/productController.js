@@ -19,17 +19,20 @@ module.exports = {
      //mostrar en la vista
         res.render('products/productDetail', { 
             titulo: "Detalle de producto",
-            producto
+            producto,
+            session: req.session
         });
     },
     carrito:(req, res) => {
         res.render('products/productCart', { 
-            titulo: "Carrito de compras" 
+            titulo: "Carrito de compras",
+            session: req.session 
         }) 
     },
     todosLosProductos: (req, res) => {
         res.render("casa/home", {
-            titulo: "Productos"
+            titulo: "Productos",
+            session: req.session
         })
 
     }

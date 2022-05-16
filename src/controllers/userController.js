@@ -4,7 +4,6 @@ const {validationResult} = require('express-validator');
 
 
 module.exports = {
-    
     login: (req, res) => {
 
         res.render('user/login', {
@@ -20,13 +19,13 @@ module.exports = {
             let user= users.find(user => user.email === req.body.email)
             
             req.session.user= {
-                id: user .id,
-                name:user.name,
+                id: user.id,
+                name: user.name,
                 email: user.email,
                 avatar:user.avatar,
                 rol: user.rol
             }
-
+           
         if(req.body.remember){
             const TIME_IN_MILISECONDS = 60000; 
             res.cookie("pagCookie",req.session.user,{
@@ -40,14 +39,17 @@ module.exports = {
         res.redirect('/')
         
         }else{
-            
+           
+
         res.render('user/login', {
             titulo: "Login",
             css: "login.css",
             errors: errors.mapped(),
             session: req.session
         })
+        res.send(req.session)
     }
+   
     },
 
     registro: (req, res) => {
@@ -83,11 +85,8 @@ module.exports = {
         
             users.push(newUser)
 
-            
-
+        
             writeUsers(users)
-
-            
 
             res.redirect('/user/login')
 

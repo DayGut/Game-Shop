@@ -9,12 +9,10 @@
         </button>
 
         <div class="header_avatar">
+            <% if (typeof locals.user != "undefined") { %>
                 <div class="avatar_session"></div>
-                <img src="images/avatar" alt="avatar"> 
-                <% if (locals.session) { %>
-                    <p><%= session.user.name %></p>
-                <% } %> 
-           
+                <img src="images/avatar/<%= session.user.avatar %> " alt="">
+            <% } %> 
         </div>
         <ul class="menu">
             <button  class="close-menu">

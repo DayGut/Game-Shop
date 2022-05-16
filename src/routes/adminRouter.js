@@ -3,8 +3,10 @@ const router = express.Router();
 const adminController = require('../controllers/admin/adminController')
 const adminProductController = require('../controllers/admin/adminProductController')
 const uploadFile = require('../middlewares/uploadProductImage');
+//const userSessionCheck = require('../middlewares/userInSessionCheck');
+//const adminCheck = require('../middlewares/adminCheck')
 
-router.get('/', adminController.index);
+router.get('/', adminController.index);//adminCheck, adminController.index
 router.get('/productos/agregar', adminProductController.productAdd);
 router.get('/productos/listar', adminProductController.list);//muestra
 router.post('/productos',uploadFile.single('image'), adminProductController.productCreate)//agregar
