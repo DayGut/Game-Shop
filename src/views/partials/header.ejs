@@ -7,11 +7,17 @@
             <a class="fa-solid fa-bars"></a>
 
         </button>
+        
+        
+
 
         <div class="header_avatar">
-            <% if (typeof locals.user != "undefined") { %>
+            <% if (typeof session.user != "undefined") { %>
                 <div class="avatar_session"></div>
                 <img src="images/avatar/<%= session.user.avatar %> " alt="">
+                <% if (session.user.rol === 'admin') { %>
+                   <ul class="menu"><li><a href="/admin">admin</a></li></ul>
+                <% } %>
             <% } %> 
         </div>
         <ul class="menu">
@@ -25,8 +31,13 @@
             <li><a href="/">home</a></li>
             <li><a href="/products/detalle">shop</a></li>
             <li><a href="/user/registro" >register</a></li>
-            <li><a href="/user/login">login</a></li>
+            <% if (typeof session.user != "undefined") { %> 
+            <li><a href="/user/logout">cerrar sesion</a></li>
+            <% } else { %>
+                <li><a href="/user/login">login</a></li>
+                <% } %> 
             <li><a href="/products/carrito">cart</a></li>
+
         </ul>
     </nav>
 </header>
