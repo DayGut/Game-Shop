@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%-include('partials/head'), ({title: 'Resultados de tu búsqueda'}) %>
+<body>
+	<!-- Header -->
+	<%-include('partials/header') %>
+	<!-- /Header -->
+	
+	<!-- Banner -->
+	<div class="banner"></div>
+	<!-- /Banner -->
+
+	<!-- todos los productos -->
+	<div class="container-search">
+		<div class="col-12">
+			<h2 class="products-title">Resultados de la búsqueda <% keyword %>  </h2>
+		</div>
+		<div class="row">
+			
+	<% if(searchResult.length > 0) { %>
+				  
+			<% searchResult.forEach(product => { %>
+				<article class="producto-search">
+					<a class="product-detail" href="/products/detalle/<%= product.id %> ">
+						<div>
+							<img src="/images/<%= product.image %>" alt="">
+						</div>
+						<p class="product-name"><%= product.name %> </p>
+						<p class="description-prod"><%= product.description %></p>
+						<% if (product.discount > 0) { %>
+							<span class="descuento"><%= product.discount %>% de descuento</span>
+						<% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
+						<div class="card__price">
+							<% if (product.discount > 0) { %>
+								<span class="precio-original">$ <%= product.price %> </span>$ <%= product.price - product.discount * product.price / 100 %>
+							<% } else { %>
+							$ <%= product.price %> 
+							<% } %>
+						</div>
+					   
+					</a>
+						<a class="boton-Prod" href="#">Comprar</a>
+				</article>
+			<% }) %>
+
+		<% } else { %>		
+
+			<div class="col-12">
+				<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+			</div>
+	<% } %>
+		</div>
+	</div>
+	<!-- /todos los productos -->
+	
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

@@ -23,12 +23,13 @@
             <button  class="close-menu">
                 <a class="fa-solid fa-xmark" aria-label="cerrar menu"></a>
             </button>
-            <li> <input type="text" placeholder="Search">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button></li>
+            <li>  <form action="/search" method="GET" class="search-form">
+                <input type="text" name="keywords" placeholder="Buscar productos" class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            </li>
             <li><a href="/">home</a></li>
-            <li><a href="/products/detalle">shop</a></li>
             <li><a href="/user/registro" >register</a></li>
             <% if (typeof session.user != "undefined") { %> 
             <li><a href="/user/logout">cerrar sesion</a></li>

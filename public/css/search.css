@@ -1,0 +1,25 @@
+.container-search{
+   
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+.producto-search{
+    width: 12em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 5px;
+    align-items: center;
+    box-shadow: 2px 2px 5px var(--backgound-color-Azul);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
