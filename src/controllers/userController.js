@@ -47,7 +47,7 @@ module.exports = {
             errors: errors.mapped(),
             session: req.session
         })
-        res.send(req.session)
+    
     }
    
     },

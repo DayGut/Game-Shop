@@ -8,10 +8,9 @@ const userInSessionCheck = require('../middlewares/userInSessionCheck');
 
 /*Renderiza vista login */
 router.get('/login', usersController.login);
-//router.post('/login', usersController.processlogin);
+router.post('/login', usersController.processlogin);
 router.post('/login', loginValidator, usersController.processlogin);
 /* Renderiza vista registro */
-router.get('/registro', usersController.registro);
 router.get('/registro', userInSessionCheck, usersController.registro);
 /* GET - Logout */
 router.get('/logout', usersController.logout);

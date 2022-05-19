@@ -74,5 +74,13 @@
         "password": "$2a$08$KJ0Mv19Nj2m5916ou/P7MOqEFhnlPnJLoSxKuShOaE.DnX9mIDRrO",
         "avatar": "1652643759648_img_.jpg",
         "rol": "admin"
+    },
+    {
+        "id": 15,
+        "name": "day",
+        "email": "day@email.com",
+        "password": "$2a$08$uno8P9H796LTQyjWuqdc/O1/wF94zK4nB8U9z3hfO1/8XbzE1ej1y",
+        "avatar": "1652920702157_img_.jpeg",
+        "rol": "user"
     }
 ]

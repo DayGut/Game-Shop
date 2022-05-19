@@ -23,16 +23,21 @@
                 <small class="text-danger"><%= errors.password.msg %></small>
             <% } %>
             <input type="password" name="password" id="password" placeholder="password" > 
-            <input type="submit" class="btn-login" value="login">
-        </form>
+            <input type="submit" class="btn-login" >
+
 
         <% if (locals.errors && errors.custom) { %>
             <small class="text-danger"><%= errors.custom.msg %></small>
         <% } %>
         <a href="/user/registro" class="btn-register">Register</a>
-        <div class="envios-d">
-                <label><input name="remember" type="checkbox" id="remember" > Recordar</label><br>
-            </div>
+        
+        <div class="form-check mb-3">
+            <input class="form-check-input" name="remember" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">
+                Recordarme
+            </label>
+        </div>
+    </form>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
