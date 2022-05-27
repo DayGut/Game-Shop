@@ -7,68 +7,49 @@
 <!--fin header-->
 
 <!-- MAIN -->
-<main class="cart-d">
-    <h1>CARRITO DE COMPRAS</h1>
-    <section class="box-d">
-        <h4>
-            <ul>PRODUCTO</ul>
-            <ul>CANTIDAD</ul>
-            <ul>PRECIO</ul>
-        </h4>
-        <article class="caja-cont-d">
-            <div class="imagen-d">
-                <div class="juegos-d">
-                    <img src="/images/fifa22.jpeg" alt="fifa22">
-                </div>
-                <div class="descripcion-d">
-                    <strong>Fifa 22</strong><br>
-                    <p> Sports FIFA 2022</p>
-                    <button  class="btn" type="button">Cancelar</button>
-                </div>
-            </div>
-            <div class="cant-d">
-                <input id="inches" type="number" name="inches" min="0" max="11" step="1">
-            </div>
-            <div class="subtotal-d">  
-                <p>Subtotal:</p> 
-                <p >$2.500</p>
-            </div>
-        </article>
-        <article class="caja-cont-d">
-            <div class="imagen-d">
-                <div class="juegos-d">
-                    <img src="/images/sekiroo.jpg" alt="sekiroo">
-                </div>
-                <div class="descripcion-d">
-                    <strong>Sekiroo</strong><br> 
-                    <p>Shadows Die Twice</p>
-                    <button  class="btn-d" type="button">Cancelar</button>
-                </div>
-            </div>
-            <div class="cant-d">
-                <input id="inches" type="number" name="inches" min="0" max="11" step="1">
+
+    <section class="contenedor">
+        <h2 class="titulo-seccion"> <%= titulo %> </h2>
+        
+       <form  class="contenedor-shop" method="get" >
+       
+        <% if(carshop.length > 0) { %>
+            <% carshop.forEach(shop => { %>
                 
-            </div>
-            <div class="subtotal-d">
-                <p>Subtotal:</p>
-                <p >$2.500</p>
-            </div>
-        </article>    
-        <div class="total-d">
-            <article class="opcionChekc-d">   
-                <div class="precFinal-d">   
-                <p class="precTotal-d">Total:$5.000</p> 
-                </div>
-            </article>
-            <div class="envios-d">
-                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Envio a domicilio</label><br>
-            </div>
-            <div class="comprar-d">
-                <button>Comprar</button>
-            </div>          
-        </div>
+              
+             <ol class="product-shop">
+                    <li>
+                        <img src="/images/<%=shop.image%>" alt="Game" class="img-shop">
+                    </li>
+                    
+                    <ol class="datos-shop"> 
+                        <li><p>Descripcion: <%=shop.description%></p></li>
+                        <li ><p class="name-shop"><%=shop.name%> </p></li>
+                        <li>
+                            <input type="number" id="tentacles" name="tentacles"
+                            min="1" max="100">
+                            <p>Precio: $<%=shop.price%></p>
+                        </li>
+                        <li><p>Subtotal: </p></li>
+                        <form action='/admin/productos/eliminar/<%- shop.id %>?_method=delete' method="post">
+                            <button class="btn btn-danger" type="submit" >
+                              <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                          </form>
+                    </ol>
+            </ol>
+            
+      <% }) %>
+      <% }  %>	
+      <p class="total-shop">Total: $</p>
+      <div class="buttons-shop">
+        <a href="/" class="btn-cancel-shop">Cancel</a>
+        <input type="submit" class="btn-save-shop" value="save">
+    </div>
+        </form>
+        
     </section>
-</main>
+
 <!-- fin del main -->
 
 <!-- footer-->

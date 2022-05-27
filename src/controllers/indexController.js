@@ -8,7 +8,7 @@ module.exports= {
 
     index: (req, res) => {
 
-        res.render("home", {
+        res.render("./home/home", {
             titulo: "Home",
             products_title: "Productos",
             css:"home.css",

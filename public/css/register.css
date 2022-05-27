@@ -62,6 +62,7 @@
     font-size: large;
     color: #ffffff;
     margin-top: 20px;
+    display: block;
 
     /*para dar la apariencia de un boton*/
 
@@ -113,21 +114,16 @@
   
   /* Estilos boton CANCELAR*/
   .btn-cancel{
-    width: 50%;
+    width: 100%;
     padding: 15px;
     background-color: var(--backgound-color-Azul);
     border: 0;
     box-sizing: border-box;
     cursor: pointer;
-    font-weight: bold;
     font-size:medium;
     color: #ffffff;
     text-align: center;
     margin-top: 20px;
-    /* Para dar la apariencia de un boton */
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
     text-decoration: none;  
   }
   .btn-cancel:hover,.btn-cancel:active{
@@ -141,21 +137,16 @@
   
   /* Estilos boton GUARDAR*/
   .btn-save{
-    width: 50%;
+    width: 100%;
     padding: 15px;
     background-color:var(--backgound-color-Azul);
     border: 0;
-    box-sizing: border-box;
     cursor: pointer;
-    font-weight: bold;
-    font-size:medium;
+    font-size:18px;
     color: #ffffff;
     margin-top: 20px;
-    /* Para dar la apariencia de un boton */
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;  
+    text-decoration: none; 
+     
   }
   .btn-save:hover,.btn-save:active{
     color:#fff;

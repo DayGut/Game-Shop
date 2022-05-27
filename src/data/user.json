@@ -1,86 +1,10 @@
 [
     {
         "id": 1,
-        "name": "asd",
-        "email": "asd@gmail.com",
-        "avatar": "user-avatar.jpeg",
-        "rol": "user"
-    },
-    {
-        "id": 2,
-        "name": "asd",
-        "email": "asd@asd.com",
-        "password": "1234",
-        "avatar": "user-avatar.jpeg",
-        "rol": "user"
-    },
-    {
-        "id": 4,
-        "name": "day",
-        "email": "dayday@gmail.com",
-        "password": "123567899",
-        "avatar": "1652182256052_img_.png",
-        "rol": "user"
-    },
-    {
-        "id": 5,
-        "name": "day",
-        "email": "dayjhggfr@gmail.com",
-        "password": "$2a$10$Mmz9SWqGUFz6KyFN45N97.tF/mzhScBZB/wXUGs.GqOgT21pmqmlO"
-    },
-    {
         "name": "admin",
         "email": "admin@admin.com",
-        "password": "$2a$08$0Gyx66nhJW9BlHHT6Li/qefSu3mXdWAeeHofzy/pXXPCEq2I7k87C",
-        "avatar": "user-avatar.jpeg",
-        "rol": "user"
-    },
-    {
-        "id": 4,
-        "name": "daiana",
-        "email": "day@gmail.com",
-        "password": "$2a$08$8r0673ntStlRx41cahcPMO14YTQJAmJ6tMkGlQ1C8MYu9d.elnI0m",
-        "avatar": "1652543124415_img_.webp",
-        "rol": "user"
-    },
-    {
-        "id": 11,
-        "name": "Juan",
-        "email": "mendozadiazjuan1@gmail.com",
-        "password": "$2a$10$3.aRvVUQ3pfEmAhOp0hvdumJGlj77yzV8gJhsassayB1bnY/N5oBG",
-        "avatar": "user-avatar.jpeg",
-        "rol": "user"
-    },
-    {
-        "id": 12,
-        "name": "Juan",
-        "email": "mendozadiazjuan1@gmail.com",
-        "password": "$2a$10$aRL6ZJuC2oSuNuPRicQ0euLf/LruWft5hiTFaWanLP1hO06z29vWq",
-        "avatar": "user-avatar.jpeg",
-        "rol": "user"
-    },
-    {
-        "id": 13,
-        "name": "day",
-        "email": "daiana@gmail.com",
-        "password": "$2a$08$9JY4naf0zZovbaDiCCkODucKf56E3Rjn.kniC/A275iW35jTfxfA.",
-        "avatar": "1652638524648_img_.webp",
-        "rol": "user"
-    },
-    {
-        "id": 14,
-        "name": "daiana",
-        "email": "daiana@email.com",
-        "password": "$2a$08$KJ0Mv19Nj2m5916ou/P7MOqEFhnlPnJLoSxKuShOaE.DnX9mIDRrO",
-        "avatar": "1652643759648_img_.jpg",
+        "password": "$2a$08$RNGJF8Am/BWWE2D5PIxLFeWaOtCUWz7xnVFL4uP8sMpipkM.KA58e",
+        "avatar": "1652662010823_img_.webp",
         "rol": "admin"
-    },
-    {
-        "id": 15,
-        "name": "day",
-        "email": "day@email.com",
-        "password": "$2a$08$uno8P9H796LTQyjWuqdc/O1/wF94zK4nB8U9z3hfO1/8XbzE1ej1y",
-        "avatar": "1652920702157_img_.jpeg",
-        "rol": "user"
     }
 ]

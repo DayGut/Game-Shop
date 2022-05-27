@@ -1,223 +1,87 @@
-
-
-/* main */
-body .cart-d{
-  background-image: url('/images/estrellas.jpg');
-  min-height: 100vh;
-  background-size: contain;
-}
-.cart-d .box-d .caja-cont-d {
-    background-color: white;
-    padding: 13px;
-    margin: 0 0 0.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-  .cart-d .box-d .caja-cont-d .imagen-d {
+.contenedor-shop{
   display: flex;
-  margin: 0 0 0.5rem;
-  width: 80%;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
-
-.cart-d h1{
-  text-align: center;
-      margin: 0 auto;  
-      color: var(--text-color-GrisClaro);
-      padding: 30px;
-      background-color: var(--texto-color-AzulMarino);
-      height: 130px;
-}
-.cart-d .box-d{
-  padding: 2px;
-  border-radius: 3px;
-  margin: 0 auto 8px;
-}
-
- .cart-d .box-d h4{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
-  background-color: white;
-  margin:0 0 .2rem ;
-} 
-
-.cart-d .box-d .caja-cont-d .imagen-d{
-  display: flex;
-  margin: 0 0 .5rem;
-}
-
-.cart-d .box-d .caja-cont-d .imagen-d .juegos-d{
-  width: 90px;
-  height: 90px;
-  background-color: white;
-  margin: 0 .3rem 0 0;
-}
-
-.cart-d .box-d .caja-cont-d .imagen-d .juegos-d img{
-  width: 100%;
- height: 160%;
-}
-
-.cant-d{
-  padding: 24px;
-  } 
-
-  .cant-d input{
-  display: flex;
-  justify-content: space-around; 
-  width: 140px;
-  height: 30px;
-  border-radius: 7px; 
-  border: solid 3px var(--backgound-color-Azul);
-  margin: 0 auto .5rem; 
-}
-
-.descripcion-d .btn-d{
- background-color: var(--texto-color-AzulMarino);
- border-radius: 5px;
- width: 80px;
- height: 30px;
- border: none;
- color: white;
- transition: background-color .5s;
-}
-
-.descripcion-d .btn:hover{
-  background-color: gold;
-}
-.cant input{
-  text-align: center;
-  cursor: pointer;
-}
-/*arreglar*/
-.main-carrito-d .box-d .caja-cont-d .cant-d {
+.product-shop{
   display: flex;
   justify-content: space-around;
-  width: 80px;
-  height: 30px;
-  border-radius: 7px;
-  border: solid 3px var(--body-color-Gris);
-  margin: 0 auto 0.5rem;
-}
+  list-style-type: none;
+  align-items: center;
+  margin:10px;
+  background-color: var( --body-color-Gris);
 
-.cart-d .box-d .caja-cont-d .cant-d button:hover{
-  color: grey;
 }
-.subtotal-d{
-  font-size: 30px;
-    padding: 15px 10px 10px;
-    padding-bottom: 30px;
+.img-shop{
+  width: 35vh;
+  height: 35vh;
 }
-.cart-d .box-d .caja-cont-d .subtotal-d{
+.datos-shop{
+  list-style-type: none;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35vh;
 }
 
-.cart-d .box-d .caja-cont-d .imagen-d .descripcion-d{
-  width: 200px;
-  font-size: 30px;
-  padding: 2px 19px;
+.product-shop li{
+  color: var(--texto-color-AzulMarino);
 }
-
-p.sub-p{
-  margin: 0 .2rem 0 0;
+.product-shop li .name-shop{
+  font-size:30px;
 }
-.cart-d .box-d .total-d{
-  background-color: var(--text-color-GrisClaro);
-  padding: 8px;
-}
-
-.cart-d .box-d .total-d .opcionChekc-d {
+.buttons-shop{
   display: flex;
-  justify-content: flex-end;
+  width: 100%;
+  justify-content: space-around;
+
 }
-
-.cart-d .box-d .total-d .precFinal-d{
-  display: flex;
-  padding-left: 154px;
-  font-size: 30px;
+.total-shop{
+  text-align: center;
 }
-
-  .cart-d .box-d .total-d .envios-d{
-  padding-right: 67px;
-  display: flex;
-  font-size: 30px;
-} 
-
-#cbox1{
-  width: 30px;
-  height: 25px;
-  margin: 3px;
+.btn-cancel-shop{
+  width: 25%;
+  padding: 15px;
+  background-color: var(--backgound-color-Azul);
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  /* Para dar la apariencia de un boton */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;  
 }
-
-.cart-d .box-d .total-d .comprar-d{
-  display: flex;
-  justify-content: center;
-  padding-left: 62px;
+.btn-cancel-shop:hover,.btn-cancel-shop:active{
+  color:#fff;
+  background-color: var(--body-color-Gris);
+  border-color:var(--texto-color-AzulMarino);
 }
-
-.cart-d .box-d .total-d .comprar-d button{
-  border: none;
-  background-color: var(--texto-color-AzulMarino);
-  transition: background-color .5s;
-  color: white;
-  width: 150px;
-  height: 40px;
-  border-radius: .6rem;
-  margin-top: 1.4rem;
+.btn-cancel-shop:focus{
+  box-shadow:0 0 0 3px #6B7280;
 }
-
-.cart-d .box-d .total-d .comprar-d button:hover{
-  background-color: gold;
+ /* Estilos boton GUARDAR*/
+ .btn-save-shop{
+  width: 25%;
+  padding: 15px;
+  background-color:var(--backgound-color-Azul);
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 20px;
+  /* Para dar la apariencia de un boton */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;  
 }
-
-
-@media(min-width:700px){
-
-.cart-d .box-d .caja-cont-d {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+.btn-save-shop:hover,.btn-save-shop:active{
+  color:#fff;
+  background-color: var(--body-color-Gris);
+  border-color:var(--texto-color-Azuarino);
 }
-
-  .cart-d .box-d h4{
-    text-align: center;
-    background-color: var(--text-color-GrisClaro);
-    margin:0 0 .2rem ;
-    font-size: 30px;
-  }
-  
-  .cart-d .box-d .total-d .opcionChekc-d{
-      display: flex;
-      justify-content: flex-end;
-  }
-
-  .cart-d .box-d .caja-cont-d .imagen-d{
-      width: 290px;
-  }
-
-  .cart-d .box-d .caja-cont-d .imagen-d .descripcion-d{
-      width: 200px;
-      font-size: 30px;
-      padding: 2px 19px;
-  }
-
-  .cart-d .box-d .total-d .comprar-d button{
-      width: 200px;
-      font-size: 1.4rem;
-  }
-  
-  p .sub-p{
-      font-size: 25px;
-  }
-
-  .cart-d .box-d{
-      max-width: 1161px;
-      margin: 0 auto 0px;  
-  }
+.btn-save-shop:focus{
+  box-shadow:0 0 0 3px var(--body-color-Gris);
 }
-  /* fin del main */

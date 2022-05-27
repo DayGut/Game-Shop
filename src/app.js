@@ -3,7 +3,7 @@ const path = require('path')
 const app = express();
 const process = require('process');
 require('dotenv').config();
-const PORT = 3000;
+const PORT = 3001;
 const methodOverride = require('method-override');
 const session = require('express-session')
 const cookieParser = require('cookie-parser');

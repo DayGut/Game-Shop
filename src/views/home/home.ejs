@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('partials/head') %>
+    <%-include('../partials/head') %>
 <body>
     <!-- header-->
-    <%-include('partials/header') %>
+    <%-include('../partials/header') %>
 <!--fin header-->
 <!-- main-->
 <main>
@@ -60,7 +60,9 @@
                     </div>
                    
                 </a>
-                    <a class="boton-Prod" href="#">Comprar</a>
+                <form method="post">
+                    <a class="boton-Prod" href="/products/carrito/<%=product.id%>">Comprar</a>
+                </form>
             </article>
         <% }) %>
     </div>
@@ -84,7 +86,7 @@
 <!-- fin main -->
 
 <!-- footer-->
-<%-include('partials/footer') %> 
+<%-include('../partials/footer') %> 
 <!-- fin footer-->
 
     

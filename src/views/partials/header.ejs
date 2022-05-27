@@ -1,7 +1,7 @@
 <header class="topheader">
     <nav class="topnav">
         <a href="/" class="logo">
-            <img src="/images/logo.jpg" alt="logo Game Shop">
+            <img src="/images/logo2.png" alt="logo Game Shop">
         </a>
         <button class="open-menu">
             <a class="fa-solid fa-bars"></a>
@@ -11,14 +11,7 @@
         
 
 
-        <div class="logo">
-            <% if (typeof session.user != "undefined") { %>
-                <img src="images/avatar/<%= session.user.avatar %> " alt="">
-                <% if (session.user.rol === 'admin') { %>
-                   <ul class="menu"><li><a href="/admin">admin</a></li></ul>
-                <% } %>
-            <% } %> 
-        </div>
+        
         <ul class="menu">
             <button  class="close-menu">
                 <a class="fa-solid fa-xmark" aria-label="cerrar menu"></a>
@@ -30,7 +23,11 @@
 
             </li>
             <li><a href="/">home</a></li>
-            <li><a href="/user/registro" >register</a></li>
+            <% if (typeof session.user != "undefined") { %> 
+            <li style="display: none;"><a href="/user/registro" >register </style></a></li>
+            <% } else { %>
+                <li><a href="/user/registro" >register</a></li>
+                <% } %>
             <% if (typeof session.user != "undefined") { %> 
             <li><a href="/user/logout">cerrar sesion</a></li>
             <% } else { %>
@@ -38,6 +35,17 @@
                 <% } %> 
             <li><a href="/products/carrito">cart</a></li>
 
-        </ul>
+        
+        <div class="avatar">
+            <% if (typeof session.user != "undefined") { %>
+                <ul ><li><a href="/admin">admin</a></li></ul>
+                <% if (session.user.rol === 'admin') { %>
+                   
+                   <img src="../images/avatar/<%= session.user.avatar %> " alt="">
+                   <p style="color: rgb(13, 199, 13);">●</p>
+                <% } %>
+            <% } %> 
+        </div>
+    </ul>
     </nav>
 </header>

@@ -11,6 +11,11 @@ module.exports = {
     writeUsers: (data) => {
         fs.writeFileSync(path.join(__dirname, "/user.json"), JSON.stringify(data));
     },
+    carshop: JSON.parse(fs.readFileSync(path.join(__dirname, "/carshop.json"), "utf-8")),
+    writeShop: (data) => {
+        fs.writeFileSync(path.join(__dirname, "/carshop.json"), JSON.stringify(data));
+
+    }
 
     
 }
