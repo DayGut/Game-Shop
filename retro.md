@@ -59,3 +59,17 @@
 <p>HACER MENOS:No atrarse con los plazos de entrega, </p>
 
 <p>DEJAR DE HACER:Perder el ritmo de trabajo, procastinar </p>
+
+
+<h1>Retrospectiva Sprint 6</h1>
+
+<p>HACER MAS: sollicitar ayuda con los temas que encontramos dificultad. </p>
+
+<p>SEGUIR HACIENDO: Mantener la constancia en las reuniones. </p>
+
+<p>EMPEZAR A HACER: Informarse sobre los temas a tratar en las reuniones y continuar frecuentemente las dayli via WhatsApp.</p>
+
+<p>HACER MENOS: Crear conflictos en el repositorio.</p>
+
+<p>DEJAR DE HACER: comenzar tarde las tareas asignadas en el Trello. </p>
+
