@@ -10,3 +10,7 @@
 <p>● Si se encontró con algún impedimento:hubo correciones del sprint 4 las cuales todavia no se han resuelto </p>
 <p>● Qué va a hacer hoy:Seguir trabajando en en el proyecto en conjunto</p>
 
+<h1>Dayli sprint 6</h1>
+<p>●Qué hizo ayer:Reunion para finalizar el diagrama de entidades.</p>
+<p>●Si se encontró con algún impedimento:Ninguno por el momento.</p>
+<p>●Qué va a hacer hoy:Profundisar en los temas sobre Base de datos.</p>
