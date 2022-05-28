@@ -29,7 +29,9 @@ module.exports = {
             titulo: "Carrito de compras",
             carshop,
             session: req.session 
-        }) },
+        }) 
+    },
+
     addcarshop: (req, res) => {
        
         let idcompra= req.params.id
@@ -43,11 +45,26 @@ module.exports = {
        res.render('products/productCart', {
            titulo: "Compras",
            carshop,
-           cantidad: req.body.tentacles,
            session: req.session
            
        })
+    },
+       productDeleteshop: (req, res) => {
+        /* 1 - Obtener el id del producto a eliminar */
+        let idProducto = +req.params.id;
+        /* 2 - Buscar el producto dentro del array y eliminarlo */
+        carshop.forEach(producto => {
+            if(producto.id === idProducto){
+                //Obtener la ubicación (índice) del producto a eliminar
+                let productToDeleteIndex = carshop.indexOf(producto);
+                //Elimino el producto del array
+                carshop.splice(productToDeleteIndex, 1)
+            }
+        })
+        /* 3 - Sobreescribir el json */
+        writeShop(carshop);
+        /* 4 - Enviar respuesta  */
+        res.redirect('/products/carrito')
+    }
             
-        }
-    
 }

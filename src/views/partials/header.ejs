@@ -38,12 +38,13 @@
         
         <div class="avatar">
             <% if (typeof session.user != "undefined") { %>
-                <ul ><li><a href="/admin">admin</a></li></ul>
                 <% if (session.user.rol === 'admin') { %>
-                   
-                   <img src="../images/avatar/<%= session.user.avatar %> " alt="">
-                   <p style="color: rgb(13, 199, 13);">●</p>
+                <ul ><li><a href="/admin">admin</a></li></ul>
                 <% } %>
+                   
+                   <img src="../images/avatar/<%= session.user.avatar %> " alt="avatar">
+                   <p style="color: rgb(13, 199, 13);">●</p>
+               
             <% } %> 
         </div>
     </ul>

@@ -6,5 +6,13 @@
         "password": "$2a$08$RNGJF8Am/BWWE2D5PIxLFeWaOtCUWz7xnVFL4uP8sMpipkM.KA58e",
         "avatar": "1652662010823_img_.webp",
         "rol": "admin"
+    },
+    {
+        "id": 2,
+        "name": "user",
+        "email": "user@user.com",
+        "password": "$2a$08$41Z1PVs90gQ26ZcNYA6fkOo1YnpTiGUTc5hjL9OD/C4EsFpvi4Kg2",
+        "avatar": "1652662010823_img_.webp",
+        "rol": "user"
     }
 ]

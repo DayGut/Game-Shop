@@ -24,7 +24,7 @@ module.exports= {
                 searchResult.push(product)
             }
         });
-        res.render('results', {
+        res.render('./home/results', {
             titulo: "Search",
             searchResult,
             keyword: req.query.keywords,

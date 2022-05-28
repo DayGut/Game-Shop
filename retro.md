@@ -73,4 +73,3 @@
 
 <p>DEJAR DE HACER: comenzar tarde las tareas asignadas en el Trello. </p>
 
-prueba
