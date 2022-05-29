@@ -11,6 +11,7 @@ router.get('/login', usersController.login);
 router.post('/login', loginValidator, usersController.processlogin);
 /* Renderiza vista registro */
 router.get('/registro', userInSessionCheck, usersController.registro);
+router.get('/login', userInSessionCheck, usersController.login);
 /* GET - Logout */
 router.get('/logout', usersController.logout);
 /* POST - Crea un nuevo usuario */
