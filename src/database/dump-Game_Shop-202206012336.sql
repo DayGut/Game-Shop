@@ -27,7 +27,6 @@ CREATE TABLE `productos` (
   `name` varchar(100) NOT NULL,
   `price` int(11) NOT NULL,
   `description` text NOT NULL,
-  `image` varchar(100) NOT NULL,
   `stock` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -69,27 +68,52 @@ LOCK TABLES `usuarios` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `usuarios_productos`
+-- Table structure for table `categorias`
 --
 
-DROP TABLE IF EXISTS `usuarios_productos`;
+DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuarios_productos` (
+CREATE TABLE `categorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `usuarios_productos_FK` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`),
-  CONSTRAINT `usuarios_productos_FK_1` FOREIGN KEY (`id`) REFERENCES `productos` (`id`)
+  `accion` varchar(50) NOT NULL,
+  `aventura` varchar(50) NOT NULL,
+  `deporte` varchar(50) NOT NULL,
+  
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuarios_productos`
+-- Dumping data for table `categorias`
 --
 
-LOCK TABLES `usuarios_productos` WRITE;
-/*!40000 ALTER TABLE `usuarios_productos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuarios_productos` ENABLE KEYS */;
+LOCK TABLES `categorias` WRITE;
+/*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `imagenes`
+--
+
+DROP TABLE IF EXISTS `imagenes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `imagenes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `imagenes`
+--
+
+LOCK TABLES `imagenes` WRITE;
+/*!40000 ALTER TABLE `imagenes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `imagenes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
