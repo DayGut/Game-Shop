@@ -29,6 +29,7 @@ CREATE TABLE `productos` (
   `description` text NOT NULL,
   `stock` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
+  FOREIGN KEY (`id`) REFERENCES usuarios(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,6 +55,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(100) NOT NULL,
   `avatar` varchar(100) NOT NULL,
   `rol` tinyint(4) NOT NULL,
+  `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -79,8 +81,8 @@ CREATE TABLE `categorias` (
   `accion` varchar(50) NOT NULL,
   `aventura` varchar(50) NOT NULL,
   `deporte` varchar(50) NOT NULL,
-  
-  PRIMARY KEY (`id`)
+   PRIMARY KEY (`id`)
+   FOREIGN KEY (`id`) REFERENCES usuarios(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -104,6 +106,7 @@ CREATE TABLE `imagenes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
+  FOREIGN KEY (`id`) REFERENCES productos(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
