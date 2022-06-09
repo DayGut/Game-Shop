@@ -1,9 +1,9 @@
-module.export =(sequelize, dataTypes) =>{
+module.exports =(sequelize, dataTypes) =>{
     let alias ="Imagen";
     let cols = { 
     id: {
         type:dataTypes.INTEGER(11),
-        primary:true,
+        primaryKey:true,
         autoIncrement: true,
     },
     name: {
@@ -13,8 +13,16 @@ module.export =(sequelize, dataTypes) =>{
     }
     let config = {
         tableName:"imagenes",
-        timesTamps:false,
+        timestamps:false
     }
     const Imagen = sequelize.define(alias, cols, config);
+
+    Imagen.associate = (models) => {
+        Imagen.belongsTo(models.Producto, {
+            as: "producto",
+            foreignKey: "imagenes_id"
+        })
+    }
+    
 return Imagen
 }

@@ -1,14 +1,19 @@
-const { products, writeProducts} = require('../../data');
-const {validationResult}=require('express-validator');
 
+const {validationResult}=require('express-validator');
+const db =require('../../database/models')
 
 module.exports = {
     list: (req, res) => {
-        res.render('admin/products/listProduct', {
+        
+        db.Usuario.findAll()
+       .then((producto)=>{
+          res.send(producto)
+      })
+        /*res.render('admin/products/listProduct', {
             titulo: "Listado de productos",
             producto: products,
             session: req.session
-        })
+        })*/
     },
     productAdd: (req, res) => {
         res.render('admin/products/addProduct', {

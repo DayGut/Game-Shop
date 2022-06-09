@@ -1,9 +1,9 @@
-module.export =(sequelize, dataTypes) =>{
+module.exports =(sequelize, dataTypes) =>{
     let alias ="Usuario";
     let cols = { 
     id: {
         type:dataTypes.INTEGER(11),
-        primary:true,
+        primaryKey:true,
         autoIncrement: true,
     },
     name: {
@@ -26,14 +26,25 @@ module.export =(sequelize, dataTypes) =>{
         type: dataTypes.STRING(100),
         allowNull: false,
     },
+    productos_id:{
+        type:dataTypes.INTEGER(11),
+        allowNull: false,
+    }
 
     }
 
     let config = {
         tableName:"usuarios",
-        timesTamps:false,
+        timestamps: false
     }
     const Usuario = sequelize.define(alias, cols, config);
+    
+    Usuario.associate = (models) => {
+        Usuario.hasMany(models.Producto, {
+            as: "productos",
+            foreignKey: "productos_id"
+        })
+    }
 
 
 return Usuario
