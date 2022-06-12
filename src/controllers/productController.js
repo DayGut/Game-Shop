@@ -1,15 +1,29 @@
-const { products } = require('../data');
+//const { products } = require('../data');
+const db = require('../database/models');
 const { carshop, writeShop } = require('../data');
 
 
 module.exports = {
     list: (req, res) => {
-      
-        res.render("products/products", {
-            products,
-            titulo:"Productos",
-            session: req.session
-        })
+        db.Producto.findAll()
+        .then(function(productos){
+            res.send(productos)
+            // res.render('admin/productos/list', {
+            //     productos: productos
+            })
+        // }
+        // )
+        // .catch(function(error){
+        //     console.log(error)
+        // })
+        
+
+
+        // res.render("products/products", {
+        //     products,
+        //     titulo:"Productos",
+        //     session: req.session
+        // })
     },
     
 

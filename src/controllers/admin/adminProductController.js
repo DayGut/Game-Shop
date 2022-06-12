@@ -3,18 +3,36 @@ const {validationResult}=require('express-validator');
 const db =require('../../database/models')
 
 module.exports = {
-    list: (req, res) => {
-        
-        db.Usuario.findAll()
-       .then((producto)=>{
-          res.send(producto)
-      })
-        /*res.render('admin/products/listProduct', {
-            titulo: "Listado de productos",
-            producto: products,
-            session: req.session
-        })*/
+
+ //crear una funcion que liste los productos de la base de datos por ruta parametrizada
+ list: (req, res) => {
+
+    db.Producto.findAll()
+
+    .then(function(productos){
+        res.render('admin/productos/list', {
+            productos: productos
+        })
+    }
+    )
+    .catch(function(error){
+        console.log(error)
+    }
+    )
     },
+
+    // list: (req, res) => {
+        
+    //     db.Usuario.findAll()
+    //    .then((producto)=>{
+    //       res.send(producto)
+    //   })
+    //     /*res.render('admin/products/listProduct', {
+    //         titulo: "Listado de productos",
+    //         producto: products,
+    //         session: req.session
+    //     })*/
+    // },
     productAdd: (req, res) => {
         res.render('admin/products/addProduct', {
             titulo: "Agregar producto",

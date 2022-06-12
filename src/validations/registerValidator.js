@@ -1,5 +1,5 @@
-const {users} = require('../data');
 const { check, body } = require('express-validator');
+const db = require('../database/models');
 
 let validateRegister = [
  check("name")
@@ -9,12 +9,18 @@ let validateRegister = [
     .notEmpty().withMessage("Se Requiere email")
     .isEmail().withMessage("ingrese un email valido"),
     body("email").custom((value)=>{
-      let user = users.find(user => user.email === value);
+      
+        return db.Usuario.findOne({
+            where: {
+                email: value
+            }
+        })
+        .then((user)=>{ 
       if(user){
-          return false;
+          return Promise.reject("El email ya existe");
       }
-      return true;
-  }).withMessage("Email ya registrado"),
+    })
+  }),
   check("pass")
       .notEmpty().withMessage("Ingrese una contraseña")
       .isLength({min: 8}).withMessage("La contraseña debe tener por lo menos 8 caracteres"), 
@@ -30,6 +36,7 @@ let validateRegister = [
 
   check("terms")
       .isString("on").withMessage("Debes aceptar los términos y condiciones")
+       
 ];
 
 module.exports = validateRegister;

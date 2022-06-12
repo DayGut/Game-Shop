@@ -11,7 +11,7 @@ module.exports =(sequelize, dataTypes) =>{
         allowNull: false,
     },
     email: {
-        type: dataTypes.STRING(50),
+        type: dataTypes.STRING(100),
         allowNull: false,
     },
     avatar: {
@@ -19,7 +19,7 @@ module.exports =(sequelize, dataTypes) =>{
         allowNull: false,
     },
     rol: {
-        type: dataTypes.STRING(50),
+        type: dataTypes.STRING(40),
         allowNull: false,
     },
     password: {
