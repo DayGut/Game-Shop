@@ -9,7 +9,11 @@ module.exports =(sequelize, dataTypes) =>{
     name: {
         type: dataTypes.STRING(50),
         allowNull: false,
-    }
+    },
+    producto_id:{
+        type: dataTypes.INTEGER(11),
+        allowNull:false
+}
     }
     let config = {
         tableName:"imagenes",
@@ -20,9 +24,10 @@ module.exports =(sequelize, dataTypes) =>{
     Imagen.associate = (models) => {
         Imagen.belongsTo(models.Producto, {
             as: "producto",
-            foreignKey: "imagenes_id"
+            foreignKey: "producto_id"
         })
     }
     
-return Imagen
+    return Imagen
+
 }

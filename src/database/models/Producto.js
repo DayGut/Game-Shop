@@ -26,11 +26,6 @@ module.exports =(sequelize, dataTypes ) =>{
             type: dataTypes.INTEGER(11),
             allowNull: false,
         },
-        image_id: {
-            type: dataTypes.INTEGER(11),
-            allowNull: false,
-        },
-    
     }
 	let config = {
         tableName: "productos",
