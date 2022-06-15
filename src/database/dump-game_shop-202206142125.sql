@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: game-shop
+-- Host: localhost    Database: game_shop
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.24-MariaDB
 
@@ -77,12 +77,9 @@ CREATE TABLE `productos` (
   `description` text NOT NULL,
   `stock` tinyint(4) NOT NULL,
   `categorias_id` int(11) NOT NULL DEFAULT 1,
-  `imagenes_id` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `fk_id_categorias` (`categorias_id`),
-  KEY `fk_id_imagenes` (`imagenes_id`),
-  CONSTRAINT `fk_id_categorias` FOREIGN KEY (`categorias_id`) REFERENCES `categorias` (`id`),
-  CONSTRAINT `fk_id_imagenes` FOREIGN KEY (`imagenes_id`) REFERENCES `imagenes` (`id`)
+  CONSTRAINT `fk_id_categorias` FOREIGN KEY (`categorias_id`) REFERENCES `categorias` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -92,7 +89,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'producto',200,'descrip1',1,1,1),(2,'producto2',3000,'descri2',0,1,1);
+INSERT INTO `productos` VALUES (1,'producto',200,'descrip1',1,1),(2,'producto2',3000,'descri2',0,1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,11 +106,8 @@ CREATE TABLE `usuarios` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `avatar` varchar(100) NOT NULL,
-  `rol` varchar(40) NOT NULL,
-  `productos_id` int(11) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`),
-  KEY `fk_id_productos` (`productos_id`),
-  CONSTRAINT `fk_id_productos` FOREIGN KEY (`productos_id`) REFERENCES `productos` (`id`)
+  `rol` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -123,12 +117,12 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'admin','admin@admin.com','12345678','default','admin',1),(2,'usuario','usuario@usuario.com','12345678','default','user',1);
+INSERT INTO `usuarios` VALUES (1,'admin','admin@admin.com','12345678','default',''),(2,'usuario','usuario@usuario.com','12345678','default','');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'game-shop'
+-- Dumping routines for database 'game_shop'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -140,4 +134,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-11 22:21:45
+-- Dump completed on 2022-06-14 21:25:32
