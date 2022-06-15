@@ -22,7 +22,7 @@ module.exports =(sequelize, dataTypes ) =>{
             type: dataTypes.BOOLEAN,
             allowNull: false,
         },
-        category_id: {
+        categorias_id: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
         },
@@ -35,7 +35,7 @@ module.exports =(sequelize, dataTypes ) =>{
     
     Producto.associate = (models) => {
         Producto.belongsTo(models.Categoria, {
-            as: "categoria",
+            as: "Categoria",
             foreignKey: "categorias_id"//producto pertenece a una categria
         })
         Producto.hasMany(models.Imagen, {

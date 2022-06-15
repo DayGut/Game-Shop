@@ -7,32 +7,20 @@ module.exports = {
  //crear una funcion que liste los productos de la base de datos por ruta parametrizada
  list: (req, res) => {
 
-    db.Producto.findAll()
-
+    db.Producto.findAll(
+        {include:[{association:'Categoria'}]})
     .then(function(productos){
-        res.render('admin/productos/list', {
-            productos: productos
+        res.render('admin/products/listProduct', {
+               titulo: "Listado de productos",
+                 producto: productos,
+                session: req.session
         })
-    }
-    )
+    })
     .catch(function(error){
-        console.log(error)
-    }
-    )
+        res.send(error)
+    })
     },
 
-    // list: (req, res) => {
-        
-    //     db.Usuario.findAll()
-    //    .then((producto)=>{
-    //       res.send(producto)
-    //   })
-    //     /*res.render('admin/products/listProduct', {
-    //         titulo: "Listado de productos",
-    //         producto: products,
-    //         session: req.session
-    //     })*/
-    // },
     productAdd: (req, res) => {
         res.render('admin/products/addProduct', {
             titulo: "Agregar producto",
@@ -118,12 +106,7 @@ module.exports = {
       if(errors.isEmpty()){
           
 
-      }else{
-
       }
-
-
-
         // 1- Obtener el id del producto
      let idProducto = +req.params.id
      let producto = products.find(producto => producto.id === idProducto)
@@ -147,7 +130,7 @@ module.exports = {
                     producto.price = req.body.price
                     producto.discount = req.body.discount
                     producto.image = req.body.image,
-                    producto.categoryId = req.body.categoryId
+                    producto.Categoria = req.body.Categoria,
                     producto.stock = req.body.stock ? true : false
                     producto.description = req.body.description
     
