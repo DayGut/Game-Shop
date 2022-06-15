@@ -25,12 +25,7 @@ module.exports =(sequelize, dataTypes) =>{
     password: {
         type: dataTypes.STRING(100),
         allowNull: false,
-    },
-    productos_id:{
-        type:dataTypes.INTEGER(11),
-        allowNull: false,
     }
-
     }
 
     let config = {
@@ -39,12 +34,7 @@ module.exports =(sequelize, dataTypes) =>{
     }
     const Usuario = sequelize.define(alias, cols, config);
     
-    Usuario.associate = (models) => {
-        Usuario.hasMany(models.Producto, {
-            as: "productos",
-            foreignKey: "productos_id"
-        })
-    }
+   
 
 
 return Usuario
