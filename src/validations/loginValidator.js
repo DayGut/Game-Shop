@@ -8,7 +8,6 @@ let validateLogin = [
         .notEmpty().withMessage("Ingrese su email").bail()
         .isEmail().withMessage("Email no valido").bail(),
     body("custom").custom((value, { req })=>{
-        //let user = users.find(user => user.email === req.body.email);
         return db.Usuario.findOne({
             where: {
                 email: req.body.email

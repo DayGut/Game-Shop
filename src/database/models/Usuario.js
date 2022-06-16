@@ -19,13 +19,14 @@ module.exports =(sequelize, dataTypes) =>{
         allowNull: false,
     },
     rol: {
-        type: dataTypes.STRING(40),
+        type: dataTypes.STRING(50),
         allowNull: false,
     },
     password: {
         type: dataTypes.STRING(100),
         allowNull: false,
     }
+
     }
 
     let config = {

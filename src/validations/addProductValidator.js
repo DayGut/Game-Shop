@@ -1,5 +1,6 @@
 const {check, body} = require('express-validator');
-const db = require('../database/models');
+
+
 
 let validateAddProducts = [
     check("name")
@@ -12,7 +13,6 @@ let validateAddProducts = [
     check("categoryId")
          .notEmpty().withMessage("selecciona una categoria"),
     body("discount").custom(value =>{
-        
         if(value >=0 && value <= 100){
             return true;
         }
