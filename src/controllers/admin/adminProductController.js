@@ -31,16 +31,18 @@ module.exports = {
             let errors = validationResult(req);
              
             if(errors.isEmpty()){
-               db.Producto.create({
-                include:[{association:'Categoria'}],
-                 ...req.body
-                })
-
-               .then((producto) => {
+               db.Producto.create({include:[{association:'Categoria'}],
+                 ...req.body,
+            
+              })
+              
+               .then((Producto) => {
+                console.log(Producto)
+               
                    let arrayImages = req.files.map(image => {
                     return {
                       name: image.filename,
-                       categorias_id: producto.id
+                      categorias_id: Producto.id
                     } 
                    })
        
