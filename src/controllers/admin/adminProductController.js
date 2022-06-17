@@ -42,7 +42,11 @@ module.exports = {
                    let arrayImages = req.files.map(image => {
                     return {
                       name: image.filename,
+<<<<<<< HEAD
                       categorias_id: Producto.id
+=======
+                      producto_id: Producto.id
+>>>>>>> a1326707edd095d7d8ef0e8fd5e4277d82425523
                     } 
                    })
        
@@ -50,7 +54,11 @@ module.exports = {
                    .then(() => res.redirect('/admin/productos/listar'))
                    .catch(error => res.send(error))
                })
+<<<<<<< HEAD
                .catch(error =>  res.send(error))
+=======
+               .catch(error => res.send(error))
+>>>>>>> a1326707edd095d7d8ef0e8fd5e4277d82425523
             }else{
               res.render('admin/products/addProduct', { 
                 titulo: "Agregar producto",
