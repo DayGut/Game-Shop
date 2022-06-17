@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
+-- MariaDB dump 10.19  Distrib 10.6.7-MariaDB, for debian-linux-gnu (aarch64)
 --
 -- Host: localhost    Database: game_shop
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.24-MariaDB
+-- Server version	10.6.7-MariaDB-3
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -73,15 +73,16 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
   `price` int(11) NOT NULL,
-  `description` text NOT NULL,
+  `description` text CHARACTER SET utf8mb4 NOT NULL,
   `stock` tinyint(4) NOT NULL,
   `categorias_id` int(11) NOT NULL DEFAULT 1,
+  `discount` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_id_categorias` (`categorias_id`),
   CONSTRAINT `fk_id_categorias` FOREIGN KEY (`categorias_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf16;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +91,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'producto',200,'descrip1',1,1),(2,'producto2',3000,'descri2',0,1);
+INSERT INTO `productos` VALUES (1,'producto',200,'descrip1',1,1,20),(2,'producto2',3000,'descri2',0,1,10);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,7 +110,7 @@ CREATE TABLE `usuarios` (
   `avatar` varchar(100) NOT NULL,
   `rol` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,13 +119,9 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'admin','admin@admin.com','12345678','1651039761589_img_.jpg','admin'),(2,'usuario','usuario@usuario.com','12345678','1651039934866_img_.jpg','usuario');
+INSERT INTO `usuarios` VALUES (3,'admin','admin@admin.com','$2a$08$GZDmH4FYLYOvPVwbExWHcOdZTwbspNVm..t.I9dz2iIxOWQo6tH7.','user-avatar.jpeg','admin');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'game_shop'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -135,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-14 22:02:33
+-- Dump completed on 2022-06-17 16:01:11

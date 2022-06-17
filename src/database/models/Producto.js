@@ -26,6 +26,10 @@ module.exports =(sequelize, dataTypes ) =>{
             type: dataTypes.INTEGER(11),
             allowNull: false,
         },
+        discount: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false,
+        },
     }
 	let config = {
         tableName: "productos",

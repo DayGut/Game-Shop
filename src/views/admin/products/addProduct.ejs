@@ -26,13 +26,12 @@
         <label for="exampleDataList" class="form-label">Categorias</label>
           <input name="categoryId" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Seleccione Categoria">
           <datalist id="datalistOptions">
-          <option value="aventura-simulacion">
-          <option value="aventura-accion">
-          <option value="rpg-simulacion">
-          <option value="accion-rpg">
-         <option value="rol-aventura">  
-        </datalist>
+          <option selected hidden value="">Categoría</option>
+          <option value="1" >aventura-simulacion</option>
+          <option value="2" >>rpg-simulacion</option>
+          <option value="3" >accion-rpg</option>
       </div>
+
       <div class="form-check form-switch pt-3">
           <input class="form-check-input" name="stock" type="checkbox" role="switch" id="flexSwitchCheckDefault">
           <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>

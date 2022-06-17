@@ -14,7 +14,7 @@ let validateLogin = [
             }
         })
         .then((user)=>{
-        if(bcrypt.compareSync(req.body.password, user.password)){
+        if(!bcrypt.compareSync(req.body.password, user.password)){
             return Promise.reject();
         }
     })
