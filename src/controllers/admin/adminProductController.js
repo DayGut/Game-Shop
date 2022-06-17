@@ -31,23 +31,26 @@ module.exports = {
             let errors = validationResult(req);
              
             if(errors.isEmpty()){
-               db.Producto.create({
+               db.Producto.create({include:[{association:'Categoria'}],
                  ...req.body,
-                 user_id: 4 
-               })
-               .then((producto) => {
+            
+              })
+              
+               .then((Producto) => {
+                console.log(Producto)
+               
                    let arrayImages = req.files.map(image => {
                     return {
-                      imageName: image.filename,
-                      project_id: producto.id
+                      name: image.filename,
+                      producto_id: Producto.id
                     } 
                    })
        
-                   db.imagen.bulkCreate(arrayImages)
+                   db.Imagen.bulkCreate(arrayImages)
                    .then(() => res.redirect('/admin/productos/listar'))
-                   .catch(error => console.log(error))
+                   .catch(error => res.send(error))
                })
-               .catch(error => console.log(error))
+               .catch(error => res.send(error))
             }else{
               res.render('admin/products/addProduct', { 
                 titulo: "Agregar producto",
