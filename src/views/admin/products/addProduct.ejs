@@ -11,30 +11,35 @@
   
       <div class="mb-3 col-md-6">
           <label for="name" class="form-label">Nombre</label>
-          <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto">
+          <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto "value="<%= (locals.old && old.name) ? old.name : "" %>" >
   </div>
   <div class="mb-3 col-md-6">
       <label for="price" class="form-label">Precio</label>
-      <input type="number" name="price" class="form-control" id="price" placeholder="ej:$1000">
+      <input type="number" name="price" class="form-control" id="price" placeholder="ej:$1000"value="<%= (locals.old && old.price) ? old.price : "" %> ">
   </div>
   
   <div class="mb-3 col-md-6">
       <label for="discount" class="form-label">Descuento</label>
-      <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento">
+      <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento" value="<%= (locals.old && old.discount) ? old.discount : "" %>">
+      <% if (locals.errors && errors.discount) { %>
+        <small class="text-danger"><%= errors.discount.msg%></small>
+      <% } %>
   </div>
       <div class="container" id="Container-admin">
         <label for="exampleDataList" class="form-label">Categorias</label>
-          <input name="categoryId" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Seleccione Categoria">
+          <input name="categorias_id" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Seleccione Categoria">
           <datalist id="datalistOptions">
           <option selected hidden value="">Categoría</option>
-          <option value="1" >aventura-simulacion</option>
-          <option value="2" >>rpg-simulacion</option>
-          <option value="3" >accion-rpg</option>
+          <option value="1"<%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %> >aventura-simulacion</option>
+          <option value="2" <%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %>>rpg-simulacion</option>
+          <option value="3" <%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %>>accion-rpg</option>
       </div>
-
+      <% if (locals.errors && errors.categorias_id) { %>
+        <small class="text-danger"><%= errors.categorias_id.msg%></small>
+      <% } %>
       <div class="form-check form-switch pt-3">
-          <input class="form-check-input" name="stock" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-          <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
+          <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"<%= (locals.old && old.stock) ? "checked" : "" %>>
+          <label class="form-check-label" for="stock">Stock</label>
         </div>
 
         
@@ -45,7 +50,7 @@
         <br>
         <div class="mb-3 " id="Container-admin">
           <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-          <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3" <%= (locals.old && old.description) ? old.description : "" %>></textarea>
         </div>
         <br>
         <div class="col-12" id="boton-adminMain">

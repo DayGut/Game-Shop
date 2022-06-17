@@ -10,7 +10,7 @@ let validateAddProducts = [
     check("price")
          .notEmpty().withMessage("Ingerese un precio").bail()
          .isNumeric().withMessage("Ingrese un valor numerico"),
-    check("categoryId")
+    check("categorias_id")
          .notEmpty().withMessage("selecciona una categoria"),
     body("discount").custom(value =>{
         if(value >=0 && value <= 100){

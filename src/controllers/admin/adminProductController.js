@@ -32,22 +32,23 @@ module.exports = {
              
             if(errors.isEmpty()){
                db.Producto.create({
-                 ...req.body,
-                 user_id: 4 
-               })
+                include:[{association:'Categoria'}],
+                 ...req.body
+                })
+
                .then((producto) => {
                    let arrayImages = req.files.map(image => {
                     return {
-                      imageName: image.filename,
-                      project_id: producto.id
+                      name: image.filename,
+                       categorias_id: producto.id
                     } 
                    })
        
-                   db.imagen.bulkCreate(arrayImages)
+                   db.Imagen.bulkCreate(arrayImages)
                    .then(() => res.redirect('/admin/productos/listar'))
-                   .catch(error => console.log(error))
+                   .catch(error => res.send(error))
                })
-               .catch(error => console.log(error))
+               .catch(error =>  res.send(error))
             }else{
               res.render('admin/products/addProduct', { 
                 titulo: "Agregar producto",
