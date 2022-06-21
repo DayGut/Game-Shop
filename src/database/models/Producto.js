@@ -30,6 +30,10 @@ module.exports =(sequelize, dataTypes ) =>{
             type: dataTypes.INTEGER(11),
             allowNull: false,
         },
+        imagen: {
+            type: dataTypes.STRING(50),
+            allowNull: false,
+        }
     }
 	let config = {
         tableName: "productos",
@@ -41,10 +45,6 @@ module.exports =(sequelize, dataTypes ) =>{
         Producto.belongsTo(models.Categoria, {
             as: "Categoria",
             foreignKey: "categorias_id"//producto pertenece a una categria
-        })
-        Producto.hasMany(models.Imagen, {
-            as: "imagenes",
-            foreignKey: "producto_id"
         })
     }
 

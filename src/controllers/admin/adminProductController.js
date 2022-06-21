@@ -12,7 +12,7 @@ module.exports = {
     .then(function(productos){
         res.render('admin/products/listProduct', {
                titulo: "Listado de productos",
-                 producto: productos,
+                producto: productos,
                 session: req.session
         })
     })
@@ -33,32 +33,14 @@ module.exports = {
             if(errors.isEmpty()){
                db.Producto.create({include:[{association:'Categoria'}],
                  ...req.body,
-            
+                 stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
+                 imagen: req.file ? req.file.filename : "PS4.jpeg"
+
               })
               
-               .then((Producto) => {
-                console.log(Producto)
-               
-                   let arrayImages = req.files.map(image => {
-                    return {
-                      name: image.filename,
-<<<<<<< HEAD
-                      categorias_id: Producto.id
-=======
-                      producto_id: Producto.id
->>>>>>> a1326707edd095d7d8ef0e8fd5e4277d82425523
-                    } 
-                   })
-       
-                   db.Imagen.bulkCreate(arrayImages)
-                   .then(() => res.redirect('/admin/productos/listar'))
-                   .catch(error => res.send(error))
-               })
-<<<<<<< HEAD
-               .catch(error =>  res.send(error))
-=======
+            .then(() => res.redirect('/admin/productos/listar'))
+
                .catch(error => res.send(error))
->>>>>>> a1326707edd095d7d8ef0e8fd5e4277d82425523
             }else{
               res.render('admin/products/addProduct', { 
                 titulo: "Agregar producto",
@@ -68,53 +50,57 @@ module.exports = {
             } 
            },
     editProduct: (req, res) => {
-      let errors = validationResult(req);
 
-      if(errors.isEmpty()){
-          
-
-      }
-        // 1- Obtener el id del producto
-     let idProducto = +req.params.id
-     let producto = products.find(producto => producto.id === idProducto)
-     //mostrar en la vista
-     res.render('admin/products/editProduct', { 
-         titulo : 'editar productos', 
-        producto,
-        session: req.session
-     })
-
-    },
-        productoEditado: (req, res) => {
-            // 1- Obtener el id del producto
+    // 1- Obtener el id del producto
         let idProducto = +req.params.id
-            // 2 - Buscar el producto a editar y modificar el producto
 
-            products.forEach(producto => {
-                if(producto.id === idProducto){
-                    // para modificar todos los valores del objeto
-                    producto.name = req.body.name
-                    producto.price = req.body.price
-                    producto.discount = req.body.discount
-                    producto.image = req.body.image,
-                    producto.Categoria = req.body.Categoria,
-                    producto.stock = req.body.stock ? true : false
-                    producto.description = req.body.description
-    
-                }
-            })
-                // Paso 3 - Escribir el JSON de productos con el array actual
-            writeProducts(products)
-            // Paso 4 - Devolver respuesta (redirección)
-            res.redirect('/admin/productos/listar')    
-    
-
+    //2- Obtener el producto de la base de datos
+        db.Producto.findByPk(idProducto, {include:[{association:'Categoria'}]})
+        .then((producto) =>{
+            res.render('admin/products/editProduct', {
+                titulo: "Editar producto",
+                 producto, 
+                session: req.session
+             })
+            }) 
+       .catch(error => res.send(error))
          },
+        productoEditado: (req, res) => {
+            let errors = validationResult(req);
+    
+              // Buscar el producto a editar y modificar el producto
+              if(errors.isEmpty()){
+                db.Producto.update({
+                    ...req.body,
+                    stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
+                    user_id: "admin"
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+
+                .then(() => {
+                    res.redirect('/admin/productos/listar')
+                })
+                .catch(error => res.send(error))
+            
+              }else{    
+                res.render('admin/products/editProduct', { 
+                    titulo: "Editar producto",
+                    errors: errors.mapped(),
+                    old: req.body
+                   })
+              }
+        },  
 
          productDelete: (req, res) => {
             /* 1 - Obtener el id del producto a eliminar */
             let idProducto = +req.params.id;
             /* 2 - Buscar el producto dentro del array y eliminarlo */
+
+            
+            
             products.forEach(producto => {
                 if(producto.id === idProducto){
                     //Obtener la ubicación (índice) del producto a eliminar
@@ -127,9 +113,7 @@ module.exports = {
             writeProducts(products);
             /* 4 - Enviar respuesta  */
             res.redirect('/admin/productos/listar')
-        }
-        
-
+        } 
     }
 
-    
+

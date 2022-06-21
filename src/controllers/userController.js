@@ -70,6 +70,7 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
                 db.Usuario.create({
+                    
                     name: req.body.name,
                     email: req.body.email,
                     password: bcrypt.hashSync(req.body.pass, 8),

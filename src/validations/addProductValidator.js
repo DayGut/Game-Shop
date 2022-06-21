@@ -1,7 +1,5 @@
 const {check, body} = require('express-validator');
 
-
-
 let validateAddProducts = [
     check("name")
         .notEmpty().withMessage("Ingrese un nombre").bail()
