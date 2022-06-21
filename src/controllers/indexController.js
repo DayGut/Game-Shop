@@ -1,4 +1,4 @@
-const { products } = require('../data')
+const db =require('../database/models')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -8,15 +8,21 @@ module.exports= {
 
     index: (req, res) => {
 
-        res.render("./home/home", {
-            titulo: "Home",
-            products_title: "Productos",
-            css:"home.css",
-            products,
-            session: req.session
+        db.Producto.findAll(
+            {include:[{association:'Categoria'}]})
+        .then(function(productos){
+            res.render('./home/home', {
+                   titulo: "Home",
+                   products_title: "Productos",
+                   CSS:"home.css",
+                    productos,
+                    session: req.session
+            })
         })
-        
-    },
+        .catch(function(error){
+            res.send(error)
+        })
+        },
     search: (req, res) => {
         let searchResult = [];
          products.forEach(product => {

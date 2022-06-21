@@ -40,28 +40,29 @@
   <section class="contenedor">
     <h2 class="titulo-seccion"> <%= products_title %> </h2>
     <div class="productos">
-        <% products.forEach(product => { %>
+        <% productos.forEach(productos => { %>
+          
             <article class="producto">
-                <a class="product-detail" href="/products/detalle/<%= product.id %> ">
+                <a class="product-detail" href="/products/detalle/<%= productos.id %> ">
                     <div>
-                        <img src="/images/<%= product.image %>" alt="">
+                        <img src="/images/<%= productos.imagen %>" alt="">
                     </div>
-                    <p class="product-name"><%= product.name %> </p>
-                    <p class="description-prod"><%= product.description %></p>
-                    <% if (product.discount > 0) { %>
-                        <span class="descuento"><%= product.discount %> de descuento%</span>
+                    <p class="product-name"><%= productos.name %> </p>
+                    <p class="description-prod"><%= productos.description %></p>
+                    <% if (productos.discount > 0) { %>
+                        <span class="descuento"><%= productos.discount %> de descuento%</span>
                     <% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
                     <div class="card__price">
-                        <% if (product.discount > 0) { %>
-                            <span class="precio-original">$ <%= product.price %> </span>$ <%= product.price - product.discount * product.price / 100 %>
+                        <% if (productos.discount > 0) { %>
+                            <span class="precio-original">$ <%= productos.price %> </span>$ <%= productos.price - productos.discount * productos.price / 100 %>
                         <% } else { %>
-                        $ <%= product.price %> 
+                        $ <%= productos.price %> 
                         <% } %>
                     </div>
                    
                 </a>
                 <form method="post">
-                    <a class="boton-Prod" href="/products/carrito/<%=product.id%>">Comprar</a>
+                    <a class="boton-Prod" href="/products/carrito/<%=productos.id%>">Comprar</a>
                 </form>
             </article>
         <% }) %>

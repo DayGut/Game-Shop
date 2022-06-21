@@ -1,6 +1,7 @@
 
 const {validationResult}=require('express-validator');
 const db =require('../../database/models')
+const path = require('path')
 
 module.exports = {
 
@@ -73,14 +74,20 @@ module.exports = {
                 db.Producto.update({
                     ...req.body,
                     stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
-                    user_id: "admin"
                 }, {
                     where: {
                         id: req.params.id
                     }
                 })
 
-                .then(() => {
+                .then((producto) => {
+                    if (req.file) {
+                        if (fs.existsSync("/images", producto.imagen)
+                            &&
+                            producto.imagen !== "default-image.png"){
+                            fs.unlinkSync("/images", producto.imagen)
+                        }
+                    }
                     res.redirect('/admin/productos/listar')
                 })
                 .catch(error => res.send(error))
@@ -95,25 +102,16 @@ module.exports = {
         },  
 
          productDelete: (req, res) => {
-            /* 1 - Obtener el id del producto a eliminar */
-            let idProducto = +req.params.id;
-            /* 2 - Buscar el producto dentro del array y eliminarlo */
-
-            
-            
-            products.forEach(producto => {
-                if(producto.id === idProducto){
-                    //Obtener la ubicación (índice) del producto a eliminar
-                    let productToDeleteIndex = products.indexOf(producto);
-                    //Elimino el producto del array
-                    products.splice(productToDeleteIndex, 1)
-                }
+            db.Producto.destroy({
+                where : { id : req.params.id}
             })
-            /* 3 - Sobreescribir el json */
-            writeProducts(products);
-            /* 4 - Enviar respuesta  */
-            res.redirect('/admin/productos/listar')
-        } 
+            .then(() => {
+                res.redirect('/admin/productos/listar')
+            })
+            
+            .catch(error => res.send(error))
+        },
+        
     }
 
 
