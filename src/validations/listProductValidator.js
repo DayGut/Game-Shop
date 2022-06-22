@@ -1,5 +1,6 @@
 const {check, body} = require('express-validator');
-const {users} = require('../data');
+const db = require('../database/models')
+
 
 let validateListProducts = [
     check("name")
@@ -9,9 +10,10 @@ let validateListProducts = [
     check("price")
          .notEmpty().withMessage("Ingerese un precio").bail()
          .isNumeric().withMessage("Ingrese un valor numerico"),
-    check("categoryId")
+    check("Categoria")
          .notEmpty().withMessage("selecciona una categoria"),
     body("discount").custom(value =>{
+        db.Producto.findAll
         if(value >=0 && value <= 100){
             return true;
         }

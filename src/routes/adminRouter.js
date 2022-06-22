@@ -13,7 +13,7 @@ router.get('/',userSessionCheck, adminCheck, adminController.index);
 router.get('/productos/agregar',userSessionCheck, adminCheck, adminProductController.productAdd);
 router.get('/productos/listar',userSessionCheck, adminCheck, adminProductController.list);//muestra
 router.post('/productos',uploadFile.single('image'), adminProductController.productCreate)//agregar
-router.put('/productos/:id', adminProductController.productoEditado)//edita
+router.put('/productos/:id',uploadFile.single('image'), adminProductController.productoEditado)//edita
 router.get('/productos/editar/:id',userSessionCheck, adminCheck, adminProductController.editProduct)//vista por get 
 router.delete('/productos/eliminar/:id', adminProductController.productDelete)//elimina 
 
