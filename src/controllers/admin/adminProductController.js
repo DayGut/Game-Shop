@@ -2,6 +2,7 @@
 const {validationResult}=require('express-validator');
 const db =require('../../database/models')
 const path = require('path')
+const fs = require('fs');
 
 module.exports = {
 
@@ -74,6 +75,7 @@ module.exports = {
                 db.Producto.update({
                     ...req.body,
                     stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
+                    imagen: req.file ? req.file.filename : "PS4.jpeg"
                 }, {
                     where: {
                         id: req.params.id
@@ -84,13 +86,13 @@ module.exports = {
                     if (req.file) {
                         if (fs.existsSync("/images", producto.imagen)
                             &&
-                            producto.imagen !== "default-image.png"){
+                            producto.imagen !== "PS4.jpeg"){
                             fs.unlinkSync("/images", producto.imagen)
                         }
                     }
                     res.redirect('/admin/productos/listar')
                 })
-                .catch(error => res.send(error))
+                .catch(error => console.log(error))
             
               }else{    
                 res.render('admin/products/editProduct', { 
@@ -109,7 +111,7 @@ module.exports = {
                 res.redirect('/admin/productos/listar')
             })
             
-            .catch(error => res.send(error))
+            .catch(error => console.log(error))
         },
         
     }
