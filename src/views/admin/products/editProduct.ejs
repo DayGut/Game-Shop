@@ -7,50 +7,56 @@
       <main class="container">
         <fieldset class="rounded border w-75 mx-auto p-4">
           <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %>
-          </legend>
+</legend>
           <form class="row " action="/admin/productos/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <div class="mb-3 col-md-6">
               <label for="name" class="form-label">Nombre</label>
-              <input type="text" name="name" class="form-control" id="name" value="<%=producto.name%>">
+              <input type="text" name="name" class="form-control" id="name" value="<%= (locals.old && old.name) ? old.name : producto.name %>">
+              <small class="text-danger"><%= (locals.errors  && errors.name) ? errors.name.msg : "" %></small>
             </div>
             <div class="mb-3 col-md-6">
               <label for="price" class="form-label">Precio</label>
-              <input type="number" name="price" class="form-control" id="price" value="<%=producto.price%>">
+              <input type="number" name="price" class="form-control" id="price" value="<%= (locals.old && old.price) ? old.price : producto.price %>">
+              <small class="text-danger"><%= (locals.errors  && errors.price) ? errors.price.msg : "" %></small>
             </div>
 
             <div class="mb-3 col-md-6">
               <label for="discount" class="form-label">Descuento</label>
-              <input type="number" name="discount" class="form-control" id="discount" value="<%=producto.discount%>">
+              <input type="number" name="discount" class="form-control" id="discount"  value="<%= (locals.old && old.discount) ? old.discount : producto.discount %>">
+              <small class="text-danger"><%= (locals.errors  && errors.discount) ? errors.discount.msg : "" %></small>
             </div>
             <div class="mb-3 col-md-6">
               <label for="exampleDataList" class="form-label">Categorias</label>
-              <input name="categorias_id" class="form-control" list="datalistOptions" id="exampleDataList"
-                value="<%=producto.categorias_id%>">
+              <input name="categorias_id" class="form-control" list="datalistOptions" id="exampleDataList" value="<%= (locals.old && old.categorias_id) ? old.categorias_id : producto.categorias_id %>">
               <datalist id="datalistOptions">
-                <option>Categoría</option>
-                <option value="1" <%=(locals.old && old.categorias_id) && old.categorias_id==="1" ? "selected" : "" %>
-                  >aventura-simulacion</option>
-                <option value="2" <%=(locals.old && old.categorias_id) && old.categorias_id==="1" ? "selected" : "" %>
-                  >rpg-simulacion</option>
-                <option value="3" <%=(locals.old && old.categorias_id) && old.categorias_id==="1" ? "selected" : "" %>
-                  >accion-rpg</option>
+                <datalist id="datalistOptions">
+                  <option>Categoría</option>
+                  <option value="1" <%=(locals.old && old.categorias_id) && old.categorias_id == "1" ? "selected" : "" %>>aventura-simulacion</option>
+                  <option value="2" <%=(locals.old && old.categorias_id) && old.categorias_id == "1" ? "selected" : "" %>>rpg-simulacion</option>
+                  <option value="3" <%=(locals.old && old.categorias_id) && old.categorias_id == "1" ? "selected" : "" %>>accion-rpg</option>
+                </datalist>
+              <small class="text-danger"><%= (locals.errors  && errors.categorias_id) ? errors.categorias_id.msg : "" %></small>
               </datalist>
             </div>
             <div class="mb-3">
               <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-              <input class="form-control" type="file" id="formFile" name="image">
+              <input class="form-control" type="file" id="formFile" name="image"  value="<%= (locals.old && old.image) ? old.image : producto.image %>">
+              <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
             </div>
             <div class="form-check form-switch pt-3">
+              
+              <label class="form-check-label" for="stock">Stock</label>
+              <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label> -->
               <input <%=producto.stock ? "checked" : "" %> class="form-check-input" name="stock" type="checkbox"
-              role="switch" id="stock">
-              <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
+              role="switch" id="stock" value="<%= (locals.old && old.stock) ? old.discount : producto.stock%>">
+              <small class="text-danger"><%= (locals.errors  && errors.stock) ? errors.stock.msg : "" %></small>
             </div>
             <br>
             <div class="mb-3 " id="Container-admin">
               <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
               <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1"
-                rows="3"><%=producto.description%></textarea>
+                rows="3"><%= producto.description %></textarea>
             </div>
             <br>
             <div class="col-12" id="boton-adminMain">

@@ -1,6 +1,6 @@
 const express = require('express');
-const path = require('path')
 const app = express();
+const path = require('path')
 const process = require('process');
 require('dotenv').config();
 const PORT = 3001;
@@ -22,6 +22,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));//habilita el acceso a put y delete
 
 /*session*/
+app.set('trust proxy', 1);//
 app.use(session({
     secret:"game-shop",
     resave: false,
@@ -33,8 +34,8 @@ app.use(cookieSession);
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Middleware de rutas
 app.use('/', indexRouter);

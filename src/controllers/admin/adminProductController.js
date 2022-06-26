@@ -1,7 +1,7 @@
 
 const {validationResult}=require('express-validator');
 const db =require('../../database/models')
-const path = require('path')
+// const path = require('path')
 const fs = require('fs');
 
 module.exports = {
@@ -33,6 +33,7 @@ module.exports = {
             let errors = validationResult(req);
              
             if(errors.isEmpty()){
+               
                db.Producto.create({include:[{association:'Categoria'}],
                  ...req.body,
                  stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,

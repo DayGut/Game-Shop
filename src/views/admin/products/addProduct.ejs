@@ -11,18 +11,20 @@
   
       <div class="mb-3 col-md-6">
           <label for="name" class="form-label">Nombre</label>
-          <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto "value="<%= (locals.old && old.name) ? old.name : "" %>" >
+          <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto ">
+          <small class="text-danger"><%= (locals.errors  && errors.name) ? errors.name.msg : "" %></small>
   </div>
   <div class="mb-3 col-md-6">
       <label for="price" class="form-label">Precio</label>
-      <input type="number" name="price" class="form-control" id="price" placeholder="ej:$1000"value="<%= (locals.old && old.price) ? old.price : "" %> ">
+      <input type="number" name="price" class="form-control" id="price" placeholder="ej:$1000">
+      <small class="text-danger"><%= (locals.errors  && errors.price) ? errors.price.msg : "" %></small>
   </div>
   
   <div class="mb-3 col-md-6">
       <label for="discount" class="form-label">Descuento</label>
       <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento" value="<%= (locals.old && old.discount) ? old.discount : "" %>">
       <% if (locals.errors && errors.discount) { %>
-        <small class="text-danger"><%= errors.discount.msg%></small>
+        <small class="text-danger"><%= errors.discount.msg %></small>
       <% } %>
   </div>
       <div class="container" id="Container-admin">
@@ -35,7 +37,7 @@
           <option value="3" <%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %>>accion-rpg</option>
       </div>
       <% if (locals.errors && errors.categorias_id) { %>
-        <small class="text-danger"><%= errors.categorias_id.msg%></small>
+        <small class="text-danger"><%= errors.categorias_id.msg %></small>
       <% } %>
       <div class="form-check form-switch pt-3">
           <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"  <%= (locals.old && old.stock) ? "checked" : "" %> >
