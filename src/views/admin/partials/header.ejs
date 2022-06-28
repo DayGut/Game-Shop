@@ -17,13 +17,13 @@
            
             <li><a href="/products/carrito">cart</a></li>
 
-            <% if (typeof locals.user != "undefined") { %> 
+            <% if (typeof session.user != "undefined") { %> 
                 <li><a href="/user/logout">cerrar sesion</a></li>
                 <% } else { %>
                     <li><a href="/user/login">login</a></li>
                     <% } %>
 
-                    <% if ( locals.user === "admin") { %> 
+                    <% if ( session.user.rol === "admin") { %> 
                     <li><a href="/admin/productos/listar" >Listar</a></li>
                     <% } else { %>
                         <li><a href="/user/login">login</a></li>
