@@ -13,22 +13,29 @@
             </button>
             
             <li><a href="/">home</a></li>
-           
-           
+            <% if (typeof session.user != "undefined") { %> 
+            <li style="display: none;"><a href="/user/registro" >register </style></a></li>
+            <% } else { %>
+                <li><a href="/user/registro" >register</a></li>
+                <% } %>
+            <% if (typeof session.user != "undefined") { %> 
+            <li><a href="/user/logout">cerrar sesion</a></li>
+            <% } else { %>
+                <li><a href="/user/login">login</a></li>
+                <% } %> 
             <li><a href="/products/carrito">cart</a></li>
-
-            <% if (typeof locals.user != "undefined") { %> 
-                <li><a href="/user/logout">cerrar sesion</a></li>
-                <% } else { %>
-                    <li><a href="/user/login">login</a></li>
+            <div class="avatar">
+                <% if (typeof session.user != "undefined") { %>
+                    <% if (session.user.rol === 'admin') { %>
+                    <ul ><li><a href="/admin">admin</a></li></ul>
                     <% } %>
-
-                    <% if ( locals.user === "admin") { %> 
-                    <li><a href="/admin/productos/listar" >Listar</a></li>
-                    <% } else { %>
-                        <li><a href="/user/login">login</a></li>
-                        <% } %>
-            <li><a href="/admin/productos/agregar">agregar</a></li>
+                       
+                       <img src="../images/avatar/<%= session.user.avatar %> " alt="avatar">
+                       <p style="color: rgb(13, 199, 13);">●</p>
+                   
+                <% } %> 
+            </div>
+            </div>
         </ul>
     </nav>
 </header>

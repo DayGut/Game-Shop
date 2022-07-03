@@ -15,7 +15,8 @@ let validateEditProducts = [
             return true;
         }
         return false;
-    }).withMessage("El descuesto tiene que ser entre 0 y 100")
+    }).withMessage("El descuesto tiene que ser entre 0 y 100"),
+    check("description").notEmpty().withMessage("Ingrese una descripcion"),
     
 
  
