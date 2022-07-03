@@ -40,20 +40,22 @@
         <small class="text-danger"><%= errors.categorias_id.msg %></small>
       <% } %>
       <div class="form-check form-switch pt-3">
-          <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"  <%= (locals.old && old.stock) ? "checked" : "" %> >
+          <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" >
           <label class="form-check-label" for="stock">Stock</label>
         </div>
         
         <div class="mb-3">
           <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-          <input class="form-control" type="file" id="formFile" name="image" onchange="fileValidation()"/>
-          <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
+          <input class="form-control" type="file" id="formFile" name="image">
+          <% if (locals.errors && errors.image) { %>
+            <small class="text-danger"><%= errors.avatar.msg %></small>
+        <% } %>
         </div>
         <br>
         <div class="mb-3 " id="Container-admin">
-          <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-          <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
+          <label for="description" class="form-label">Descripcion</label>
+          <textarea name="description" class="form-control texto-area-main" id="description" rows="3" value="<%= (locals.old && old.discount) ? old.discount : "" %>"></textarea>
+            <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
         </div>
         <br>
         <div class="col-12" id="boton-adminMain">

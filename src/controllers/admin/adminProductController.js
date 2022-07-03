@@ -64,15 +64,16 @@ module.exports = {
                 titulo: "Editar producto",
                  producto, 
                 session: req.session
+
              })
             }) 
        .catch(error => res.send(error))
          },
         productoEditado: (req, res) => {
             let errors = validationResult(req);
-    
-              // Buscar el producto a editar y modificar el producto
-              if(errors.isEmpty()){
+             
+            if(errors.isEmpty()){
+                
                 db.Producto.update({
                     ...req.body,
                     stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
@@ -93,15 +94,22 @@ module.exports = {
                     }
                     res.redirect('/admin/productos/listar')
                 })
-                .catch(error => console.log(error))
+                .catch(errors => console.log(errors))
             
               }else{    
+                let producto = +req.params.id
+                db.Producto.findByPk(producto, {include:[{association:'Categoria'}]})
+                .then((producto) =>{
                 res.render('admin/products/editProduct', { 
                     titulo: "Editar producto",
-                    errors: errors.mapped(),
-                    old: req.body
-                   })
-              }
+                    producto,
+                    old: req.body,
+                    errors: errors.mapped()
+
+                })
+              })
+                .catch(errors => console.log(errors))
+            }
         },  
 
          productDelete: (req, res) => {

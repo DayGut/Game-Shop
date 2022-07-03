@@ -7,19 +7,11 @@
             <a class="fa-solid fa-bars"></a>
 
         </button>
-        
-
-        
         <ul class="menu">
             <button  class="close-menu">
                 <a class="fa-solid fa-xmark" aria-label="cerrar menu"></a>
             </button>
-            <li>  <form action="/search" method="GET" class="search-form">
-                <input type="text" name="keywords" placeholder="Buscar productos" class="search-form_input">
-                <button type="submit" class="search-form_button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-
-            </li>
+            
             <li><a href="/">home</a></li>
             <% if (typeof session.user != "undefined") { %> 
             <li style="display: none;"><a href="/user/registro" >register </style></a></li>
@@ -32,19 +24,18 @@
                 <li><a href="/user/login">login</a></li>
                 <% } %> 
             <li><a href="/products/carrito">cart</a></li>
-
-        
-        <div class="avatar">
-            <% if (typeof session.user != "undefined") { %>
-                <% if (session.user.rol === 'admin') { %>
-                <ul ><li><a href="/admin">admin</a></li></ul>
-                <% } %>
+            <div class="avatar">
+                <% if (typeof session.user != "undefined") { %>
+                    <% if (session.user.rol === 'admin') { %>
+                    <ul ><li><a href="/admin">admin</a></li></ul>
+                    <% } %>
+                       
+                       <img src="../images/avatar/<%= session.user.avatar %> " alt="avatar">
+                       <p style="color: rgb(13, 199, 13);">●</p>
                    
-                   <img src="../images/avatar/<%= session.user.avatar %> " alt="avatar">
-                   <p style="color: rgb(13, 199, 13);">●</p>
-               
-            <% } %> 
-        </div>
-    </ul>
+                <% } %> 
+            </div>
+            </div>
+        </ul>
     </nav>
 </header>

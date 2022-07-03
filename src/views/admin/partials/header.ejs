@@ -18,15 +18,14 @@
             <li><a href="/products/carrito">cart</a></li>
 
             <% if (typeof locals.user != "undefined") { %> 
-                <li><a href="/user/logout">cerrar sesion</a></li>
+                <li><a href="/user/login">login</a></li>
                 <% } else { %>
-                    <li><a href="/user/login">login</a></li>
+                    <li><a href="/user/logout">cerrar sesion</a></li>
                     <% } %>
-
                     <% if ( locals.user === "admin") { %> 
-                    <li><a href="/admin/productos/listar" >Listar</a></li>
-                    <% } else { %>
                         <li><a href="/user/login">login</a></li>
+                    <% } else { %>
+                        <li><a href="/admin/productos/listar" >Listar</a></li>
                         <% } %>
             <li><a href="/admin/productos/agregar">agregar</a></li>
         </ul>
