@@ -3,6 +3,7 @@
     <%-include("../partials/head")%>
 <body>
     <%-include("../partials/header")%>
+    <script src="/js/addvalidation.js"></script>
     <main class="container"> 
      <form action="/admin/productos" method="POST" enctype="multipart/form-data"> <!--enctype="multipart/form-data" tiene la funcionalidad del muler -->
       <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
@@ -12,24 +13,24 @@
       <div class="mb-3 col-md-6">
           <label for="name" class="form-label">Nombre</label>
           <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto ">
-          <small class="text-danger"><%= (locals.errors  && errors.name) ? errors.name.msg : "" %></small>
+          <small class="text-danger" id="nameErrors"><%= (locals.errors  && errors.name) ? errors.name.msg : "" %></small>
   </div>
   <div class="mb-3 col-md-6">
       <label for="price" class="form-label">Precio</label>
       <input type="number" name="price" class="form-control" id="price" placeholder="ej:$1000">
-      <small class="text-danger"><%= (locals.errors  && errors.price) ? errors.price.msg : "" %></small>
+      <small class="text-danger" id="priceErrors"><%= (locals.errors  && errors.price) ? errors.price.msg : "" %></small>
   </div>
   
   <div class="mb-3 col-md-6">
       <label for="discount" class="form-label">Descuento</label>
       <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento" value="<%= (locals.old && old.discount) ? old.discount : "" %>">
       <% if (locals.errors && errors.discount) { %>
-        <small class="text-danger"><%= errors.discount.msg %></small>
+        <small class="text-danger" id="discountErrors"><%= errors.discount.msg %></small>
       <% } %>
   </div>
       <div class="container" id="Container-admin">
         <label for="exampleDataList" class="form-label">Categorias</label>
-          <input name="categorias_id" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Seleccione Categoria">
+          <input name="categorias_id" class="form-control" list="datalistOptions" id="categorias" placeholder="Seleccione Categoria">
           <datalist id="datalistOptions">
           <option selected hidden value="">Categoría</option>
           <option value="1"<%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %> >aventura-simulacion</option>
@@ -47,13 +48,13 @@
         <div class="mb-3">
           <label for="formFile" class="form-label">Agregar archivo de imagen</label>
           <input class="form-control" type="file" id="formFile" name="image" onchange="fileValidation()"/>
-          <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
+          <small class="text-danger" id="fileErrors"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
         </div>
         <br>
         <div class="mb-3 " id="Container-admin">
           <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-          <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
+          <textarea name="description" class="form-control texto-area-main" id="description" rows="3"></textarea>
+          <small class="text-danger" id="descriptionErrors"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
         </div>
         <br>
         <div class="col-12" id="boton-adminMain">
