@@ -10,7 +10,6 @@
           <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %>
 </legend>
           <form class="row " action="/admin/productos/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-
             <div class="mb-3 col-md-6">
               <label for="name" class="form-label">Nombre</label>
               <input type="text" name="name" class="form-control" id="name" value="<%= (locals.old && old.name) ? old.name : producto.name %>">
@@ -50,8 +49,7 @@
               <label class="form-check-label" for="stock">Stock</label>
               <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label> -->
               <input <%=producto.stock ? "checked" : "" %> class="form-check-input" name="stock" type="checkbox"
-              role="switch" id="stock" value="<%= (locals.old && old.stock) ? old.discount : producto.stock%>">
-              <small class="text-danger"><%= (locals.errors  && errors.stock) ? errors.stock.msg : "" %></small>
+              role="switch" id="stock">
             </div>
             <br>
             <div class="mb-3 " id="Container-admin">
@@ -64,8 +62,9 @@
             <div class="col-12" id="boton-adminMain">
               <button class="btn btn-primary" type="submit">Editar</button>
             </div>
+          </form>
         </fieldset>
-        </form>
+        
       </main>
 
       <%-include("../partials/footer")%>

@@ -33,6 +33,18 @@ let validateRegister = [
       }
       return true;
   }).withMessage("Las contraseñas no coinciden"),
+  body("avatar").custom((value, {req}) => {
+    let file = req.file
+    let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
+        if(!file){
+            return Promise.reject("Seleccione una imagen");
+        }
+        let extensionOriginal = req.file.mimetype.split("/").pop()
+        if(!extensionesPermitidas.includes(extensionOriginal)){
+            throw new Error(`Debe ser archivo de imagen ${extensionesPermitidas.join(', ')}`)
+        }
+        return true;
+    }),
 
   check("terms")
       .isString("on").withMessage("Debes aceptar los términos y condiciones")
