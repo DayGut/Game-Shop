@@ -73,3 +73,15 @@
 
 <p>DEJAR DE HACER: comenzar tarde las tareas asignadas en el Trello. </p>
 
+<h1>Retrospectiva Sprint 7</h1>
+
+<p>HACER MAS: daily para mejorar la comunición en el trabajo.</p>
+
+<p>SEGUIR HACIENDO: mantener el ritmo de trabajo. </p>
+
+<p>EMPEZAR A HACER: empezar a listar los detalles a ajustar.</p>
+
+<p>HACER MENOS: dejar tareas o ajustes pendientes</p>
+
+<p>DEJAR DE HACER: empezar el trabajo tarde.</p>
+
