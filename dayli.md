@@ -14,3 +14,8 @@
 <p>●Qué hizo ayer:Reunion para finalizar el diagrama de entidades.</p>
 <p>●Si se encontró con algún impedimento:Ninguno por el momento.</p>
 <p>●Qué va a hacer hoy:Profundisar en los temas sobre Base de datos.</p>
+
+<h1>Dayli sprint 7</h1>
+<p>●Qué hizo ayer:corrigiendo detalles para la finalización del sprint</p>
+<p>●Si se encontró con algún impedimento: seguir corrigiendo detalles en las vistas y funcionalidades que faltan(fuera de los requerimientos).</p>
+<p>●Qué va a hacer hoy:Repartimos tareas de detalles faltantes y solucionamos errores.</p>
