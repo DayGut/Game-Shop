@@ -10,7 +10,7 @@
     <!--Register-->
     <div class="register-form">
         <h1>Form Registration</h1>
-        <form action="/user/registro" method="post" enctype="multipart/form-data">
+        <form action="/user/registro" method="post" enctype="multipart/form-data" id="form">
             <div>
             <label form="nombre">User name</label>
             <input type="text" name="name" id="name" value="<%= (locals.old && old.name) ? old.name : "" %>">
@@ -52,7 +52,7 @@
             <div class="botones-registro">
                 <input type="submit" class="btn-save" value="Aceptar">
                 <a href="/" class="btn-cancel">Cancelar</a>
-               
+                <span id="submitErrors"></span>
             </div>
         </form>
 
