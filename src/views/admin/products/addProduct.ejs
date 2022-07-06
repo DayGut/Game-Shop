@@ -47,7 +47,7 @@
         
         <div class="mb-3">
           <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-          <input class="form-control" type="file" id="formFile" name="image" onchange="fileValidation()"/>
+          <input class="form-control" type="file" id="formFile" name="image" />
           <small class="text-danger" id="fileErrors"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
         </div>
         <br>

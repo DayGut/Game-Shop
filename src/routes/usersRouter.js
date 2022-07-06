@@ -17,7 +17,7 @@ router.get('/logout', usersController.logout);
 /* POST - Crea un nuevo usuario */
 router.post('/registro', uploadFile.single('avatar'),registerValidator, usersController.processRegister)
 /*perfil del usuario*/
-//router.get('perfil', profile)
+router.get('/perfil',uploadFile.single('avatar'),registerValidator, usersController.editProfile);
 //router.put('/perfil/:id', editProfile)
 
 
