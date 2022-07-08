@@ -50,13 +50,7 @@ let validateRegister = [
 ];
 
 
-//             throw new Error(`Debe ser archivo de imagen ${extensiones.join(', ')}`)
-//         }
-//     }),
 
-//   check("terms")
-//       .isString("on").withMessage("Debes aceptar los términos y condiciones")
-       
-// ];
+
 
 module.exports = validateRegister;

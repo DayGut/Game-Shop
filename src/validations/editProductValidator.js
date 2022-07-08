@@ -15,10 +15,20 @@ let validateEditProducts = [
             return true;
         }
         return false;
-    }).withMessage("El descuesto tiene que ser entre 0 y 100"),
+    }),
+    body("avatar").custom((value, {req}) => {
+        let file = req.file
+        let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
+            if(!file){
+                return Promise.reject("Subir un avatar")
+            }
+            let extensionOriginal = req.file.mimetype.split("/").pop()
+            if(!extensionesPermitidas.includes(extensionOriginal)){
+                throw new Error(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
+            }
+            return true;
+        }).withMessage("El descuesto tiene que ser entre 0 y 100"),
     check("description").notEmpty().withMessage("Ingrese una descripcion"),
-    
-
  
 ];
 
