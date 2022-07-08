@@ -14,10 +14,9 @@ window.addEventListener("load", () => {
     $pass2 = qs('#pass2'),
     $pass2Errors = qs('#pass2Errors'),
     $file = qs('#formFile'),
+    $fileErrors = qs('#fileErrors'),
     $terms = qs('#terms'),
     $termsErrors = qs('#termsErrors'),
-    $fileErrors = qs('#fileErrors'),
-    $imgPreview = qs('#img-preview'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
@@ -121,18 +120,6 @@ window.addEventListener("load", () => {
             $file.value = '';
             $imgPreview.innerHTML = '';
             return false;
-        }else{
-            // Image preview
-            console.log($file.files);
-            if($file.files && $file.files[0]){
-                let reader = new FileReader();
-                reader.onload = function(e){
-                    $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
-                };
-                reader.readAsDataURL($file.files[0]);
-                $fileErrors.innerHTML = '';
-                $file.classList.remove('is-invalid')
-            }
         }
          })
 
@@ -141,6 +128,37 @@ window.addEventListener("load", () => {
             $terms.classList.toggle('is-valid')
             $terms.classList.remove('is-invalid')
             $termsErrors.innerHTML = ""
+        })
+
+        $form.addEventListener("submit", function(event) {
+
+            event.preventDefault()
+            let elementsForm = this.elements;
+            let errores = false;
+    
+            
+    
+            for (let index = 0; index < elementsForm.length - 1; index++) {
+                if(elementsForm[index].value == ""
+                && elementsForm[index].name !== "apellido"
+                && elementsForm[index].type !== "file"
+                || elementsForm[index].classList.contains("is-invalid")){
+                    elementsForm[index].classList.add("is-invalid");
+                    submitErrors.innerHTML = "Hay errores en el formulario"
+                    errores = true;
+                }
+            }
+    
+            if(!$terms.checked){
+                $terms.classList.add("is-invalid");
+                $termsErrors.innerHTML = "Debes los términos y condiciones";
+            }
+    
+            if(!errores){
+                alert("Validado!")
+                $form.submit()
+            }
+    
         })
     
 })

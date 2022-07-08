@@ -46,6 +46,7 @@ let validateRegister = [
         return true;
     }),
 
+
   check("terms")
       .isString("on").withMessage("Debes aceptar los términos y condiciones")
        

@@ -46,19 +46,7 @@
         
         <div class="mb-3">
           <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-<<<<<<< HEAD
-          <input class="form-control" type="file" id="formFile" name="image">
-          <% if (locals.errors && errors.image) { %>
-            <small class="text-danger"><%= errors.avatar.msg %></small>
-        <% } %>
-        </div>
-        <br>
-        <div class="mb-3 " id="Container-admin">
-          <label for="description" class="form-label">Descripcion</label>
-          <textarea name="description" class="form-control texto-area-main" id="description" rows="3" value="<%= (locals.old && old.discount) ? old.discount : "" %>"></textarea>
-            <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
-=======
-          <input class="form-control" type="file" id="formFile" name="image" onchange="fileValidation()"/>
+          <input class="form-control" type="file" id="formFile" name="image" />
           <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
         </div>
         <br>
@@ -66,7 +54,6 @@
           <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
           <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"></textarea>
           <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
->>>>>>> ea56db7fc0652246d6553169a0f8b0b7d4ec52b9
         </div>
         <br>
         <div class="col-12" id="boton-adminMain">
