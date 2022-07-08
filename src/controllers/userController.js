@@ -101,5 +101,14 @@ module.exports = {
         }
 
         res.redirect('/')
-    }
+    },
+    editProfile:(req,res)=>{ 
+       
+            res.render('user/editProfile', {
+                titulo: "Editar Perfil",
+                session: req.session
+
+             })
+            }
+      
 };

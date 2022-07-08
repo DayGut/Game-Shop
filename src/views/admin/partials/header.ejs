@@ -19,6 +19,7 @@
 
             <% if (typeof locals.user != "undefined") { %> 
                 <li><a href="/user/login">login</a></li>
+<<<<<<< HEAD
                 <% } else { %>
                     <li><a href="/user/logout">cerrar sesion</a></li>
                     <% } %>
@@ -27,6 +28,14 @@
                     <% } else { %>
                         <li><a href="/admin/productos/listar" >Listar</a></li>
                         <% } %>
+=======
+                
+                <% } else { %>
+                    <li><a href="/user/logout">cerrar sesion</a></li>
+                    <% } %>
+
+                   
+>>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
             <li><a href="/admin/productos/agregar">agregar</a></li>
         </ul>
     </nav>

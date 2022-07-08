@@ -75,19 +75,19 @@ window.addEventListener("load", () => {
         }
     });
 
-    $pass.addEventListener('blur', () => {
+    $pass.addEventListener('blur', function(){
         switch (true) {
             case !$pass.value.trim():
-                $passErrors.innerHTML = 'Campo requerido';
-                $pass.classList.add('Usuario inválido');
+                $passErrors.innerHTML = 'Campo requerido'
+                $pass2.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
                 $passErrors.innerHTML = 'La contraseña debe: mas de 6 caracteres, al menos una mayúscula y un número';
-                $pass.classList.add('Contraseña inválida');
+                $pass.classList.add('is-invalid')
                 break;    
             default:
                 $pass.classList.remove("Contraseña invalida");
-                $pass.classList.add('contraseña valida');
+                $pass.classList.add('contraseña valida')
                 $passErrors.innerHTML = ""
                 break;
         }
@@ -129,7 +129,6 @@ window.addEventListener("load", () => {
             $terms.classList.remove('is-invalid')
             $termsErrors.innerHTML = ""
         })
-
         $form.addEventListener("submit", function(event) {
 
             event.preventDefault()
