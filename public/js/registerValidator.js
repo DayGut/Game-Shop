@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
     $nameErrors = qs('#nameErrors'),
     $inputLastname = qs('#lastname'),
     $lastnameErrors = qs('#lastnameErrors'),
+    $form = qs('#form'),
     $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     $pass = qs('#pass'),
@@ -19,7 +20,8 @@ window.addEventListener("load", () => {
     $termsErrors = qs('#termsErrors'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+    
 
     $inputName.addEventListener("blur", () => {
         switch (true) {
@@ -82,12 +84,12 @@ window.addEventListener("load", () => {
                 $pass2.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
-                $passErrors.innerHTML = 'La contraseña debe: mas de 6 caracteres, al menos una mayúscula y un número';
+                $passErrors.innerHTML = 'La contraseña debe: mas de 8 caracteres, al menos una mayúscula y un número';
                 $pass.classList.add('is-invalid')
                 break;    
             default:
-                $pass.classList.remove("Contraseña invalida");
-                $pass.classList.add('contraseña valida')
+                $pass.classList.remove("is-invalid");
+                $pass.classList.add('is-valid')
                 $passErrors.innerHTML = ""
                 break;
         }
@@ -118,7 +120,6 @@ window.addEventListener("load", () => {
         if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
             $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
             $file.value = '';
-            $imgPreview.innerHTML = '';
             return false;
         }
          })

@@ -6,14 +6,9 @@
     <%-include("../partials/header")%>
     <script src="/js/editvalidation.js"></script>
       <main class="container">
-<<<<<<< HEAD
-        <fieldset class="rounded border w-75 mx-auto p-4">
-          <legend class="text-center">EDITAR PRODUCTO:<% producto.name %></legend>
-=======
         <fieldset class="rounded border w-75 mx-auto p-4" id="fondo-mainAdmin">
           <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %>
 </legend>
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
           <form class="row " action="/admin/productos/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="mb-3 col-md-6">
               <label for="name" class="form-label">Nombre</label>
@@ -28,12 +23,8 @@
  
             <div class="mb-3 col-md-6">
               <label for="discount" class="form-label">Descuento</label>
-<<<<<<< HEAD
-              <input type="number" name="discount" class="form-control" id="discount">
-=======
               <input type="number" name="discount" class="form-control" id="discount"  value="<%= (locals.old && old.discount) ? old.discount : producto.discount %>">
               <small class="text-danger" id="discountErrors"><%= (locals.errors  && errors.discount) ? errors.discount.msg : "" %></small>
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
             </div>
             <div class="mb-3 col-md-6">
               <label for="exampleDataList" class="form-label">Categorias</label>
@@ -62,17 +53,10 @@
             </div>
             <br>
             <div class="mb-3 " id="Container-admin">
-<<<<<<< HEAD
-              <label for="description" class="form-label">Descripcion</label>
-              <textarea name="description" class="form-control texto-area-main" id="description"
-                rows="3" value="<%= (locals.old && old.description) ? old.description : producto.description %>"></textarea>
-                <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
-=======
               <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
               <textarea name="description" class="form-control texto-area-main" id="description"
                 rows="3"><%= producto.description %></textarea>
                 <small class="text-danger" id="descriptionErrors"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
             </div>
             <br>
             <div class="col-12" id="boton-adminMain">

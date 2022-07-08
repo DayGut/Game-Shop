@@ -8,7 +8,8 @@ window.addEventListener("load", () => {
     $password = qs('#password'),
     $passwordErrors = qs('#passwordErrors'),
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    regExPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+
 
     $email.addEventListener("blur", () => {
         switch (true) {
@@ -32,15 +33,15 @@ window.addEventListener("load", () => {
         switch (true) {
             case !$password.value.trim():
                 $passwordErrors.innerHTML = 'Campo requerido';
-                $password.classList.add('Usuario inválido');
+                $password.classList.add('Usuario.inválido');
                 break;
             case !regExPassword.test($password.value):
-                $passwordErrors.innerHTML = 'La contraseña debe: mas de 6 caracteres, al menos una mayúscula y un número';
-                $password.classList.add('Contraseña inválida');
+                $passwordErrors.innerHTML = 'La contraseña debe: mas de 8 caracteres, al menos una mayúscula y un número';
+                $password.classList.add('Contraseña-inválida');
                 break;    
             default:
-                $password.classList.remove("Contraseña invalida");
-                $password.classList.add('contraseña valida');
+                $password.classList.remove("Contraseña-invalida");
+                $password.classList.add('contraseña.valida');
                 $passwordErrors.innerHTML = ""
                 break;
         }

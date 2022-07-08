@@ -48,22 +48,13 @@
         <div class="mb-3">
           <label for="formFile" class="form-label">Agregar archivo de imagen</label>
           <input class="form-control" type="file" id="formFile" name="image" />
-<<<<<<< HEAD
-          <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
-=======
           <small class="text-danger" id="fileErrors"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
         </div>
         <br>
         <div class="mb-3 " id="Container-admin">
           <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-<<<<<<< HEAD
-          <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <small class="text-danger"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
-=======
           <textarea name="description" class="form-control texto-area-main" id="description" rows="3"></textarea>
           <small class="text-danger" id="descriptionErrors"><%= (locals.errors  && errors.description) ? errors.description.msg : "" %></small>
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
         </div>
         <br>
         <div class="col-12" id="boton-adminMain">

@@ -35,35 +35,23 @@ let validateRegister = [
   }).withMessage("Las contraseñas no coinciden"),
   body("avatar").custom((value, {req}) => {
     let file = req.file
-<<<<<<< HEAD
     let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
-=======
-    let extensiones = ["jpg","jpeg","png", "gif"];
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
         if(!file){
-            return Promise.reject("Seleccione una imagen");
+            return Promise.reject("Subir un avatar")
         }
         let extensionOriginal = req.file.mimetype.split("/").pop()
-<<<<<<< HEAD
         if(!extensionesPermitidas.includes(extensionOriginal)){
-            throw new Error(`Debe ser archivo de imagen ${extensionesPermitidas.join(', ')}`)
+            throw new Error(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
         }
         return true;
     }),
+    check("terms")
+          .isString("on").withMessage("Debes aceptar los términos y condiciones")
+];
 
-=======
-        if(!extensiones.includes(extensionOriginal)){
-            return Promise.reject("Formato de imagen no valido");
-        }
-        return true;
-    }
-    ).withMessage("Formato de imagen no valido")
-];/* A template literal. */
->>>>>>> 5fb54dbc35d13539a919ec878ed959bfe01331c2
 
 //             throw new Error(`Debe ser archivo de imagen ${extensiones.join(', ')}`)
 //         }
-//         return true;
 //     }),
 
 //   check("terms")
