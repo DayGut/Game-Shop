@@ -12,8 +12,8 @@ function qs(element) {
     $fileErrors = qs('#fileErrors'),
     regExAlphaName = /^[a-zA-Z\sñáéíóúü ]{5,40}$/,
     regExAlphaDescrip = /^[a-zA-Z\sñáéíóúü ]{20,100}$/,
-    regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,12}$/;
+    
+    
 
     $inputName.addEventListener("blur", () => {
         switch (true) {
