@@ -29,15 +29,29 @@ module.exports = {
 
     detalle:(req,res)=>{
              // 1- Obtener el id del producto
-     let idProducto = +req.params.id
-     let producto = products.find(producto => producto.id === idProducto)
-     //mostrar en la vista
-        res.render('products/productDetail', { 
-            titulo: "Detalle de producto",
-            producto,
-            session: req.session
-        });
-    },
+             let idProducto = +req.params.id
+             db.Producto.findByPk(idProducto, {include:[{association:'Categoria'}]})
+        .then((producto) =>{
+            res.render('products/productDetail', { 
+                imagen: req.file ? req.file.filename : "PS4.jpeg",
+                  titulo: "Detalle de producto",
+                  producto,
+                session: req.session
+                   });
+
+             })
+            
+       .catch(error => res.send(error))
+         },
+    //  let idProducto = +req.params.id
+    //  let producto = products.find(producto => producto.id === idProducto)
+    //  //mostrar en la vista
+    //     res.render('products/productDetail', { 
+    //         titulo: "Detalle de producto",
+    //         producto,
+    //         session: req.session
+    //     });
+    // },
     carrito:(req, res) => {
         res.render('products/productCart', { 
             titulo: "Carrito de compras",
