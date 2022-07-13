@@ -7,17 +7,16 @@ const loginValidator = require('../validations/loginValidator');
 const userInSessionCheck = require('../middlewares/userInSessionCheck');
 
 /*Renderiza vista login */
-router.get('/login', usersController.login);
+router.get('/login',userInSessionCheck, usersController.login);
 router.post('/login', loginValidator, usersController.processlogin);
 /* Renderiza vista registro */
 router.get('/registro', userInSessionCheck, usersController.registro);
-router.get('/login', userInSessionCheck, usersController.login);
 /* GET - Logout */
 router.get('/logout', usersController.logout);
 /* POST - Crea un nuevo usuario */
 router.post('/registro', uploadFile.single('avatar'),registerValidator, usersController.processRegister)
 /*perfil del usuario*/
-router.get('/perfil',uploadFile.single('avatar'),registerValidator, usersController.editProfile);
+router.get('/perfil',uploadFile.single('avatar'), usersController.editProfile);
 //router.put('/perfil/:id', editProfile)
 
 

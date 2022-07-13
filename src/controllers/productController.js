@@ -43,15 +43,7 @@ module.exports = {
             
        .catch(error => res.send(error))
          },
-    //  let idProducto = +req.params.id
-    //  let producto = products.find(producto => producto.id === idProducto)
-    //  //mostrar en la vista
-    //     res.render('products/productDetail', { 
-    //         titulo: "Detalle de producto",
-    //         producto,
-    //         session: req.session
-    //     });
-    // },
+    
     carrito:(req, res) => {
         res.render('products/productCart', { 
             titulo: "Carrito de compras",

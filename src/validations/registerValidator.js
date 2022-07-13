@@ -33,7 +33,7 @@ let validateRegister = [
       }
       return true;
   }).withMessage("Las contraseñas no coinciden"),
-  body("avatar").custom((value, {req}) => {
+  body("avatar").notEmpty().withMessage("Ingrese una imagen").custom((value, {req}) => {
     let file = req.file
     let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
         if(!file){

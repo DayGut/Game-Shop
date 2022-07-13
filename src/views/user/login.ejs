@@ -18,7 +18,7 @@
             <input type="password" name="password" id="password" placeholder="password" value="<%= (locals.old && old.password) ? old.password : "" %>"> 
             <small class="text-danger" id="passwordErrors"><%= (locals.errors && errors.password) ? errors.password.msg : "" %> </small>
             <input type="submit" class="btn-login" value="Login" >
-
+            <span id="submitErrors" class="text-danger"></span>
 
         <% if (locals.errors && errors.custom) { %>
             <small class="text-danger"><%= errors.custom.msg %></small>
@@ -30,6 +30,7 @@
             <label class="form-check-label" for="remember">
                 Recordarme
             </label>
+            <span id="submitErrors" class="text-danger"></span>
         </div>
     </form>
     </div>
