@@ -121,8 +121,13 @@ window.addEventListener("load", () => {
             $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
             $file.value = '';
             return false;
+        }else{
+            imagen.classList.remove('is-invalid');
+            imagen.classList.add('is-valid');
+            errorImagen.innerHTML = '';
+            errores = false;
         }
-         })
+    })
 
          $terms.addEventListener('click', () => {
             $terms.value = "on"

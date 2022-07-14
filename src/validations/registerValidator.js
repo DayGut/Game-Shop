@@ -33,22 +33,20 @@ let validateRegister = [
       }
       return true;
   }).withMessage("Las contraseñas no coinciden"),
-  body("avatar").notEmpty().withMessage("Ingrese una imagen").custom((value, {req}) => {
-    let file = req.file
-    let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
-        if(!file){
-            return Promise.reject("Subir un avatar")
-        }
-        let extensionOriginal = req.file.mimetype.split("/").pop()
-        if(!extensionesPermitidas.includes(extensionOriginal)){
-            throw new Error(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
-        }
-        return true;
-    }),
+  body('avatar')
+  .custom(( value, {req} ) => {
+    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    if(!req.file){
+        return Promise.reject('campo requerido')
+    }if(!allowedExtensions.exec(req.file.filename)){
+        return Promise.reject('Carga un archivo de imagen válido, con las extensiones .jpeg/.jpg/.png/.gif')
+    }else{
+        return true
+    }
+}),
     check("terms")
           .isString("on").withMessage("Debes aceptar los términos y condiciones")
 ];
-
 
 
 

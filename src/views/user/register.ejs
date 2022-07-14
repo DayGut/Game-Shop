@@ -38,7 +38,7 @@
         </div>
             <div class="form--group">
                 <label for="avatar">Avatar</label>
-                <input type="file" name="avatar" id="formFile" value="<%= (locals.old && old.avatar) ? old.avatar : "" %>">
+                <input type="file" name="avatar" id="formFile" onchange="fileValidation()" value="<%= (locals.old && old.avatar) ? old.avatar : "" %>">
                     <small class="text-danger" id="fileErrors"><%= (locals.errors && errors.avatar) ? errors.avatar.msg : "" %></small>
             </div><br>
 
