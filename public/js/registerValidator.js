@@ -20,17 +20,17 @@ window.addEventListener("load", () => {
     $termsErrors = qs('#termsErrors'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+    regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/
     
 
     $inputName.addEventListener("blur", () => {
         switch (true) {
             case !$inputName.value.trim():
-                $nameErrors.innerHTML = "Requerido";
+                $nameErrors.innerHTML = "El nombre es requerido";
                 $inputName.classList.add("is-invalid");
                 break;
             case !regExAlpha.test($inputName.value):
-                $nameErrors.innerHTML = "Nombre inválido";
+                $nameErrors.innerHTML = "ingrese nombre valido";
                 $inputName.classList.add("is-invalid");
                 break;
             default: 
@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
     $inputLastname.addEventListener("blur", () => {
         switch (true) {
             case !$inputLastname.value.trim():
-                $lastnameErrors.innerHTML = "Requerido";
+                $lastnameErrors.innerHTML = "El apellido es requerido";
                 $inputLastname.classList.add("is-invalid");
                 break;
             case !regExAlpha.test($inputLastname.value):
@@ -62,11 +62,11 @@ window.addEventListener("load", () => {
     $email.addEventListener("blur", () => {
         switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerHTML = "Requerido";
+                $emailErrors.innerHTML = "Se Requiere email";
                 $email.classList.add("is-invalid");
                 break;
             case !regExEmail.test($email.value):
-                $emailErrors.innerHTML = "Email inválido";
+                $emailErrors.innerHTML = "ingrese un email valido";
                 $email.classList.add("is-invalid");
                 break;
             default: 
@@ -84,7 +84,7 @@ window.addEventListener("load", () => {
                 $pass2.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
-                $passErrors.innerHTML = 'La contraseña debe: mas de 8 caracteres, al menos una mayúscula y un número';
+                $passErrors.innerHTML = 'La contraseña debe: mas de 8 caracteres, al menos una mayúscula, un número y un caracter especial';
                 $pass.classList.add('is-invalid')
                 break;    
             default:
@@ -122,9 +122,9 @@ window.addEventListener("load", () => {
             $file.value = '';
             return false;
         }else{
-            imagen.classList.remove('is-invalid');
-            imagen.classList.add('is-valid');
-            errorImagen.innerHTML = '';
+            $file.classList.remove('is-invalid')
+            $file.classList.add('is-valid')
+            $fileErrors.innerHTML = '';
             errores = false;
         }
     })
@@ -135,28 +135,28 @@ window.addEventListener("load", () => {
             $terms.classList.remove('is-invalid')
             $termsErrors.innerHTML = ""
         })
+
         $form.addEventListener("submit", function(event) {
 
             event.preventDefault()
             let elementsForm = this.elements;
             let errores = false;
     
-            
-    
             for (let index = 0; index < elementsForm.length - 1; index++) {
                 if(elementsForm[index].value == ""
                 && elementsForm[index].name !== "apellido"
                 && elementsForm[index].type !== "file"
-                || elementsForm[index].classList.contains("is-invalid")){
+                && elementsForm[index].type !== "checkbox"
+                 ||elementsForm[index].classList.contains("is-invalid")){
                     elementsForm[index].classList.add("is-invalid");
-                    submitErrors.innerHTML = "Hay errores en el formulario"
+                    submitErrors.innerHTML = "Corregir campos marcados en rojo";
                     errores = true;
                 }
             }
     
             if(!$terms.checked){
                 $terms.classList.add("is-invalid");
-                $termsErrors.innerHTML = "Debes los términos y condiciones";
+                $termsErrors.innerHTML = "Debes aceptar los términos y condiciones";
             }
     
             if(!errores){

@@ -10,8 +10,8 @@
 
     <!--Login-->
     <div class="login-form">
-        
         <h2>Login</h2>
+        <div class="is-invalid">
         <form action="/user/login" method="POST" id="login">
             <input type="email" name="email" id="email" placeholder="E-mail" value="<%= (locals.old && old.email) ? old.email : "" %>">
             <small class="text-danger" id="emailErrors"><%= (locals.errors && errors.email) ? errors.email.msg : "" %> </small>
@@ -34,6 +34,7 @@
         </div>
     </form>
     </div>
+</div>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 

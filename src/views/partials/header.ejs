@@ -11,7 +11,14 @@
             <button  class="close-menu">
                 <a class="fa-solid fa-xmark" aria-label="cerrar menu"></a>
             </button>
-            
+
+            <!-- buscador -->
+            <form action="/search" method="get"></form>
+            <li> <input type="text" placeholder="Search" name="keywords">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button></li>
+            </form>
             <li><a href="/">home</a></li>
             <% if (typeof session.user != "undefined") { %> 
             <li style="display: none;"><a href="/user/registro" >register </style></a></li>

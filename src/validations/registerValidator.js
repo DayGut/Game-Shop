@@ -5,6 +5,9 @@ let validateRegister = [
  check("name")
     .notEmpty().withMessage("El nombre es requerido")
     .isLength({ min:2}).withMessage("ingrese nombre valido"),
+    check("lastname")
+    .notEmpty().withMessage("El apellido es requerido")
+    .isLength({ min:2}).withMessage("ingrese un apellido valido"),   
  check("email")
     .notEmpty().withMessage("Se Requiere email")
     .isEmail().withMessage("ingrese un email valido"),
@@ -36,9 +39,7 @@ let validateRegister = [
   body('avatar')
   .custom(( value, {req} ) => {
     let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
-    if(!req.file){
-        return Promise.reject('campo requerido')
-    }if(!allowedExtensions.exec(req.file.filename)){
+    if(!allowedExtensions.exec(req.file.filename)){
         return Promise.reject('Carga un archivo de imagen válido, con las extensiones .jpeg/.jpg/.png/.gif')
     }else{
         return true
