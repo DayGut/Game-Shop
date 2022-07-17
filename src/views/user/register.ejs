@@ -3,18 +3,22 @@
 
     <%-include('../partials/head') %>
     <script src="/js/registerValidator.js"></script>
+    <script src="/js/hamburguesa.js"></script>
+
 <body>
     <!-- header-->
     <%-include('../partials/header') %>
+    
     <!--fin header-->
     <!--Register-->
+    
     <div class="register-form">
         <h1>Form Registration</h1>
         <div class="is-valid">
         <form action="/user/registro" method="post" enctype="multipart/form-data" id="form">
             <div class="is-invalid">
             <label form="nombre">User name</label>
-            <input type="text" name="name" id="name" value="<%= (locals.old && old.name) ? old.name : "" %>">
+            <input type="text" name="name" id="name" placeholder="Nombre" value="<%= (locals.old && old.name) ? old.name : "" %>">
                 <small class="text-danger" id="nameErrors"><%= (locals.errors && errors.name) ? errors.name.msg : "" %></small>
             </div>
             <div>
@@ -24,12 +28,12 @@
                 </div>
             <div>
             <label form="email">E-mail</label>
-            <input type="email" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
+            <input type="email" name="email" id="email" placeholder="E-mail" value="<%= (locals.old && old.email) ? old.email : "" %>">
                 <small class="text-danger" id="emailErrors"><%= (locals.errors && errors.email) ? errors.email.msg : "" %></small>
             </div>
         <div>
             <label form="pass">Password</label>
-            <input type="password" name="pass" id="pass" value="<%= (locals.old && old.pass) ? old.pass : "" %>">
+            <input type="password" name="pass" id="pass" placeholder="Contraseña" value="<%= (locals.old && old.pass) ? old.pass : "" %>">
                 <small class="text-danger" id="passErrors"><%= (locals.errors && errors.pass) ? errors.pass.msg : "" %></small>
         </div>
         <div>
@@ -66,7 +70,7 @@
     <!-- fin footer-->
 
 
-
+     
     <script src="https://kit.fontawesome.com/f21216c2d3.js" crossorigin="anonymous"></script>
 </body>
 

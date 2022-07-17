@@ -5,7 +5,7 @@ let validateAddProducts = [
     check("name")
         .notEmpty().withMessage("Ingrese un nombre").bail()
         .isAlphanumeric().withMessage("Nombre no valido").bail()
-        .isLength({min:5}).withMessage("Debe tener al menos 5 caracteres"),
+        .isLength({min:4}).withMessage("Debe tener al menos 4 caracteres"),
     check("price")
          .notEmpty().withMessage("Ingerese un precio").bail()
          .isNumeric().withMessage("Ingrese un valor numerico"),
