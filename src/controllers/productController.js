@@ -1,4 +1,4 @@
-//const { products } = require('../data');
+const { products } = require('../data');
 const db = require('../database/models');
 const { carshop, writeShop } = require('../data');
 
@@ -6,24 +6,17 @@ const { carshop, writeShop } = require('../data');
 module.exports = {
     list: (req, res) => {
         db.Producto.findAll()
-        .then(function(productos){
-            res.send(productos)
-            // res.render('admin/productos/list', {
-            //     productos: productos
+        .then(function(products){
+                   res.render("products/products", {
+            products,
+         titulo:"Productos",
+        session: req.session
             })
-        // }
-        // )
-        // .catch(function(error){
-        //     console.log(error)
-        // })
+         })
+         .catch(function(error){
+             console.log(error)
+         })
         
-
-
-        // res.render("products/products", {
-        //     products,
-        //     titulo:"Productos",
-        //     session: req.session
-        // })
     },
     
 
@@ -45,11 +38,16 @@ module.exports = {
          },
     
     carrito:(req, res) => {
+        db.Producto.findAll()
+        .then(function(products){
         res.render('products/productCart', { 
             titulo: "Carrito de compras",
             carshop,
-            session: req.session 
+            session: req.session,
+            produsctos: products
         }) 
+    })
+    .catch(error => res.send(error))
     },
 
     addcarshop: (req, res) => {
