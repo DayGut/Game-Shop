@@ -12,12 +12,12 @@
     <div class="login-form">
         
         <h2>Login</h2>
-        <form action="/user/login" method="POST">
+        <form action="/user/login" method="POST" id="login">
             <input type="email" name="email" id="email" placeholder="E-mail" value="<%= (locals.old && old.email) ? old.email : "" %>">
             <small class="text-danger" id="emailErrors"><%= (locals.errors && errors.email) ? errors.email.msg : "" %> </small>
             <input type="password" name="password" id="password" placeholder="password" value="<%= (locals.old && old.password) ? old.password : "" %>"> 
             <small class="text-danger" id="passwordErrors"><%= (locals.errors && errors.password) ? errors.password.msg : "" %> </small>
-            <input type="submit" class="btn-login" value="Login" >
+            <input type="submit" class="btn-login" value="login" >
             <span id="submitErrors" class="text-danger"></span>
 
         <% if (locals.errors && errors.custom) { %>
