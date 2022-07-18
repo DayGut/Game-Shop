@@ -1,4 +1,14 @@
 /*Login*/
+
+.is-valid{
+  border-color: #28a745 !important;
+}
+
+.is-invalid{
+  border-color: #dc3545 !important;
+ 
+}
+
 .login-form{
     width: 300px;
     margin: 100px auto;

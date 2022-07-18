@@ -1,5 +1,14 @@
 /*Login*/
 
+.is-invalid{
+  border-color: #dc3545 !important;
+  
+}
+
+.is-valid{
+  border-color: #28a745 !important;
+}
+
  .login-fondo{
   background-image: url('/images/fondo.jpeg');
   min-height: 100vh;
