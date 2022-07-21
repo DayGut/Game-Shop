@@ -8,12 +8,10 @@ window.addEventListener("load", () => {
     $emailErrors = qs('#emailErrors'),
     $password = qs('#password'),
     $passwordErrors = qs('#passwordErrors'),
-    errores,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/
+    regExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/,
+    errores;
     
-
-
     $email.addEventListener("blur", () => {
         switch (true) {
             case !$email.value.trim():
