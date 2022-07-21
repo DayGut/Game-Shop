@@ -30,18 +30,18 @@ window.addEventListener("load", () => {
         }
     });
 
-    $password.addEventListener('blur', function(){
+    $password.addEventListener("blur", function(){
         switch (true) {
             case !$password.value.trim():
-                $passwordErrors.innerHTML = 'Campo requerido';
-                $password.classList.add('is-invalid');
+                $passwordErrors.innerHTML = "Campo requerido";
+                $password.classList.add("is-invalid");
                 break;
             case !regExPassword.test($password.value):
-                $passwordErrors.innerHTML = 'Usuario o contraseña incorrectos';//igual como esta en el back para no especificar la contraseña
-                $password.classList.add('is-invalid');
+                $passwordErrors.innerHTML = "Contraseña incorrecta";
+                $password.classList.add("Contraseña-inválida");
                 break;    
             default:
-                $password.classList.remove("Contraseña-invalida");
+                $password.classList.remove("is-invalid");
                 $password.classList.add('is-valid');
                 $passwordErrors.innerHTML = ""
                 break;
@@ -75,14 +75,14 @@ window.addEventListener("load", () => {
             default:
                 if(!errores){
                     $login.submit()
-                    submitErrors.innerHTML = "Hay errores en el formulario"
+                    submitErrors.innerHTML = 'Usuario o contraseña incorrectos'
                     errores = false
                 }else{
                     errores = true;
                 }
             break;
-        }
-    })   
+            }
+        })
 
 })
 
