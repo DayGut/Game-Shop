@@ -3,6 +3,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
+const {Op} = db.Sequelize;
+
 
 module.exports= {
 
@@ -22,24 +24,36 @@ module.exports= {
         .catch(function(error){
             res.send(error)
         })
-        },
+    }, 
     search: (req, res) => {
-        let searchResult = [];
-         products.forEach(product => {
-            if(removeAccents(product.name).toLowerCase().includes(req.query.keywords.toLowerCase())){
-                searchResult.push(product)
+        let search = req.query.keywords;
+        let search_clean = removeAccents(search).toLowerCase();
+        db.Producto.findAll(
+            {where:{
+                name:{[Op.like]:`%${search_clean}%`},
             }
-        });
+        })
+    .then((productos)=>{
         res.render('./home/results', {
             titulo: "Search",
-            searchResult,
-            keyword: req.query.keywords,
+            title: "Productos",
+            CSS:"home.css",
+            productos,
             toThousand,
-            session: req.session
-            
+            keyword: search_clean,
+            session: req.session,
+            image: req.file ? req.file.filename : "user-avatar.jpeg"
         })
+
+    })
+    .catch(function(error){ 
+        res.send(error)
+    })
+    
+    
         
-    }
+}
     
     
 }
+

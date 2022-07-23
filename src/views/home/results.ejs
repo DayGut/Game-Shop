@@ -18,13 +18,13 @@
 		</div>
 		<div class="row">
 			
-	<% if(searchResult.length > 0) { %>
+	<% if(productos.length > 0) { %>
 				  
-			<% searchResult.forEach(product => { %>
-				<article class="producto-search">
+			<% productos.forEach(product => { %>
+				<article class="producto">
 					<a class="product-detail" href="/products/detalle/<%= product.id %> ">
 						<div>
-							<img src="/images/<%= product.image %>" alt="">
+							<img src="/images/<%= product.imagen %>" alt="">
 						</div>
 						<p class="product-name"><%= product.name %> </p>
 						<p class="description-prod"><%= product.description %></p>
@@ -33,7 +33,7 @@
 						<% }else{ %> <span class="descuento">Sin descuento</span> <% } %>
 						<div class="card__price">
 							<% if (product.discount > 0) { %>
-								<span class="precio-original">$ <%= product.price %> </span>$ <%= product.price - product.discount * product.price / 100 %>
+								<span class="precio-original">$ <%= product.price %> </span>$ <%= toThousand(product.price - product.discount * product.price / 100) %>
 							<% } else { %>
 							$ <%= product.price %> 
 							<% } %>
