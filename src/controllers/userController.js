@@ -79,8 +79,10 @@ module.exports = {
                     rol: "admin"//toma los datos los carga en la base de datos
                 })
                 .then((user) => {
-                    res.redirect('user/login',{
-                  session: req.session
+                    res.render('user/login',{
+                  session: req.session,
+                    titulo: "Login",
+                  user
                  })//luego redirecciona a la pagina de login
                 })
                 .catch(error => console.log(error))//vuelvo a cargar en el login y me muestrael error
