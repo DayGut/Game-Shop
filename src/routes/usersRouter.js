@@ -16,8 +16,8 @@ router.get('/logout', usersController.logout);
 /* POST - Crea un nuevo usuario */
 router.post('/registro', uploadFile.single('avatar'),registerValidator, usersController.processRegister)
 /*perfil del usuario*/
-router.get('/perfil',uploadFile.single('avatar'), usersController.editProfile);
+router.get('/perfil',uploadFile.single('avatar'), usersController.perfil);
 //router.put('/perfil/:id', editProfile)
-
+router.put('/perfil/:id',uploadFile.single('image'),usersController.editProfile)
 
 module.exports = router;

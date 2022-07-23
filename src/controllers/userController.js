@@ -79,7 +79,9 @@ module.exports = {
                     rol: "admin"//toma los datos los carga en la base de datos
                 })
                 .then((user) => {
-                    res.redirect('/user/login')//luego redirecciona a la pagina de login
+                    res.redirect('user/login',{
+                  session: req.session
+                 })//luego redirecciona a la pagina de login
                 })
                 .catch(error => console.log(error))//vuelvo a cargar en el login y me muestrael error
                 
@@ -103,13 +105,38 @@ module.exports = {
 
         res.redirect('/')
     },
-    editProfile:(req,res)=>{ 
-       
+    perfil:(req,res)=>{
+        db.Usuario.findByPk(req.session.user.id)
+        .then(user => {
             res.render('user/editProfile', {
                 titulo: "Editar Perfil",
-                session: req.session
-
-             })
+                session: req.session,
+                user,
+            })
+        })
+        .catch(errors => console.log(errors))
+       
+    },
+    editProfile:(req,res)=>{ 
+       db.Usuario.findByPk(req.session.user.id)
+        .then(usuario => {
+            db.Usuario.update({
+                ...req.body,
+                avatar: req.file ? req.file.filename : req.session.user.avatar
+            },{
+                where : { id : req.session.user.id}
+            })
+            .then(() => {
+                if(req.file){
+                    if (fs.existsSync(path.join(__dirname, "../../public/images/avatars", usuario.avatar)) &&
+                        usuario.avatar !== "default-image.png"){
+                        fs.unlinkSync( path.join(__dirname, "../../public/images/avatars", usuario.avatar))
+                    }
+                }
+            })
+            .catch(errors => console.log(errors))
+            res.redirect('/user/home')
+        })
+        .catch(errors => console.log(errors))
             }
-      
 };

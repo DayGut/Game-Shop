@@ -77,7 +77,7 @@
   .redes .facebook:hover,
   .redes .facebook:hover .tooltip,
   .redes .facebook:hover .tooltip::before {
-    background-color: #3b5999;
+    background-color: #3b5998;
     color: #ffffff;
   }
   
@@ -105,7 +105,7 @@
   .redes .youtube:hover,
   .redes .youtube:hover .tooltip,
   .redes .youtube:hover .tooltip::before {
-    background-color: #de463b;
+    background-color: #c4302b;
     color: #ffffff;
   }
   

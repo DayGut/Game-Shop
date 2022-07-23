@@ -9,36 +9,27 @@
     <!--fin header-->
     <!--Register-->
     <div class="register-form">
-        <h1>Form Registration</h1>
+        <h1>Editar Perfil <%= user.nombre %></h1>
         <form action="/user/registro" method="post" enctype="multipart/form-data">
             <div>
             <label form="nombre">User name</label>
-            <input type="text" name="name" id="name" value="<%= (locals.old && old.name) ? old.name : "" %>">
+            <input type="text" name="name" id="name" value="<%= (locals.old && old.name) ? old.name : user.name %>">
                 <small class="text-danger" id="nameErrors"><%= (locals.errors && errors.name) ? errors.name.msg : "" %></small>
             </div>
             <div>
                 <label form="lastname">Lastname</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= (locals.old && old.lastname) ? old.lastname : "" %>">
+                <input type="text" name="lastname" id="lastname" value="<%= (locals.old && old.apellido) ? old.apellido : user.apellido%>">
                     <small class="text-danger" id="lastnameErrors"><%= (locals.errors && errors.lastname) ? errors.lastname.msg : "" %></small>
                 </div>
             <div>
             <label form="email">E-mail</label>
-            <input type="email" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : "" %>">
+            <input type="email" name="email" id="email" value="<%= (locals.old && old.email) ? old.email : user.email%>">
                 <small class="text-danger" id="emailErrors"><%= (locals.errors && errors.email) ? errors.email.msg : "" %></small>
             </div>
-        <div>
-            <label form="pass">Password</label>
-            <input type="password" name="pass" id="pass" value="<%= (locals.old && old.pass) ? old.pass : "" %>">
-                <small class="text-danger" id="passErrors"><%= (locals.errors && errors.pass) ? errors.pass.msg : "" %></small>
-        </div>
-        <div>
-            <label form="pass2">Repeat Password</label>
-            <input type="password" name="pass2" id="pass2" value="<%= (locals.old && old.pass2) ? old.pass2 : "" %>">
-            <small class="text-danger" id="pass2Errors"><%= (locals.errors && errors.pass2) ? errors.pass2.msg : "" %></small>
-        </div>
+       
             <div class="form--group">
                 <label for="avatar">Avatar</label>
-                <input type="file" name="avatar" id="formFile" value="<%= (locals.old && old.avatar) ? old.avatar : "" %>">
+                <input type="file" name="avatar" id="formFile" value="<%= (locals.old && old.avatar) ? old.avatar : ""  %>">
                     <small class="text-danger" id="fileErrors"><%= (locals.errors && errors.avatar) ? errors.avatar.msg : "" %></small>
             </div><br>
 

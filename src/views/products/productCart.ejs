@@ -15,27 +15,33 @@
        
         <% if(carshop.length > 0) { %>
             <% carshop.forEach(shop => { %>
+              
                 
               
              <ol class="product-shop">
-                    <li>
+                    <li class="caja-imagen">
                         <img src="/images/<%=shop.image%>" alt="Game" class="img-shop">
                     </li>
-                    
-                    <ol class="datos-shop"> 
-                        <li><p>Descripcion: <%=shop.description%></p></li>
-                        <li ><p class="name-shop"><%=shop.name%> </p></li>
+                    <ol class="datos-shop-detalle">
                         <li>
-                            <!--<input type="number" id="tentacles" name="tentacles"
+                            <li><p class="name-shop"><%=shop.name%> </p></li>
+                           <li><p>Descripcion: <%=shop.description%></p></li> 
+                        </li>
+                    </ol>
+                    <ol class="datos-shop"> 
+                        <li>
+                            <p>Precio: $<%=shop.price%></p>
+                            <label for="">Cantidad</label>
+                            <input type="number" id="tentacles" name="tentacles"
                             min="1" max="100">
-                            <p>Precio: $<%=shop.price%></p> -->
+                           
                         </li>
                         <li><p>Subtotal: </p></li>
-                        <form action='/carrito/eliminar/<%- carshop.id %>?_method=delete' method="post">
+                        
                             <button class="btn btn-danger" type="submit" >
                               <i class="fa-solid fa-trash-can"></i>
                             </button>
-                          </form>
+                          
                     </ol>
             </ol>
             

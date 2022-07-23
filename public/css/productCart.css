@@ -4,23 +4,33 @@
 }
 .product-shop{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style-type: none;
   align-items: center;
   margin:10px;
+  padding: 10px
+px
+;
   background-color: var( --body-color-Gris);
 
 }
 .img-shop{
-  width: 35vh;
-  height: 35vh;
+  width: 10vh;
+  height: 10vh;
 }
 .datos-shop{
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 35vh;
+  height: 15vh;
+}
+.datos-shop-detalle{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15vh;
 }
 
 .product-shop li{
