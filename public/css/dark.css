@@ -1,0 +1,51 @@
+#modo{
+    width: 100px;
+    font-size: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.dark header{
+    color: #fff;
+}
+.dark a{
+    color: #fff;
+}
+.dark .producto{
+    box-shadow: 0 0 8px rgb(0, 0, .4);
+}
+.dark label{
+    color: #fff;
+}
+
+.dark a:hover{
+    color: #fff;
+}
+.dark .ofertas{
+    background-color:rgb(4, 24, 27);
+    color: #fff;
+}
+.dark {
+    background: rgb(4, 24, 27);
+}
+
+.dark h1{
+    color: white;
+}
+
+.dark .descripcion{
+    color: rgb(209, 208, 208);
+}
+.dark #modo{
+    color: white;
+}
+.dark #modo:hover{
+    color: rgb(209, 208, 208);
+}
+.dark p{
+    color: rgb(211, 211, 211);
+}
+.dark h2{
+    color: white;
+}
+

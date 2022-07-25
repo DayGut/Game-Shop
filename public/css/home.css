@@ -37,6 +37,9 @@
     border-radius: 3px 0 0 3px;
   }
   
+  a{
+    color:var(--body-color-Gris)
+  }
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
@@ -93,7 +96,14 @@
 
 /* Main */
 
-
+.contenedor-imagenes.wpb_single_image img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+.wpb_single_image {
+  text-align: center;
+}
 .ofertas{
     background: #f2f2f2;
 }
@@ -105,7 +115,6 @@
 .contenedor-imagenes img{
     display: block;
     width: 30%;
-    box-shadow: 0 0 8px rgb(0, 0, .4);
     margin-bottom: 40px;
 }
 /*fin mian*/
