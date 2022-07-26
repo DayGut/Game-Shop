@@ -9,8 +9,6 @@
 <H2> Integrantes del equipo 👨🏽‍💻👩🏽‍💻👨🏽‍💻<h2> 
 
 
-<p>✅ juan mendoza</p>
-
 <p>✅ Ulises Coaquira</p>
 
 <p>✅ Daiana Gutierrez</p>
