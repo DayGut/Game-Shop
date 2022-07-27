@@ -28,12 +28,9 @@ module.exports= {
     search: (req, res) => {
         let search = req.query.keywords;
         let search_clean = removeAccents(search).toLowerCase();
-        db.Producto.findAll(   
+        db.Producto.findAll(
             {where:{
-                [Op.or]: [
-                {name:{[Op.like]:`%${search_clean}%`}},
-                {description:{[Op.like]:`%${search_clean}%`}}
-                ]
+                name:{[Op.like]:`%${search_clean}%`},
             }
         })
     .then((productos)=>{

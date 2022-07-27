@@ -12,16 +12,16 @@
 	<!-- /Banner -->
 
 	<!-- todos los productos -->
-	<div class="contenedor">
+	<div class="container-search">
 		<div class="col-12">
 			<h2 class="products-title">Resultados de la búsqueda <% keyword %>  </h2>
 		</div>
-		<div class="productos">
+		<div class="row">
 			
 	<% if(productos.length > 0) { %>
 				  
 			<% productos.forEach(product => { %>
-				<article class="producto-search">
+				<article class="producto">
 					<a class="product-detail" href="/products/detalle/<%= product.id %> ">
 						<div>
 							<img src="/images/<%= product.imagen %>" alt="">

@@ -1,8 +1,8 @@
-//const {users, writeUsers} = require('../data');
 const db = require('../database/models');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator');
-
+let fs = require('fs')
+let path = require('path')
 
 module.exports = {
     login: (req, res) => {
@@ -79,10 +79,8 @@ module.exports = {
                     rol: "admin"//toma los datos los carga en la base de datos
                 })
                 .then((user) => {
-                    res.render('user/login',{
-                  session: req.session,
-                    titulo: "Login",
-                  user
+                    res.redirect('user/login',{
+                  session: req.session
                  })//luego redirecciona a la pagina de login
                 })
                 .catch(error => console.log(error))//vuelvo a cargar en el login y me muestrael error
@@ -119,26 +117,28 @@ module.exports = {
         .catch(errors => console.log(errors))
        
     },
-    editProfile:(req,res)=>{ 
-       db.Usuario.findByPk(req.session.user.id)
-        .then(usuario => {
-            db.Usuario.update({
-                ...req.body,
-                avatar: req.file ? req.file.filename : req.session.user.avatar
-            },{
-                where : { id : req.session.user.id}
-            })
-            .then(() => {
-                if(req.file){
-                    if (fs.existsSync(path.join(__dirname, "../../public/images/avatars", usuario.avatar)) &&
-                        usuario.avatar !== "default-image.png"){
-                        fs.unlinkSync( path.join(__dirname, "../../public/images/avatars", usuario.avatar))
+            editProfile : async (req, res) => {
+                try {
+                    let usuarioEdit = await db.Usuario.findByPk(req.params.id)
+                    await db.Usuario.update({
+                        ...req.body,
+                        avatar: req.file ? req.file.filename : req.session.user.avatar
+                    },{
+                        where : {id : req.params.id}
+                    })
+                    let usuario = await db.Usuario.findByPk(req.params.id)
+                    if(req.file){
+                        if (fs.existsSync(path.join(__dirname, "../../public/images/avatar", usuario.avatar)) &&
+                            usuario.avatar !== "user-avatar.jpeg"){
+                            fs.unlinkSync( path.join(__dirname, "../../public/images/avatar", usuarioEdit.avatar))
+                        }
                     }
+                    
+                    
+                    res.locals.user = req.session.user;
+                    res.redirect('/')
+                } catch (error) {
+                    console.log(error);
                 }
-            })
-            .catch(errors => console.log(errors))
-            res.redirect('/user/home')
-        })
-        .catch(errors => console.log(errors))
             }
 };

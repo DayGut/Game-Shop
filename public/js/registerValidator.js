@@ -164,6 +164,41 @@ window.addEventListener("load", () => {
                 $form.submit()
             }
     
-        })
+        }),
+        $login.addEventListener('submit', (event) => {
+            event.preventDefault()
+            switch (true) {
+                case $email.value.length == 0:
+                    $emailErrors.innerHTML = 'Ingrese su email'
+                    $email.classList.add('is-invalid')
+                    errores = true
+                    break;
+                case !regExEmail.test($email.value):
+                    $emailErrors.innerHTML = 'Email no valido'
+                    $email.classList.add('is-invalid')
+                    errores = true
+                    break;
+                case $password.value.length == 0:
+                    $passwordErrors.innerHTML = 'Ingrese su contraseña'
+                    $password.classList.add('is-invalid')
+                    errores = true
+                    break;
+                case !regExPassword.test($password.value):
+                    $passwordErrors.innerHTML = 'Usuario o contraseña incorrectos'
+                    $password.classList.add('is-invalid')
+                    errores = true
+                    break;
+                default:
+                    if(!errores){
+                        $login.submit()
+                        submitErrors.innerHTML = 'Usuario o contraseña incorrectos'
+                        errores = false
+                    }else{
+                        errores = true;
+                    }
+                break;
+                }
+            })
+    
     
 })
