@@ -56,10 +56,15 @@ module.exports = {
                 id: req.params.id
             },
             include:[{association:'Producto'}]})
-        .then(function(productos){
+            .then(products => {
+                let productos = [];
+                let category = productos.category;
+                category.forEach(product => {
+                    products.push(product);
+            })
         res.render('products/categories', { 
             titulo: "Categorias",
-            productos,
+            products,
             session: req.session
         }) 
     })

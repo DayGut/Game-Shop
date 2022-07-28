@@ -2,6 +2,7 @@
 <html lang="es">
 <!-- Include Head -->
 <%-include('../partials/head'), ({title: 'Resultados de tu búsqueda'}) %>
+<script src="js/dark.js" defer></script>
 <body>
 	<!-- Header -->
 	<%-include('../partials/header') %>
@@ -22,7 +23,7 @@
 				  
 			<% productos.forEach(product => { %>
 				<article class="producto">
-					<a class="product-detail" href="/products/detalle/<%= product.id %> ">
+					<a class="productos" href="/products/detalle/<%= product.id %> ">
 						<div>
 							<img src="/images/<%= product.imagen %>" alt="">
 						</div>
@@ -53,9 +54,14 @@
 		</div>
 	</div>
 	<!-- /todos los productos -->
+	<a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp" target="_blank">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
 	
-	<!-- footer -->
-	<%- include('../partials/footer') %>
-	<!-- /footer -->
+	
 </body>	
+
+<!-- footer -->
+<%- include('../partials/footer') %>
+<!-- /footer -->
 </html>
