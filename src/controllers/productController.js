@@ -34,7 +34,7 @@ module.exports = {
 
              })
             
-       .catch(error => res.send(error))
+       .catch(error => console.log(error))
          },
     
     carrito:(req, res) => {
@@ -47,8 +47,26 @@ module.exports = {
             produsctos: products
         }) 
     })
-    .catch(error => res.send(error))
+    .catch(error => console.log(error))
     },
+
+    categories:(req, res) => {
+        db.Categoria.findOne({
+            where: {
+                id: req.params.id
+            },
+            include:[{association:'Producto'}]})
+        .then(function(productos){
+        res.render('products/categories', { 
+            titulo: "Categorias",
+            productos,
+            session: req.session
+        }) 
+    })
+    .catch(error => console.log(error))
+    },
+
+        
 
     addcarshop: (req, res) => {
        

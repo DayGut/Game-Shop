@@ -16,6 +16,7 @@
             <th scope="col">Categoría</th>
             <th scope="col">Descuento</th>
             <th scope="col">Stock</th>
+            <th scope="col">imagen</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -29,12 +30,15 @@
                   <td>%<%- producto.discount %></td>
                   <td><%- producto.stock %></td>
                   <td>
-                    <a href="/admin/productos/editar/<%- producto.id %>" class="btn btn-success">
+                      <div class="img-container" id="img-preview">
+                    <img src="/images/<%= producto.imagen %>" alt="">
+                  </div></td>
+                  <td>
+                    <a href="/admin/productos/editar/<%- producto.id %>" class="btn btn-outline-secondary">
                       <i class="fa-solid fa-pen-to-square"></i>
-
                     </a>
                     <form action='/admin/productos/eliminar/<%- producto.id %>?_method=delete' method="post">
-                    <button class="btn btn-danger" type="submit" >
+                    <button class="btn btn-outline-dark" type="submit" >
                       <i class="fa-solid fa-trash-can"></i>
                     </button>
                   </form>

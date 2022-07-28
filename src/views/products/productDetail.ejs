@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head') %>
+
+  <body>
+    <%-include('../partials/header') %>
+      <main class="contenedor">
+        <nav class="titulo-producto">
+
+          <h2>
+            <%=titulo%>
+          </h2>
+        </nav>
+
+        <div class="producto-contenedor">
+
+          
+
+          <div class="product-image">
+            <img src="/images/<%= producto.imagen %>" alt="imagen">
+          </div>
+
+
+          <div class="prodcuto-detalles">
+            <h1>
+              <%=producto.name%>
+            </h1>
+            <h2>
+              <% if (producto.discount> 0) { %>
+                <span class="descuento">
+                  <%= producto.discount %>% off
+                </span>
+                <% }else{ %> <span class="descuento">Sin descuento</span>
+                  <% } %>
+                    <div class="producto-precio">
+                      <% if (producto.discount> 0) { %>
+                        <span class="precio-original">$ <%= producto.price %> </span>$
+                        <%= producto.price - producto.discount * producto.price / 100 %>
+                          <% } else { %>
+                            $ <%= producto.price %>
+                              <% } %>
+            </h2>
+            <div class="description">
+              <p>
+                <%=producto.description%>
+              </p>
+            </div>
+            <button class="agregar-bton">Comprar</button>
+          </div>
+
+        </div>
+
+      </main>
+      <%-include('../partials/footer') %>
+        <!-- partial -->
+        
+
+  </body>
+
+</html>

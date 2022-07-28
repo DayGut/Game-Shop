@@ -7,5 +7,5 @@ router.get('/detalle/:id', productController.detalle);
 router.get('/carrito', productController.carrito);
 router.get('/carrito/:id',productController.addcarshop);
 router.delete('/carrito/eliminar/:id', productController.productDeleteshop)//elimina 
-
+router.get('/categorias', productController.categories);
 module.exports = router;
