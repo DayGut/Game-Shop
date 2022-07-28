@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
     $inputLastname = qs('#lastname'),
     $lastnameErrors = qs('#lastnameErrors'),
     $form = qs('#form'),
+    submitErrors = qs('#errorSubmit'),
     $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     $pass = qs('#pass'),
@@ -159,11 +160,12 @@ window.addEventListener("load", () => {
                 $termsErrors.innerHTML = "Debes aceptar los términos y condiciones";
             }
     
-            // if(!errores){
-            //     //alert("Validado!")
-            //     $form.submit()
-            // }
+            if(!errores){
+                alert("Validado!")
+                $form.submit()
+            }
     
         })
+
     
 })

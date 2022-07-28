@@ -9,8 +9,8 @@
     <!--fin header-->
     <!--Register-->
     <div class="register-form">
-        <h1>Editar Perfil <%= user.nombre %></h1>
-        <form action="/user/registro" method="post" enctype="multipart/form-data">
+        <h1>Editar Perfil <%= user.name %></h1>
+        <form  action="/user/perfil/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div>
             <label form="nombre">User name</label>
             <input type="text" name="name" id="name" value="<%= (locals.old && old.name) ? old.name : user.name %>">
@@ -18,7 +18,7 @@
             </div>
             <div>
                 <label form="lastname">Lastname</label>
-                <input type="text" name="lastname" id="lastname" value="<%= (locals.old && old.apellido) ? old.apellido : user.apellido%>">
+                <input type="text" name="lastname" id="lastname" value="<%= (locals.old && old.apellido) ? old.lastname : user.lastname%>">
                     <small class="text-danger" id="lastnameErrors"><%= (locals.errors && errors.lastname) ? errors.lastname.msg : "" %></small>
                 </div>
             <div>
@@ -29,12 +29,12 @@
        
             <div class="form--group">
                 <label for="avatar">Avatar</label>
-                <input type="file" name="avatar" id="formFile" value="<%= (locals.old && old.avatar) ? old.avatar : ""  %>">
+                <input type="file" name="avatar" id="formFile" >
                     <small class="text-danger" id="fileErrors"><%= (locals.errors && errors.avatar) ? errors.avatar.msg : "" %></small>
             </div><br>
 
             <div>
-                <input class="form-check-input" name="terms" type="checkbox" value="" id="terms" value="<%= (locals.old && old.terms) ? old.terms : "" %>">
+                <input class="form-check-input" name="terms" type="checkbox" value="" id="terms" value="<%= (locals.old && old.terms) ? old.terms : '' %>">
                 <label class="form-check-label" for="terms">
                     Acepto los términos y condiciones
                 </label>
@@ -58,7 +58,6 @@
 
 
     <script src="https://kit.fontawesome.com/f21216c2d3.js" crossorigin="anonymous"></script>
-    <script src="/js/dark.js" defer></script>
 </body>
 
 

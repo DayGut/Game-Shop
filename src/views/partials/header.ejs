@@ -1,19 +1,12 @@
-<%-include('../partials/head') %>
-
-
 <header class="topheader">
-
-   
     <nav class="topnav">
         <a href="/" class="logo">
             <img src="/images/logo2.png" alt="logo Game Shop">
         </a>
         <button class="open-menu">
             <a class="fa-solid fa-bars"></a>
+
         </button>
-        <div class="modo" id="modo">
-            <i class="fas fa-toggle-on"></i>
-        </div>
         <ul class="menu">
             <button  class="close-menu">
                 <a class="fa-solid fa-xmark" aria-label="cerrar menu"></a>
@@ -26,7 +19,6 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button></li>
             </form>
-
             <li><a href="/">home</a></li>
             <% if (typeof session.user != "undefined") { %> 
             <li style="display: none;"><a href="/user/registro" >register </style></a></li>
@@ -51,8 +43,6 @@
                 <% } %> 
             </div>
             </div>
-            
         </ul>
     </nav>
-    <script src="js/dark.js" ></script>
 </header>
