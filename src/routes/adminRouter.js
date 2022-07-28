@@ -3,11 +3,13 @@ const router = express.Router();
 const adminController = require('../controllers/admin/adminController')
 const adminProductController = require('../controllers/admin/adminProductController')
 const uploadFile = require('../middlewares/uploadProductImage');
+const adminCategoryController = require("../controllers/admin/adminCategoryController");
 
 const adminCheck = require('../middlewares/adminCheck')
 const userSessionCheck = require('../middlewares/userSessionCheck');
 const addProductValidator = require('../validations/addProductValidator');
 const editProductValidator = require('../validations/editProductValidator');
+
 
 
 /*session*/
@@ -23,6 +25,12 @@ router.get('/productos/editar/:id',userSessionCheck, adminCheck, adminProductCon
 router.delete('/productos/eliminar/:id', adminProductController.productDelete)//elimina 
 
 
-
+// CRUD CATEGORIA 
+router.get('/categories', userSessionCheck, adminCheck, adminCategoryController.list );
+router.get('/categories/addCategory', userSessionCheck, adminCheck, adminCategoryController.categoryAdd );
+router.post('/categories', adminCategoryController.categoryCreate );
+router.get('/categories/editCategory/:id', userSessionCheck, adminCheck, adminCategoryController.categoryEdit );
+router.put('/categories/editCategory/:id', adminCategoryController.categoryUpdate );
+router.delete('/categories/delete/:id', adminCategoryController.categoryDelete);
 
 module.exports = router;

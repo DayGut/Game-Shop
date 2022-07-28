@@ -50,28 +50,26 @@ module.exports = {
     .catch(error => console.log(error))
     },
 
-    categories:(req, res) => {
-        db.Categoria.findOne({
-            where: {
-                id: req.params.id
-            },
-            include:[{association:'Producto'}]})
-            .then(products => {
-                let productos = [];
-                let category = productos.category;
-                category.forEach(product => {
-                    products.push(product);
-            })
-        res.render('products/categories', { 
-            titulo: "Categorias",
-            products,
-            session: req.session
-        }) 
-    })
-    .catch(error => console.log(error))
-    },
-
-        
+    // categories:(req, res) => {
+    //     db.Categoria.findOne({
+    //         where: {
+    //             id: req.params.id
+    //         },
+    //         include:[{association:'Producto'}]})
+    //         .then(products => {
+    //             let productos = [];
+    //             let category = productos.category;
+    //             category.forEach(product => {
+    //                 products.push(product);
+    //         })
+    //     res.render('products/categories', { 
+    //         titulo: "Categorias",
+    //         products,
+    //         session: req.session
+    //     }) 
+    // })
+    // .catch(error => console.log(error))
+    // },
 
     addcarshop: (req, res) => {
        

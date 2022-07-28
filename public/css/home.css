@@ -108,4 +108,7 @@
     box-shadow: 0 0 8px rgb(0, 0, .4);
     margin-bottom: 40px;
 }
+a{
+  color:var(--body-color-Gris);
+}
 /*fin mian*/
