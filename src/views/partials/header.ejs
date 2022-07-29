@@ -37,7 +37,7 @@
             <div class="avatar">
                 <% if (typeof session.user != "undefined") { %>
                     <% if (session.user.rol === 'admin') { %>
-                    <ul ><li><a href="/admin">admin</a></li></ul>
+                    <li><a href="/admin">admin</a></li>
                     <% } %>
                        <a href="/user/perfil">
                        <img src="../images/avatar/<%= session.user.avatar %> " alt="avatar">

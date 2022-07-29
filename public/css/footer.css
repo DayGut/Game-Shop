@@ -166,7 +166,7 @@
         opacity: 1;
         pointer-events: all;
     }
-    .hide{
+    .hide, .slideshow-container, .botones-carrusel, .redes{
       display: none;
   }
   

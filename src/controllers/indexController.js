@@ -18,7 +18,7 @@ module.exports= {
                    products_title: "Productos",
                    CSS:"home.css",
                     productos,
-                    session: req.session
+                    session: req.session,
             })
         })
         .catch(function(error){
