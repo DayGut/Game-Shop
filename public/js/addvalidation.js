@@ -10,7 +10,7 @@ function qs(element) {
     $descriptionErrors = qs('#descriptionErrors'),
     $file = qs('#formFile'),
     $fileErrors = qs('#fileErrors'),
-    regExAlphaName = /^[a-zA-Z\sñáéíóúü ]{5,40}$/,
+    regExAlphaName = /^[A-Za-z0-9\s]+$/g,
     regExAlphaDescrip = /^[a-zA-Z\sñáéíóúü ]{20,100}$/,
     
     

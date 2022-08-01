@@ -3,6 +3,7 @@
     <%-include("../partials/head")%>
 <body>
     <%-include("../partials/header")%>
+    <script defer src="/js/script.js"></script>
     <script src="/js/addvalidation.js"></script>
     <main class="container"> 
      <form action="/admin/productos" method="POST" enctype="multipart/form-data" style="margin: 10px 0 10px;"> <!--enctype="multipart/form-data" tiene la funcionalidad del muler -->
@@ -30,12 +31,25 @@
   </div>
       <div class="container" id="Container-admin">
         <label for="exampleDataList" class="form-label">Categorias</label>
+<<<<<<< HEAD
           <select name="id_categoria" class="form-control" id="categorias" aria-label="Default select example">
             <% categorias.forEach(({id, name}) => { %>
               <option value="<%= id %>"><%= name %></option>
             <% }) %> 
           </select>
        </div>  
+=======
+          <input name="categorias_id" class="form-control" list="datalistOptions" id="categorias" placeholder="Seleccione Categoria">
+          <datalist id="datalistOptions">
+          <option selected hidden value="">Categoría</option>
+          <option value="1"<%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %> ></option>
+          <option value="2" <%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %>></option>
+          <option value="3" <%= (locals.old && old.categorias_id) && old.categorias_id === "1" ? "selected" : "" %>></option>
+      </div>
+      <% if (locals.errors && errors.categorias_id) { %>
+        <small class="text-danger"><%= errors.categorias_id.msg %></small>
+      <% } %>
+>>>>>>> b65515d0ef7bc754b10c4829dd22329aca40cc9c
       <div class="form-check form-switch pt-3">
           <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" >
           <label class="form-check-label" for="stock">Stock</label>
