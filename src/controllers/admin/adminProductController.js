@@ -22,9 +22,13 @@ module.exports = {
     },
 
     productAdd: (req, res) => {
+        db.Categoria.findAll()
+        .then((categorias)=>{
         res.render('admin/products/addProduct', {
             titulo: "Agregar producto",
-            session: req.session
+            session: req.session,
+            categorias
+        })
         })
     },
         productCreate: (req, res) => {
@@ -43,15 +47,19 @@ module.exports = {
 
                .catch(error => res.send(error))
             }else{
+                db.Categoria.findAll()
+                .then((categorias)=>{
               res.render('admin/products/addProduct', { 
                 titulo: "Agregar producto",
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                categorias,
+                session: req.session
                })
+                })
             } 
            },
     editProduct: (req, res) => {
-
     // 1- Obtener el id del producto
         let idProducto = +req.params.id
 
@@ -94,7 +102,7 @@ module.exports = {
                 })
                 .catch(errors => console.log(errors))
             
-              }else{    
+              }else{
                 let producto = +req.params.id
                 db.Producto.findByPk(producto, {include:[{association:'Categoria'}]})
                 .then((producto) =>{

@@ -7,7 +7,9 @@ module.exports = {
             res.render("admin/categories/categoryAdmin", {
                 titulo: "Categorias",
                 categorias,
-                session: req.session
+                session: req.session,
+                css:"categories.css"
+
             })
         })
         .catch((error) => { res.send(error)})  

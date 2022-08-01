@@ -22,7 +22,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button></li>
             </form>
-            <li><a href="/">home</a></li>
+           <!--  <li><a href="/">home</a></li>    sacar -->
             <% if (typeof session.user != "undefined") { %> 
             <li style="display: none;"><a href="/user/registro" >register </style></a></li>
             <% } else { %>
@@ -37,7 +37,7 @@
             <div class="avatar">
                 <% if (typeof session.user != "undefined") { %>
                     <% if (session.user.rol === 'admin') { %>
-                    <ul ><li><a href="/admin">admin</a></li></ul>
+                    <li><a href="/admin">admin</a></li>
                     <% } %>
                        <a href="/user/perfil">
                        <img src="../images/avatar/<%= session.user.avatar %> " alt="avatar">
