@@ -29,23 +29,23 @@ module.exports = {
             session: req.session,
             categorias
         })
+        }).catch((error)=>{
+            res.send(error)
         })
     },
         productCreate: (req, res) => {
-            let errors = validationResult(req);
+             let errors = validationResult(req);
              
-            if(errors.isEmpty()){
+             if(errors.isEmpty()){
                
                db.Producto.create({include:[{association:'Categoria'}],
                  ...req.body,
                  stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
                  imagen: req.file ? req.file.filename : "PS4.jpeg"
-
               })
-              
-            .then(() => res.redirect('/admin/productos/listar'))
-
-               .catch(error => res.send(error))
+              .then(() => res.redirect('/admin/productos/listar'))
+                .catch((error) => {
+                    res.send(error)})
             }else{
                 db.Categoria.findAll()
                 .then((categorias)=>{
@@ -55,9 +55,11 @@ module.exports = {
                 old: req.body,
                 categorias,
                 session: req.session
-               })
+              })
+
                 })
-            } 
+               
+            }
            },
     editProduct: (req, res) => {
     // 1- Obtener el id del producto
