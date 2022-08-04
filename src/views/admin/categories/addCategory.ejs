@@ -3,8 +3,11 @@
 <body>
     <%-include("../partials/header")%>
     <script defer src="/js/script.js"></script>
-    <main class="conteiner-categori">
-        <form action="/admin/categories" method="POST">
+    
+    <main class="addCategory">
+
+
+        <form action="/admin/categories" method="POST" class="conteiner-addcategory">
             <div class="inp-cont">
                 <label for="name">Nombre de la Categoría</label>
                 <input type="text" name="name" placeholder="Ej: Accesorios" id="name">

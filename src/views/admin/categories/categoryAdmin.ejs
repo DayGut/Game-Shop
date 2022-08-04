@@ -3,24 +3,30 @@
 <body>
     <%-include("../partials/header")%>
     <script defer src="/js/script.js"></script>
-    <main>
-        <article >
-            <button >
-                <a href="/admin/categories/addCategory">
-                    Nueva Categoría
-                </a>
-            </button>
-        </article>
-        <article >
+
+  
+
+    <main class="container min-vh-100" style="min-height: 73vh;">
+        <div class="btn-group-me-2">
+          <a href="/admin/categories/addCategory" class="btn btn-sm btn-primary">Agregar Nueva Categoria</a>
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h2>Categorias</h2>
+          <div class="btn-toolbar mb-2 mb-md-0">
+          </div>
+        </div>
+
+        <!-- <article >
             <form action="/admin/categories/searchCategory" method="get">
                 <input type="text" name="search" id="search" placeholder="Buscar Categoría">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-        </article>
+        </article> -->
 
         <article class="container-fluid">
             <table class="table table-striped table-hover">
-                <thead>
+                <thead class="topheader">
                   <tr class="text-center">
                     <th scope="col">id</th>
                     <th scope="col">Nombre</th>
@@ -33,11 +39,11 @@
                             <th scope="row"><%=categoria.id%></th>
                             <td><%=categoria.name%></td>
                             <td>
-                              <a href="/admin/categories/editCategory/<%- categoria.id %>" class="btn" id="btn-admin-modificacion">
+                              <a href="/admin/categories/editCategory/<%- categoria.id %>" class="btn btn-outline-primary" id="btn-admin-modificacion">
                                 <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                               <form action="/admin/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
-                                <button type="submit" class="btn" id="btn-admin-borrar">
+                                <button type="submit" class="btn btn-outline-danger" id="btn-admin-borrar">
                                   <i class="fa-solid fa-trash-can"></i>
                                 </button>
                               </form>
@@ -49,9 +55,6 @@
         </article>
         <a href="/">Salir del administrador</a>
     </main>
-
-    
-   
 </body>
 <%-include("../partials/footer")%>
 </html>

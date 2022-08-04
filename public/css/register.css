@@ -9,6 +9,8 @@
  
 }
 
+
+
 .login-form{
     width: 300px;
     margin: 100px auto;
@@ -175,9 +177,27 @@
     width: 400px;
     margin: 20px auto;
     padding: 0px 20px 60px 20px;
+    font-size: large;
     font-family: roboto;  
-   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);  
   }
+  .register-form2{
+    position: absolute;
+    z-index: 10;
+    top: 23px;
+    right: 75px;
+    width: 350px;
+    margin: 100px auto;
+    height: 50vh;
+    padding: 20px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: roboto;  
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
   .form--group input[type="file"]{
     background-color: var(--backgound-color-Azul)
   }
@@ -185,6 +205,11 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  }
+  .register-form2 h1 {
+    color:var(--texto-color-AzulMarino) ;
+    font-size: 22px;
+    padding: 70px 0 10px 0;
   }
   .register-form h1 {
     color:var(--texto-color-AzulMarino) ;
@@ -200,5 +225,15 @@
     margin-bottom: 10px;
     box-sizing:border-box;
   }
+  .register-form2 input[type="password"],
+  .register-form2 input[type="text"],
+  .register-form2 input[type="email"]{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+    box-sizing:border-box;
+  }
+
 
 /*fin login*/

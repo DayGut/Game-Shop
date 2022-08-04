@@ -15,17 +15,21 @@
   background-size: contain;
 }
 
-.login-form{
-    width: 300px;
-    margin: 100px auto;
-    height: 500px;
-    padding: 20px 20px ;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 0 19px 38px rgb(0 0 0 / 30%),
-     0 15px 12px rgb(0 0 0 / 22%);
+
+.login-form1{
+  position: absolute;
+  z-index: 10;
+  top: 32px;
+  right: 120px;
+  width: 300px;
+  margin: 100px auto;
+  height: 328px;
+  padding: 20px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
 }
 
 /* .login-form .avatar_session img{
@@ -36,13 +40,17 @@
 } */
 
 
-.login-form h2{
-    color: var(--texto-color-AzulMarino);
+.login-form1 h2{
+    /* color: var(--texto-color-AzulMarino); */
+    font-size: 30px;
+    font-weight: 700;
+    color:black;
+    margin-bottom: 10px;
 }
 
 
-.login-form input[type="password"],
-.login-form input[type="email"]{
+.login-form1 input[type="password"],
+.login-form1 input[type="email"]{
     width: 100%;
     padding:  15px;
     border: 1px solid #ced4da;
@@ -187,19 +195,20 @@
     box-shadow:0 0 0 3px var(--body-color-Gris);
   }
   
+ 
+
   /* form User Registration */
-  .register-form{
-    width: 400px;
+   /* .register-form{
     margin: 80px auto;
     padding: 0px 20px 60px 20px;
     font-family: roboto;  
     text-align: left !important;
    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
-  }
+  }  */
   
   .register-form h1 {
     text-align: left;
-    color:var(--texto-color-AzulMarino) ;
+    color:var(--texto-color-AzulMarino);
     font-size: 22px;
     padding: 70px 0 10px 0;
   }
@@ -211,4 +220,6 @@
     margin-bottom: 10px;
     box-sizing:border-box;
   }
+
+  
 /*fin login*/

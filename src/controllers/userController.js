@@ -8,7 +8,7 @@ module.exports = {
 
         res.render('user/login', {
             titulo:"Login",
-            css:"login.css",
+            css:"login.css, starWars.ccs",
             session: req.session
         })
     },  
@@ -47,7 +47,7 @@ module.exports = {
 
         res.render('user/login', {
             titulo: "Login",
-            css: "login.css",
+            css: "login.css, starWars.ccs",
             errors: errors.mapped(),
             session: req.session
         })

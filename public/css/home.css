@@ -107,7 +107,16 @@
     width: 30%;
     box-shadow: 0 0 8px rgb(0, 0, .4);
     margin-bottom: 40px;
+    object-fit: cover;
 }
+
+
+
+.contenedor-imagenes img:hover {
+  transform: scale(1.2);
+}
+
+
 a{
   color:var(--body-color-Gris);
 }

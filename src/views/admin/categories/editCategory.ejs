@@ -3,7 +3,7 @@
 <body>
     <%-include("../partials/header")%>
     <script defer src="/js/script.js"></script>
-    <main>
+    <main class="edit-category">
         <form action="/admin/categories/editCategory/<%-category.id%>?_method=PUT" method="POST">
             <div>
                 <label for="name">Nombre de la categoría</label>
