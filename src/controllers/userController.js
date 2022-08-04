@@ -1,15 +1,14 @@
 const db = require('../database/models');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator');
-//let fs = require('fs')
-//let path = require('path')
+
 
 module.exports = {
     login: (req, res) => {
 
         res.render('user/login', {
             titulo:"Login",
-            css:"login.css",
+            css:"login.css, starWars.ccs",
             session: req.session
         })
     },  
@@ -48,7 +47,7 @@ module.exports = {
 
         res.render('user/login', {
             titulo: "Login",
-            css: "login.css",
+            css: "login.css, starWars.ccs",
             errors: errors.mapped(),
             session: req.session
         })
@@ -129,12 +128,7 @@ module.exports = {
                         where : {id : req.params.id}
                     })
                     let usuario = await db.Usuario.findByPk(req.params.id)
-                    // // if(req.file){
-                    //     if (fs.existsSync(path.join(__dirname, "../../public/images/avatar", usuario.avatar)) &&
-                    //         usuario.avatar !== "user-avatar.jpeg"){
-                    //         fs.unlinkSync( path.join(__dirname, "../../public/images/avatar", usuarioEdit.avatar))
-                    //     }
-                    //}
+                   
                     req.session.user = {
                         id : usuario.id,
                         name : usuario.name,

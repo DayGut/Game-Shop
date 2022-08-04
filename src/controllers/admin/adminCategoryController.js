@@ -7,7 +7,9 @@ module.exports = {
             res.render("admin/categories/categoryAdmin", {
                 titulo: "Categorias",
                 categorias,
-                session: req.session
+                session: req.session,
+                CSS:"categories.css"
+
             })
         })
         .catch((error) => { res.send(error)})  
@@ -16,13 +18,15 @@ module.exports = {
     categoryAdd: (req, res) => {
         res.render("admin/categories/addCategory", {
             titulo: "Agregar categoria",
-            session: req.session
+            session: req.session,
+            CSS:"categories.css"
         })
     },
 
     categoryCreate: (req, res) => {
         db.Categoria.create({
             name: req.body.name,
+            CSS:"categories.css"
 
         })
         .then((result)=>{
@@ -39,7 +43,8 @@ module.exports = {
             res.render('admin/categories/editCategory', {
                 titulo: "Editar Categorias",
                 category,
-                session: req.session
+                session: req.session,
+                CSS:"categories.css"
             })
         })
         .catch((error) => { res.send(error)})

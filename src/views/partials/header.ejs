@@ -22,14 +22,14 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button></li>
             </form>
-            <li><a href="/">home</a></li>
+           <!--  <li><a href="/">home</a></li>    sacar -->
             <% if (typeof session.user != "undefined") { %> 
             <li style="display: none;"><a href="/user/registro" >register </style></a></li>
             <% } else { %>
                 <li><a href="/user/registro" >register</a></li>
                 <% } %>
             <% if (typeof session.user != "undefined") { %> 
-            <li><a href="/user/logout">cerrar sesion</a></li>
+            <li><a href="/user/logout">logout</a></li>
             <% } else { %>
                 <li><a href="/user/login">login</a></li>
                 <% } %> 

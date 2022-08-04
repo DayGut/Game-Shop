@@ -145,7 +145,7 @@ window.addEventListener("load", () => {
     
             for (let index = 0; index < elementsForm.length - 1; index++) {
                 if(elementsForm[index].value == ""
-                && elementsForm[index].name !== "apellido"
+                && elementsForm[index].lastname !== "apellido"
                 && elementsForm[index].type !== "file"
                 && elementsForm[index].type !== "checkbox"
                  ||elementsForm[index].classList.contains("is-invalid")){
@@ -160,9 +160,9 @@ window.addEventListener("load", () => {
                 $termsErrors.innerHTML = "Debes aceptar los términos y condiciones";
             }
     
-            if(!errores){
-                alert("Validado!")
-                $form.submit()
+             if(!errores){
+              alert("Validado!")
+               $form.submit()
             }
     
         })
