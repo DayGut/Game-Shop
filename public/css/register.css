@@ -187,8 +187,8 @@
     top: 23px;
     right: 75px;
     width: 350px;
+    height: auto;
     margin: 100px auto;
-    height: 50vh;
     padding: 20px 20px;
     text-align: center;
     display: flex;
@@ -209,7 +209,7 @@
   .register-form2 h1 {
     color:var(--texto-color-AzulMarino) ;
     font-size: 22px;
-    padding: 70px 0 10px 0;
+    padding-top: 5px;
   }
   .register-form h1 {
     color:var(--texto-color-AzulMarino) ;

@@ -160,10 +160,10 @@ window.addEventListener("load", () => {
                 $termsErrors.innerHTML = "Debes aceptar los términos y condiciones";
             }
     
-            // if(!errores){
-            //     alert("Validado!")
-            //     $form.submit()
-            // }
+             if(!errores){
+              alert("Validado!")
+               $form.submit()
+            }
     
         })
 
