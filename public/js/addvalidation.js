@@ -7,7 +7,9 @@ function qs(element) {
     $inputName = qs('#name'),
     $nameErrors = qs('#nameErrors'),
     $inputDescription = qs ('#description')
+    $submit= qs('#errorSubmit-add')
     $descriptionErrors = qs('#descriptionErrors'),
+    $form=qs('#add-form')
     $file = qs('#formFile'),
     $fileErrors = qs('#fileErrors'),
     regExAlphaName = /^[A-Za-z0-9\s]+$/g,
@@ -60,6 +62,36 @@ function qs(element) {
             $file.value = '';
             return false;
         }
+    })
+
+    $form.addEventListener("submit", function(event) {
+
+        event.preventDefault()
+        let elementsForm = this.elements;
+        let errores = false;
+
+        for (let index = 0; index < elementsForm.length - 1; index++) {
+            if(elementsForm[index].value == ""
+            && elementsForm[index].name !== "apellido"
+            && elementsForm[index].type !== "file"
+            && elementsForm[index].type !== "checkbox"
+             ||elementsForm[index].classList.contains("is-invalid")){
+                elementsForm[index].classList.add("is-invalid");
+                submitErrors.innerHTML = "Corregir campos marcados en rojo";
+                errores = true;
+            }
+        }
+
+        if(!$terms.checked){
+            $terms.classList.add("is-invalid");
+            $termsErrors.innerHTML = "Debes aceptar los términos y condiciones";
+        }
+
+        if(!errores){
+            alert("Validado!")
+            $form.submit()
+        }
+
     })
 
   })

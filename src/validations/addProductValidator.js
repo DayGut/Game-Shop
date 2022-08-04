@@ -20,7 +20,7 @@ let validateAddProducts = [
     }).withMessage("El descuesto tiene que ser entre 0 y 100"),
     check("description")
         .notEmpty().withMessage("Ingrese una descripcion").bail()
-        .isLength({min:5}).withMessage("Debe tener al menos 5 caracteres")
+        .isLength({min:5}).withMessage("Debe tener al menos 20 caracteres")
     
 ];
 

@@ -6,9 +6,11 @@
 }
 
 .dark header{
+    transition: all .5s ease;
     color: #fff;
 }
 .dark a{
+    transition: all .5s ease;
     color: #fff;
 }
 .dark .producto{
@@ -26,6 +28,7 @@
     color: #fff;
 }
 .dark {
+    transition: all .5s ease;
     background: rgb(4, 24, 27);
 }
 
@@ -37,6 +40,7 @@
     color: rgb(209, 208, 208);
 }
 .dark #modo{
+    transition: all .5s ease;
     color: white;
 }
 .dark #modo:hover{
