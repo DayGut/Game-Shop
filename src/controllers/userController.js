@@ -75,7 +75,7 @@ module.exports = {
                     email: req.body.email,
                     password: bcrypt.hashSync(req.body.pass, 8),
                     avatar: req.file ? req.file.filename : "user-avatar.jpeg",
-                    rol: "admin"//toma los datos los carga en la base de datos
+                    rol: "user"//toma los datos los carga en la base de datos
                 })
                 .then((user) => {
                     res.render('user/login',{
